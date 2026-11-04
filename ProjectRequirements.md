@@ -16,4 +16,9 @@ __________________________________________
 LESSON 2: TITLE
 __________________________________________
 
+AFTER REDIRECTS TO LESSON PAGE:
+-Full content of that lesson
+-PROVIDE EXAMPLES
+-PROVIDE SPACES FOR IMAGES/VISUAL TO HELP USER UNDERSTAND LESSON BETTER
+
 AT END OF EVERY LESSON : PROVIDE TESTS (IDENTIFICATION AND ESSAY)
