@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-blue: #174B85;
+      --primary-blue: #0F4C81;
+      --soft-blue: #8DB8EE;
+      --pastel-blue: #C7DCFA;
+      --light-bg: #EAF2FF;
+      --white: #FFFFFF;
+      --text-dark: #1E3A8A;
+      --text-muted: #64748B;
+      --border-subtle: #D0E1F9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #EBF3FC;
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Main Card Frame */
+    .dashboard-app-frame {
+      width: 100%;
+      max-width: 1240px;
+      height: 88vh;
+      min-height: 700px;
+      background: #F4F8FF;
+      border-radius: 28px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.08);
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 250px;
+      background: var(--white);
+      border-right: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px 20px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar.collapsed {
+      margin-left: -250px;
+    }
+
+    .sidebar-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--deep-blue);
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-menu a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .sidebar-menu a:hover, .sidebar-menu a.active {
+      background-color: var(--light-bg);
+      color: var(--deep-blue);
+    }
+
+    .sidebar-footer {
+      padding-top: 15px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .logout-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #DC2626;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 10px 16px;
+    }
+
+    /* Main Content Area */
+    .main-content {
+      flex: 1;
+      padding: 36px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+    }
+
+    /* Top Header Bar */
+    .top-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .menu-toggle-btn {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      cursor: pointer;
+      color: var(--deep-blue);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    .welcome-text h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.3rem;
+      color: var(--deep-blue);
+      line-height: 1.1;
+    }
+
+    .welcome-text p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-top: 4px;
+    }
+
+    /* Pinalaking Current Level Badge */
+    .level-badge {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 28px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 6px 16px rgba(23, 75, 133, 0.05);
+    }
+
+    .level-badge span {
+      font-size: 2rem;
+    }
+
+    .level-info h4 {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+    }
+
+    .level-info p {
+      font-weight: 800;
+      color: var(--deep-blue);
+      font-size: 1.25rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Pinalaking Your Learning Progress Card */
+    .progress-card {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: 22px;
+      padding: 28px 34px;
+      box-shadow: 0 6px 18px rgba(23, 75, 133, 0.04);
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .progress-header h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.35rem;
+      color: var(--deep-blue);
+      font-weight: 800;
+    }
+
+    .progress-header span {
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--deep-blue);
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 18px;
+      background: #E2E8F0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .progress-bar-fill {
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(90deg, #174B85 0%, #4F83CC 100%);
+      border-radius: 10px;
+    }
+
+    .progress-footer-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Dashboard Grid */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr;
+      gap: 24px;
+    }
+
+    .section-box {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03);
+    }
+
+    .section-box h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.2rem;
+      color: var(--deep-blue);
+      margin-bottom: 18px;
+    }
+
+    .lessons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .lesson-preview-card {
+      background: #F8FBFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .lesson-thumb {
+      width: 52px;
+      height: 52px;
+      background: var(--light-bg);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      border: 1px solid var(--border-subtle);
+      flex-shrink: 0;
+    }
+
+    .lesson-preview-info {
+      flex: 1;
+    }
+
+    .lesson-preview-info h4 {
+      font-size: 1.05rem;
+      color: var(--deep-blue);
+      margin-bottom: 3px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+    }
+
+    .lesson-preview-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .btn-continue {
+      background-color: var(--deep-blue);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-continue:hover {
+      background-color: var(--primary-blue);
+    }
+
+    .quick-access-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .quick-link-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: #F8FAFC;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: all 0.2s;
+    }
+
+    .quick-link-item:hover {
+      background: var(--light-bg);
+      color: var(--deep-blue);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dashboard App Frame -->
+  <div class="dashboard-app-frame">
+    
+    <!-- Left Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="sidebar-logo">
+          📖 READEFINE
+        </div>
+        <ul class="sidebar-menu">
+          <!-- Meron nang Home link dito para makabalik sa index.html -->
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html" class="active">🏠 Dashboard</a></li>
+          <li><a href="lessons.html">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top Header Bar -->
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <h1>Hello, Learner!</h1>
+            <p>Keep going! You're doing great ✨</p>
+          </div>
+        </div>
+
+        <!-- Pinalaking Current Level -->
+        <div class="level-badge">
+          <span>⭐</span>
+          <div class="level-info">
+            <h4>Current Level</h4>
+            <p>Beginner</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pinalaking Progress Card -->
+      <div class="progress-card">
+        <div class="progress-header">
+          <h3>Your Learning Progress</h3>
+          <span>40%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill"></div>
+        </div>
+        <div class="progress-footer-text">2 of 5 lessons completed</div>
+      </div>
+
+      <!-- Dashboard Bottom Grid -->
+      <div class="dashboard-grid">
+        
+        <div class="section-box">
+          <h3>Continue Learning</h3>
+          <div class="lessons-container">
+            
+            <div class="lesson-preview-card">
+              <div class="lesson-thumb">📘</div>
+              <div class="lesson-preview-info">
+                <h4>Lesson 1</h4>
+                <p>Basic Vocabulary & Context Clues</p>
+              </div>
+              <a href="lesson1.html" class="btn-continue">Continue →</a>
+            </div>
+
+            <div class="lesson-preview-card">
+              <div class="lesson-thumb">📙</div>
+              <div class="lesson-preview-info">
+                <h4>Lesson 2</h4>
+                <p>Main Ideas & Supporting Details</p>
+              </div>
+              <a href="lesson2.html" class="btn-continue">Start →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="section-box">
+          <h3>Quick Access</h3>
+          <div class="quick-access-list">
+            <a href="exams.html" class="quick-link-item">📝 Take a Quiz</a>
+            <a href="#" class="quick-link-item">📊 View Results</a>
+            <a href="dashboard.html" class="quick-link-item">🔄 Change Mode</a>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    const menuToggleBtn = document.getElementById('menuToggleBtn');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  </script>
+
+</body>
+</html>
