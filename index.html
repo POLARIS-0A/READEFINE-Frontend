@@ -4,59 +4,289 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>READEFINE - Read. Learn. Redefine.</title>
-  <!-- Dito ikinonekta ang hiwalay na style.css -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* PINALAKI AT PINAGANDANG GLASSMORPHISM MODALS */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(23, 75, 133, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .auth-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 32px;
+      width: 90%;
+      max-width: 480px;
+      padding: 44px 40px;
+      box-shadow: 0 25px 50px rgba(23, 75, 133, 0.15);
+      text-align: center;
+      position: relative;
+      animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes popIn {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .close-modal-btn {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid var(--border-subtle, #E2E8F0);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: var(--text-dark, #1E293B);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .close-modal-btn:hover {
+      background: #FFFFFF;
+      transform: scale(1.05);
+    }
+    .auth-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--deep-blue, #174B85);
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    .auth-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--deep-blue, #174B85);
+      margin-bottom: 8px;
+    }
+    .auth-subtitle {
+      color: var(--text-muted, #64748B);
+      font-size: 1rem;
+      margin-bottom: 32px;
+    }
+    .form-group {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--deep-blue, #174B85);
+      margin-bottom: 8px;
+    }
+    .form-input {
+      width: 100%;
+      padding: 16px 18px;
+      background: rgba(250, 252, 255, 0.95);
+      border: 1px solid var(--border-subtle, #E2E8F0);
+      border-radius: 16px;
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--text-dark, #1E293B);
+      outline: none;
+      box-sizing: border-box;
+      transition: all 0.2s ease;
+    }
+    .form-input:focus {
+      border-color: var(--soft-blue, #8DB8EE);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(141, 184, 238, 0.25);
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--deep-blue, #174B85);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 12px;
+      box-shadow: 0 8px 20px rgba(23, 75, 133, 0.2);
+    }
+    .btn-submit:hover {
+      background: #113866;
+      transform: translateY(-2px);
+    }
+    .auth-footer-text {
+      font-size: 0.95rem;
+      color: var(--text-muted, #64748B);
+      margin-top: 24px;
+    }
+    .auth-footer-text a {
+      color: var(--deep-blue, #174B85);
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .auth-footer-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo-container">
-      📖 READEFINE
-    </div>
-    <ul class="nav-menu">
-      <li><a href="index.html" style="color: var(--deep-blue);">Home</a></li>
-      <li><a href="dashboard.html">Lessons</a></li>
-      <li><a href="exams.html">Exams</a></li>
-      <li><a href="#">Progress</a></li>
-    </ul>
-    <div class="profile-icon">
-      👤
-    </div>
-  </nav>
+  <div class="app-frame">
+    <div class="landing-container">
+      
+      <!-- Top Navigation -->
+      <nav class="landing-nav">
+        <div class="landing-logo">
+          📖 READEFINE
+        </div>
+        <ul class="landing-nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#" onclick="openLoginModal()">Lessons</a></li>
+          <li><a href="#" onclick="openLoginModal()">Exams</a></li>
+          <li><a href="#" onclick="openLoginModal()">Progress</a></li>
+        </ul>
+        
+        <!-- Pinalitan ko ito para may kasamang 'Log In' text sa tabi ng profile icon -->
+        <div onclick="openLoginModal()" style="display: flex; align-items: center; gap: 8px; cursor: pointer; background: rgba(255, 255, 255, 0.6); padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-subtle, #E2E8F0); transition: all 0.2s;">
+          <span style="font-size: 0.9rem; font-weight: 700; color: var(--deep-blue, #174B85);">Log In</span>
+          <div class="profile-icon" style="margin: 0;">👤</div>
+        </div>
+      </nav>
 
-  <!-- Hero Section -->
-  <div class="hero-container">
-    <div class="hero-text-content">
-      <h1>Read. Learn. Redefine.</h1>
-      <p>Eliminate illiteracy, create your own metamorphosis.</p>
-      <a href="dashboard.html" class="btn-start">Start Learning →</a>
-    </div>
+      <!-- Center Hero Oblong Card -->
+      <div class="hero-card">
+        <div class="hero-text">
+          <h1>Read. Learn. Redefine.</h1>
+          <p>Eliminate illiteracy, Create your own metamorphosis.</p>
+          <button onclick="openLoginModal()" class="btn-primary" style="border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Learning →</button>
+        </div>
+        
+        <div class="illustration-box">
+          <div style="font-size: 3rem; margin-bottom: 12px;">📚✨</div>
+          <p style="font-weight: 700; font-size: 1.1rem; color: var(--deep-blue);">[ Logo / Illustration Area ]</p>
+          <small>(Under maintenance / Ilalagay ang custom art dito)</small>
+        </div>
+      </div>
 
-    <!-- Right Side: Dito mo ilalagay ang logo/illustration mo habang under maintenance -->
-    <div class="hero-image-placeholder">
-      <span style="font-size: 2.5rem; margin-bottom: 8px;">📚✨</span>
-      <strong>[ Logo / Illustration Area ]</strong>
-      <span style="font-size: 0.85rem; color: var(--secondary-text); margin-top: 4px;">(Under maintenance / Ilalagay ang custom art dito)</span>
+      <!-- Footer Features Badges -->
+      <div class="features-footer">
+        <div class="feature-item">🎧 Interactive Lessons with Audio</div>
+        <div class="feature-item">🤖 AI-Powered Answer Checker</div>
+        <div class="feature-item">📊 Track Your Progress</div>
+      </div>
+
     </div>
   </div>
 
-  <!-- Bottom Features Bar -->
-  <div class="features-footer">
-    <div class="feature-item">
-      <div class="feature-icon">🎧</div>
-      <span>Interactive Lessons with Audio</span>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">🤖</div>
-      <span>AI-Powered Answer Checker</span>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">📊</div>
-      <span>Track Your Progress</span>
+  <!-- LOGIN MODAL -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="auth-card">
+      <button class="close-modal-btn" onclick="closeAuthModals()">✕</button>
+      <div class="auth-logo">📖 READEFINE</div>
+      <h2 class="auth-title">Welcome Back</h2>
+      <p class="auth-subtitle">Log in to continue your literacy journey</p>
+
+      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Log In →</button>
+      </form>
+
+      <p class="auth-footer-text">
+        Don't have an account? <a onclick="switchToSignup()">Sign Up</a>
+      </p>
     </div>
   </div>
+
+  <!-- SIGNUP MODAL -->
+  <div class="modal-overlay" id="signupModal">
+    <div class="auth-card">
+      <button class="close-modal-btn" onclick="closeAuthModals()">✕</button>
+      <div class="auth-logo">📖 READEFINE</div>
+      <h2 class="auth-title">Create Account</h2>
+      <p class="auth-subtitle">Join READEFINE and start your learning journey</p>
+
+      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="Juan Dela Cruz" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" placeholder="At least 6 characters" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Sign Up →</button>
+      </form>
+
+      <p class="auth-footer-text">
+        Already have an account? <a onclick="switchToLogin()">Log In</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const loginModal = document.getElementById('loginModal');
+    const signupModal = document.getElementById('signupModal');
+
+    function openLoginModal() {
+      signupModal.classList.remove('active');
+      loginModal.classList.add('active');
+    }
+
+    function openSignupModal() {
+      loginModal.classList.remove('active');
+      signupModal.classList.add('active');
+    }
+
+    function closeAuthModals() {
+      loginModal.classList.remove('active');
+      signupModal.classList.remove('active');
+    }
+
+    function switchToSignup() {
+      loginModal.classList.remove('active');
+      signupModal.classList.add('active');
+    }
+
+    function switchToLogin() {
+      signupModal.classList.remove('active');
+      loginModal.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>

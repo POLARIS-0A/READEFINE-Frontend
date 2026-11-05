@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 1 & Exam</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .quiz-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .quiz-question {
+      font-weight: 700;
+      color: var(--deep-blue);
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .quiz-option-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: #F8FBFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .quiz-option-label:hover {
+      background: #EAF2FF;
+      border-color: var(--soft-blue);
+    }
+    .quiz-input-text {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      background: #FAFCFF;
+      transition: border-color 0.2s;
+    }
+    .quiz-input-text:focus {
+      border-color: var(--soft-blue);
+      background: #FFFFFF;
+    }
+
+    /* DISABLED BUTTON STYLE */
+    .btn-disabled {
+      background: #CBD5E1 !important;
+      color: #64748B !important;
+      border: none !important;
+      cursor: not-allowed !important;
+      opacity: 0.7;
+    }
+
+    /* CUSTOM POPUP / MODAL STYLES */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(23, 75, 133, 0.4);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-card {
+      background: var(--white);
+      border-radius: 24px;
+      width: 90%;
+      max-width: 480px;
+      padding: 32px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: popIn 0.25s ease-out;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .modal-title {
+      font-size: 1.3rem;
+      color: var(--deep-blue);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .modal-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Level 1 • Lesson 1</span>
+            <h1 style="font-size: 1.6rem;">Understanding Words and Vocabulary</h1>
+          </div>
+        </div>
+
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">
+          ← Back to Levels
+        </a>
+      </div>
+
+      <!-- LESSON CONTAINER -->
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 32px; display: flex; flex-direction: column; gap: 28px;">
+        
+        <!-- OBJECTIVES -->
+        <div>
+          <h3 style="color: var(--deep-blue); font-size: 1.3rem; margin-bottom: 12px;">🎯 Learning Objectives</h3>
+          <p style="color: var(--text-muted); margin-bottom: 8px;">At the end of this lesson, learners should be able to:</p>
+          <ul style="padding-left: 20px; color: var(--text-muted); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+            <li>Explain what vocabulary means.</li>
+            <li>Identify the importance of vocabulary in communication.</li>
+            <li>Understand unfamiliar words through examples.</li>
+            <li>Use appropriate words in sentences.</li>
+          </ul>
+        </div>
+
+        <hr style="border: none; border-top: 1px solid var(--border-subtle);">
+
+        <!-- INTRODUCTION -->
+        <div>
+          <h3 style="color: var(--deep-blue); font-size: 1.3rem; margin-bottom: 10px;">📖 Introduction</h3>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 10px;">Words are an important part of everyday communication. We use words when speaking, reading, writing, sending messages, and expressing our thoughts.</p>
+          <p style="color: var(--text-muted); line-height: 1.6;">Understanding words helps people communicate clearly and understand information. Learning new words also allows individuals to express their ideas more accurately.</p>
+        </div>
+
+        <!-- LESSON DISCUSSION -->
+        <div>
+          <h3 style="color: var(--deep-blue); font-size: 1.3rem; margin-bottom: 14px;">📝 Lesson Discussion</h3>
+          
+          <div style="margin-bottom: 20px;">
+            <h4 style="color: var(--deep-blue); font-size: 1.1rem; margin-bottom: 6px;">1. What Is Vocabulary?</h4>
+            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 8px;">Vocabulary refers to the collection of words that a person knows, understands, and uses in communication.</p>
+            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 10px;">A person's vocabulary develops through reading, listening, speaking, writing, and learning new information.</p>
+            <div style="background: var(--light-bg); padding: 14px 18px; border-radius: 12px; border-left: 4px solid var(--deep-blue);">
+              <strong>Example:</strong> A student who knows the words "confident," "responsible," and "determined" can use these words to describe people, actions, and situations.
+            </div>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <h4 style="color: var(--deep-blue); font-size: 1.1rem; margin-bottom: 10px;">2. Types of Vocabulary</h4>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+              <div style="background: #F8FBFF; padding: 16px; border-radius: 12px; border: 1px solid var(--border-subtle);">
+                <h5 style="color: var(--deep-blue); margin-bottom: 6px;">Receptive Vocabulary</h5>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 8px;">Words that a person can understand when reading or listening but may not regularly use when speaking or writing.</p>
+                <em style="font-size: 0.85rem; color: var(--text-muted);">Example: Understanding "generous" in a story.</em>
+              </div>
+              <div style="background: #F8FBFF; padding: 16px; border-radius: 12px; border: 1px solid var(--border-subtle);">
+                <h5 style="color: var(--deep-blue); margin-bottom: 6px;">Expressive Vocabulary</h5>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 8px;">Words that a person can actively use when speaking or writing.</p>
+                <em style="font-size: 0.85rem; color: var(--text-muted);">Example: Using "generous" to describe a helpful person.</em>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <h4 style="color: var(--deep-blue); font-size: 1.1rem; margin-bottom: 8px;">3. Importance of Vocabulary</h4>
+            <ul style="padding-left: 20px; color: var(--text-muted); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+              <li>Improves reading comprehension.</li>
+              <li>Helps people express ideas clearly.</li>
+              <li>Supports effective communication.</li>
+              <li>Makes writing more meaningful.</li>
+              <li>Helps learners understand academic and everyday information.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="color: var(--deep-blue); font-size: 1.1rem; margin-bottom: 8px;">4. How to Improve Vocabulary</h4>
+            <ul style="padding-left: 20px; color: var(--text-muted); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+              <li>Read books, articles, and other written materials.</li>
+              <li>Listen carefully to conversations and discussions.</li>
+              <li>Look up unfamiliar words in a dictionary.</li>
+              <li>Write down new words and their meanings.</li>
+              <li>Practice using new words in sentences.</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr style="border: none; border-top: 1px solid var(--border-subtle);">
+
+        <!-- EXAMPLES SECTION -->
+        <div>
+          <h3 style="color: var(--deep-blue); font-size: 1.3rem; margin-bottom: 12px;">💡 Vocabulary Examples</h3>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="background: var(--light-bg); padding: 16px; border-radius: 12px;">
+              <strong>Word: Responsible</strong><br>
+              <span style="color: var(--text-muted); font-size: 0.95rem;">Meaning: Able to be trusted to do what is expected or required.</span><br>
+              <em style="color: var(--text-dark); font-size: 0.9rem;">Sentence: A responsible student submits assignments on time.</em>
+            </div>
+            <div style="background: var(--light-bg); padding: 16px; border-radius: 12px;">
+              <strong>Word: Hesitant</strong><br>
+              <span style="color: var(--text-muted); font-size: 0.95rem;">Meaning: Uncertain or unsure about doing something.</span><br>
+              <em style="color: var(--text-dark); font-size: 0.9rem;">Sentence: She was hesitant to answer because she was not confident.</em>
+            </div>
+          </div>
+        </div>
+
+        <hr style="border: none; border-top: 1px solid var(--border-subtle);">
+
+        <!-- KEY TAKEAWAYS -->
+        <div style="background: #F0FDF4; border: 1px solid #BBF7D0; padding: 20px; border-radius: 16px;">
+          <h3 style="color: #166534; font-size: 1.2rem; margin-bottom: 10px;">📌 Key Takeaways</h3>
+          <ul style="padding-left: 20px; color: #15803D; line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+            <li>Vocabulary is a collection of words a person knows and uses.</li>
+            <li>Receptive vocabulary involves understanding words.</li>
+            <li>Expressive vocabulary involves actively using words.</li>
+            <li>A strong vocabulary improves communication and comprehension.</li>
+          </ul>
+        </div>
+
+        <hr style="border: none; border-top: 2px solid var(--deep-blue); margin: 20px 0;">
+
+        <!-- LESSON EXAM SECTION -->
+        <form id="examForm">
+          <div style="margin-bottom: 24px;">
+            <h2 style="color: var(--deep-blue); font-size: 1.5rem; margin-bottom: 6px;">📝 Lesson 1 Assessment & Exam</h2>
+            <p style="color: var(--text-muted);">Answer all the test items below. Incomplete submissions will not be accepted!</p>
+          </div>
+
+          <!-- PART I: IDENTIFICATION -->
+          <div class="quiz-card">
+            <h4 style="color: var(--deep-blue); margin-bottom: 16px;">Part I. Identification</h4>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div>
+                <p class="quiz-question">1. The collection of words a person knows and uses.</p>
+                <input type="text" class="quiz-input-text id-input" placeholder="Type your answer here...">
+              </div>
+              <div>
+                <p class="quiz-question">2. A word that has the same or nearly the same meaning as another word.</p>
+                <input type="text" class="quiz-input-text id-input" placeholder="Type your answer here...">
+              </div>
+              <div>
+                <p class="quiz-question">3. A word that has the opposite meaning of another word.</p>
+                <input type="text" class="quiz-input-text id-input" placeholder="Type your answer here...">
+              </div>
+              <div>
+                <p class="quiz-question">4. The meaning of a word.</p>
+                <input type="text" class="quiz-input-text id-input" placeholder="Type your answer here...">
+              </div>
+              <div>
+                <p class="quiz-question">5. The use of words when speaking or writing.</p>
+                <input type="text" class="quiz-input-text id-input" placeholder="Type your answer here...">
+              </div>
+            </div>
+          </div>
+
+          <!-- PART II: MULTIPLE CHOICE -->
+          <div class="quiz-card">
+            <h4 style="color: var(--deep-blue); margin-bottom: 16px;">Part II. Multiple Choice</h4>
+            
+            <div style="margin-bottom: 20px;">
+              <p class="quiz-question">1. What does vocabulary refer to?</p>
+              <div class="quiz-options">
+                <label class="quiz-option-label"><input type="radio" name="mc1" value="A"> A. A collection of words a person knows</label>
+                <label class="quiz-option-label"><input type="radio" name="mc1" value="B"> B. A collection of numbers</label>
+                <label class="quiz-option-label"><input type="radio" name="mc1" value="C"> C. A list of punctuation marks</label>
+                <label class="quiz-option-label"><input type="radio" name="mc1" value="D"> D. A set of mathematical symbols</label>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <p class="quiz-question">2. Which word means the same as happy?</p>
+              <div class="quiz-options">
+                <label class="quiz-option-label"><input type="radio" name="mc2" value="A"> A. Angry</label>
+                <label class="quiz-option-label"><input type="radio" name="mc2" value="B"> B. Joyful</label>
+                <label class="quiz-option-label"><input type="radio" name="mc2" value="C"> C. Tired</label>
+                <label class="quiz-option-label"><input type="radio" name="mc2" value="D"> D. Afraid</label>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <p class="quiz-question">3. Which word is the opposite of difficult?</p>
+              <div class="quiz-options">
+                <label class="quiz-option-label"><input type="radio" name="mc3" value="A"> A. Hard</label>
+                <label class="quiz-option-label"><input type="radio" name="mc3" value="B"> B. Complicated</label>
+                <label class="quiz-option-label"><input type="radio" name="mc3" value="C"> C. Easy</label>
+                <label class="quiz-option-label"><input type="radio" name="mc3" value="D"> D. Challenging</label>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <p class="quiz-question">4. Why is vocabulary important?</p>
+              <div class="quiz-options">
+                <label class="quiz-option-label"><input type="radio" name="mc4" value="A"> A. It helps people understand and communicate ideas.</label>
+                <label class="quiz-option-label"><input type="radio" name="mc4" value="B"> B. It replaces the need to read.</label>
+                <label class="quiz-option-label"><input type="radio" name="mc4" value="C"> C. It removes the need for grammar.</label>
+                <label class="quiz-option-label"><input type="radio" name="mc4" value="D"> D. It makes every sentence longer.</label>
+              </div>
+            </div>
+
+            <div>
+              <p class="quiz-question">5. Which activity can help improve vocabulary?</p>
+              <div class="quiz-options">
+                <label class="quiz-option-label"><input type="radio" name="mc5" value="A"> A. Avoiding unfamiliar words</label>
+                <label class="quiz-option-label"><input type="radio" name="mc5" value="B"> B. Reading different kinds of texts</label>
+                <label class="quiz-option-label"><input type="radio" name="mc5" value="C"> C. Ignoring word meanings</label>
+                <label class="quiz-option-label"><input type="radio" name="mc5" value="D"> D. Using only familiar words</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- PART III: ESSAY -->
+          <div class="quiz-card">
+            <h4 style="color: var(--deep-blue); margin-bottom: 16px;">Part III. Essay</h4>
+            <p class="quiz-question">Explain why having a good vocabulary is important in everyday communication. Give at least two examples of how it can help you as a student.</p>
+            <textarea id="essayInput" class="quiz-input-text" rows="5" placeholder="Type your essay response here..."></textarea>
+          </div>
+
+          <!-- SUBMIT EXAM BUTTON -->
+          <div style="text-align: center; margin-top: 30px;">
+            <button type="button" onclick="validateAndSubmit()" class="btn-primary" style="padding: 14px 40px; font-size: 1.1rem; cursor: pointer;">
+              Submit Lesson Exam 🚀
+            </button>
+          </div>
+        </form>
+
+        <!-- NAVIGATION FOOTER -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+          <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">
+            ← Return to Levels Hub
+          </a>
+          <!-- Unlock Next Button (Naka-disabled hangga't 'di kumpleto ang exam) -->
+          <button id="unlockNextBtn" onclick="handleUnlockClick()" class="btn-primary btn-disabled">
+            Complete Lesson & Unlock Next →
+          </button>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- CUSTOM FEEDBACK MODAL (ENGLISH) -->
+  <div class="modal-overlay" id="statusModal">
+    <div class="modal-card">
+      <span class="modal-icon" id="modalIcon">⚠️</span>
+      <h3 class="modal-title" id="modalTitle">Incomplete Submission</h3>
+      <p class="modal-desc" id="modalDesc">Please complete all questions before submitting your exam.</p>
+      <button class="btn-primary" id="modalBtn" onclick="closeStatusModal()" style="width: 100%;">Return to Exam</button>
+    </div>
+  </div>
+
+  <script>
+    const menuToggleBtn = document.getElementById('menuToggleBtn');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+
+    const statusModal = document.getElementById('statusModal');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalBtn = document.getElementById('modalBtn');
+    const unlockNextBtn = document.getElementById('unlockNextBtn');
+
+    let isExamPassed = false;
+
+    function validateAndSubmit() {
+      // 1. Check Identification Answers
+      const idInputs = document.querySelectorAll('.id-input');
+      let allIdAnswered = true;
+      idInputs.forEach(input => {
+        if (!input.value.trim()) {
+          allIdAnswered = false;
+        }
+      });
+
+      // 2. Check Multiple Choice Answers (mc1 to mc5)
+      let allMcAnswered = true;
+      for (let i = 1; i <= 5; i++) {
+        const checkedOption = document.querySelector(`input[name="mc${i}"]:checked`);
+        if (!checkedOption) {
+          allMcAnswered = false;
+          break;
+        }
+      }
+
+      // 3. Check Essay Input
+      const essayInput = document.getElementById('essayInput').value.trim();
+      const isEssayAnswered = essayInput.length > 0;
+
+      // Validation Check Logic (English Alerts)
+      if (!allIdAnswered || !allMcAnswered || !isEssayAnswered) {
+        isExamPassed = false;
+        modalIcon.innerText = "⚠️";
+        modalTitle.innerText = "Incomplete Exam Submission";
+        modalDesc.innerText = "You still have unanswered questions. Please fill out all parts (Identification, Multiple Choice, and Essay) before submitting!";
+        modalBtn.innerText = "Return to Exam";
+        modalBtn.onclick = closeStatusModal;
+        statusModal.classList.add('active');
+      } else {
+        isExamPassed = true;
+        modalIcon.innerText = "🎉";
+        modalTitle.innerText = "Exam Submitted Successfully!";
+        modalDesc.innerText = "Great job completing Lesson 1! Your answers have been recorded. You can now proceed to the next lesson.";
+        modalBtn.innerText = "Proceed to Next Lesson";
+        
+        // Activate Bottom Next Button
+        unlockNextBtn.classList.remove('btn-disabled');
+        
+        modalBtn.onclick = () => {
+          window.location.href = "levels.html";
+        };
+        statusModal.classList.add('active');
+      }
+    }
+
+    function handleUnlockClick() {
+      if (isExamPassed) {
+        window.location.href = "levels.html";
+      } else {
+        modalIcon.innerText = "🔒";
+        modalTitle.innerText = "Lesson Locked";
+        modalDesc.innerText = "Please complete and submit the Lesson 1 Exam first to unlock the next lesson!";
+        modalBtn.innerText = "Got it";
+        modalBtn.onclick = closeStatusModal;
+        statusModal.classList.add('active');
+      }
+    }
+
+    function closeStatusModal() {
+      statusModal.classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

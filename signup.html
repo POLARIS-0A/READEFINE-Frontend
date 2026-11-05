@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #EAF2FF 0%, #C7DCFA 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 20px 0;
+    }
+    .auth-container {
+      width: 100%;
+      max-width: 440px;
+      padding: 20px;
+    }
+    .auth-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 28px;
+      padding: 40px 32px;
+      box-shadow: 0 20px 40px rgba(23, 75, 133, 0.08);
+      text-align: center;
+    }
+    .auth-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--deep-blue);
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    .auth-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--deep-blue);
+      margin-bottom: 8px;
+    }
+    .auth-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+    }
+    .form-group {
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--deep-blue);
+      margin-bottom: 6px;
+    }
+    .form-input {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(250, 252, 255, 0.9);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+    .form-input:focus {
+      border-color: var(--soft-blue);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(79, 131, 204, 0.1);
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--deep-blue);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 20px rgba(23, 75, 133, 0.2);
+      margin-top: 10px;
+    }
+    .btn-submit:hover {
+      background: #113866;
+      transform: translateY(-2px);
+    }
+    .auth-footer-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 24px;
+    }
+    .auth-footer-text a {
+      color: var(--deep-blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .auth-footer-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-logo">📖 READEFINE</div>
+      <h1 class="auth-title">Create Account</h1>
+      <p class="auth-subtitle">Join READEFINE and start exploring your literacy path</p>
+
+      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="Juan Dela Cruz" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-input" placeholder="At least 6 characters" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Sign Up →</button>
+      </form>
+
+      <p class="auth-footer-text">
+        Already have an account? <a href="login.html">Log In</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

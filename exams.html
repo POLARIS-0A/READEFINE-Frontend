@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Exams Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .exam-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex: 1;
+      min-height: 0;
+    }
+    .exam-card {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .exam-card.unlocked {
+      border: 2px solid var(--soft-blue);
+    }
+    .exam-card.unlocked:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(23,75,133,0.06);
+    }
+    .exam-card.locked {
+      background: #F8FAFC;
+      opacity: 0.85;
+    }
+    .badge-unlocked {
+      background: #EAF2FF;
+      color: var(--deep-blue);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .badge-locked {
+      background: #E2E8F0;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* MODAL FOR LOCKED EXAMS */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(23, 75, 133, 0.4);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-card {
+      background: var(--white);
+      border-radius: 24px;
+      width: 90%;
+      max-width: 480px;
+      padding: 32px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: popIn 0.25s ease-out;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html">📚 Lessons</a></li>
+          <li><a href="exams.html" class="active">📝 Exams</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <h1>Exams & Assessments Hub</h1>
+            <p>Take level exams to test your comprehensive knowledge and unlock higher stages! 🚀</p>
+          </div>
+        </div>
+
+        <a href="dashboard.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">
+          ← Back to Dashboard
+        </a>
+      </div>
+
+      <!-- EXAMS GRID -->
+      <div class="exam-grid">
+        
+        <!-- LEVEL 1 EXAM (UNLOCKED) -->
+        <div class="exam-card unlocked">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge-unlocked">Level 1 Final Exam</span>
+              <span style="font-size: 1.2rem;">🔓 Unlocked</span>
+            </div>
+            <h3 style="font-size: 1.4rem; color: var(--deep-blue); margin-bottom: 8px;">Foundations of Literacy Assessment</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">Comprehensive test covering vocabulary types, communication importance, and basic language skills from Level 1.</p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">15 Items (Mixed Test)</span>
+            <a href="exam-lesson1.html" class="btn-primary">Start Level 1 Exam →</a>
+          </div>
+        </div>
+
+        <!-- LEVEL 2 EXAM (LOCKED) -->
+        <div class="exam-card locked" onclick="showLockedModal('Level 2', 'Level 1 Exam')">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge-locked">Level 2 Exam</span>
+              <span style="font-size: 1.2rem;">🔒 Locked</span>
+            </div>
+            <h3 style="font-size: 1.4rem; color: var(--text-muted); margin-bottom: 8px;">Developing Reading Assessment</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">Evaluates comprehension strategies, main ideas, and advanced paragraph organization.</p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 1 Completion</span>
+            <button disabled style="background: #CBD5E1; color: #64748B; border: none; padding: 10px 20px; border-radius: 12px; font-weight: 700; cursor: not-allowed;">Locked</button>
+          </div>
+        </div>
+
+        <!-- LEVEL 3 EXAM (LOCKED) -->
+        <div class="exam-card locked" onclick="showLockedModal('Level 3', 'Level 2 Exam')">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge-locked">Level 3 Exam</span>
+              <span style="font-size: 1.2rem;">🔒 Locked</span>
+            </div>
+            <h3 style="font-size: 1.4rem; color: var(--text-muted); margin-bottom: 8px;">Applied Literacy Assessment</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">Tests critical thinking, fact/opinion analysis, and evaluating information sources.</p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 2 Completion</span>
+            <button disabled style="background: #CBD5E1; color: #64748B; border: none; padding: 10px 20px; border-radius: 12px; font-weight: 700; cursor: not-allowed;">Locked</button>
+          </div>
+        </div>
+
+        <!-- LEVEL 4 EXAM (LOCKED) -->
+        <div class="exam-card locked" onclick="showLockedModal('Level 4', 'Level 3 Exam')">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge-locked">Level 4 Exam</span>
+              <span style="font-size: 1.2rem;">🔒 Locked</span>
+            </div>
+            <h3 style="font-size: 1.4rem; color: var(--text-muted); margin-bottom: 8px;">Advanced Communication Assessment</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">Comprehensive final mastery test on advanced vocabulary, essay writing, and complex texts.</p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 3 Completion</span>
+            <button disabled style="background: #CBD5E1; color: #64748B; border: none; padding: 10px 20px; border-radius: 12px; font-weight: 700; cursor: not-allowed;">Locked</button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- LOCKED EXAM WARNING MODAL -->
+  <div class="modal-overlay" id="lockedModal">
+    <div class="modal-card">
+      <span style="font-size: 3rem; margin-bottom: 12px; display: block;">🔒</span>
+      <h3 style="color: var(--deep-blue); font-size: 1.3rem; font-weight: 800; margin-bottom: 10px;" id="lockedModalTitle">Exam is Locked</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 24px;" id="lockedModalDesc">You must complete the previous level exam first before taking this assessment.</p>
+      <button class="btn-primary" onclick="closeLockedModal()" style="width: 100%;">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    const menuToggleBtn = document.getElementById('menuToggleBtn');
+    const sidebar = document.getElementById('sidebar');
+    const lockedModal = document.getElementById('lockedModal');
+    const lockedModalTitle = document.getElementById('lockedModalTitle');
+    const lockedModalDesc = document.getElementById('lockedModalDesc');
+
+    menuToggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+
+    function showLockedModal(levelName, requiredExam) {
+      lockedModalTitle.innerText = `${levelName} Assessment Locked`;
+      lockedModalDesc.innerText = `You must pass the ${requiredExam} and complete all corresponding lessons first to unlock this assessment!`;
+      lockedModal.classList.add('active');
+    }
+
+    function closeLockedModal() {
+      lockedModal.classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>
+
