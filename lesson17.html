@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 17: Paragraph Structure and Organization</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container { width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; gap: 28px; }
+    .pill-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06); width: 100%; box-sizing: border-box; }
+    .hero-oblong-badge { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%); color: #FFFFFF; padding: 12px 28px; border-radius: 30px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.15rem; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15); }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--deep-blue, #174B85); font-size: 1.45rem; font-weight: 800; margin-top: 28px; margin-bottom: 14px; }
+    .text-body { color: #1E293B; font-size: 1.1rem; line-height: 1.85; margin-bottom: 16px; }
+    .aesthetic-box { background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%); border-left: 6px solid var(--soft-blue, #8DB8EE); border-radius: 20px; padding: 22px 28px; margin: 20px 0; box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03); }
+    .grid-two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 20px 0; }
+    .mini-pill-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 24px; padding: 24px 28px; box-shadow: 0 6px 15px rgba(0,0,0,0.02); }
+    .takeaway-pill-card { background: linear-gradient(135deg, #174B85 0%, #113866 100%); color: #FFFFFF; border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15); width: 100%; box-sizing: border-box; }
+    .takeaway-pill-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 16px; color: #F4D38A; }
+    .takeaway-pill-card ul { padding-left: 20px; line-height: 1.9; font-size: 1.05rem; }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 2 • Lesson 17</span>
+            <h1 style="font-size: 1.9rem;">Paragraph Structure and Organization</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Define a paragraph.</li>
+              <li>2. Identify the three main parts of a paragraph.</li>
+              <li>3. Explain the purpose of a topic sentence, supporting sentences, and concluding sentence.</li>
+              <li>4. Organize ideas into a clear and meaningful paragraph.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              Writing is made up of sentences that communicate ideas. These sentences are grouped into paragraphs to organize information and make writing easier to understand.<br>
+              A paragraph is a group of related sentences that develop one main idea.<br>
+              Understanding paragraph structure helps learners arrange their thoughts, connect sentences, and communicate information clearly.
+            </p>
+
+            <h3 class="section-title">1. What Is a Paragraph?</h3>
+            <p class="text-body">A paragraph is a group of related sentences that discuss one main idea or topic. It usually begins with a topic sentence, continues with supporting sentences, and may end with a concluding sentence.</p>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> Reading is a useful habit for students. It helps improve vocabulary and reading comprehension. It also provides new information and develops imagination. Therefore, students should make time for reading every day.<br><br>
+              <small style="color: #64748B;">The sentences work together to explain one main idea: reading is a useful habit for students.</small>
+            </div>
+
+            <h3 class="section-title">2. Topic Sentence</h3>
+            <p class="text-body">The topic sentence introduces the main idea of a paragraph. It tells readers what the paragraph will discuss. It is commonly found at the beginning of a paragraph.</p>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> "Regular exercise is important for maintaining good health."
+            </div>
+
+            <h3 class="section-title">3. Supporting Sentences</h3>
+            <p class="text-body">Supporting sentences provide explanations, examples, facts, and other information that develop the topic sentence.</p>
+            <div class="aesthetic-box">
+              <strong>Topic Sentence:</strong> Regular exercise is important for maintaining good health.<br>
+              <strong>Supporting Sentences:</strong><br>
+              • Exercise strengthens the muscles.<br>
+              • It helps improve endurance.<br>
+              • It supports overall physical wellness.
+            </div>
+
+            <h3 class="section-title">4. Concluding Sentence</h3>
+            <p class="text-body">A concluding sentence ends a paragraph by restating the main idea or providing a final thought. It gives the paragraph a sense of completion.</p>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> "Because of these benefits, regular exercise should be part of a healthy lifestyle."
+            </div>
+
+            <h3 class="section-title">5. Unity in a Paragraph</h3>
+            <p class="text-body">Unity means that all sentences in a paragraph are related to one main idea. Every sentence must contribute to the topic.</p>
+            <div class="aesthetic-box">
+              <strong>Topic Sentence:</strong> Online learning provides flexibility for students.<br>
+              ✔ Students can access lessons from different locations. <em>(Related)</em><br>
+              ✔ Recorded lessons can be reviewed when needed. <em>(Related)</em><br>
+              ✖ My favorite food is fried chicken. <em>(Unrelated detail!)</em>
+            </div>
+
+            <h3 class="section-title">6. Coherence in a Paragraph</h3>
+            <p class="text-body">Coherence means that ideas and sentences are connected in a logical and understandable way. Writers use transition words to connect sentences smoothly.</p>
+            <p class="text-body"><strong>Transition Words:</strong> First, Next, Also, Furthermore, However, Therefore, Finally.</p>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> First, students should identify their tasks. Next, they should organize them according to importance. Finally, they should complete each task based on their schedule.
+            </div>
+
+            <h3 class="section-title">7. How to Organize a Paragraph</h3>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li>Choose one clear topic.</li>
+              <li>Identify the main idea.</li>
+              <li>Write a topic sentence.</li>
+              <li>Add supporting sentences.</li>
+              <li>Arrange ideas in a logical order.</li>
+              <li>Use transition words when needed.</li>
+              <li>End with a concluding sentence when appropriate.</li>
+            </ul>
+          </div>
+
+          <!-- EXAMPLES GRID -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Paragraph Parts</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"Time management is important for students..."</p>
+                <small style="color: #64748B;">Contains: Topic Sentence, Supporting Sentences, and Concluding Sentence.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 2: Identifying Unity</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">Healthy eating topic ➡️ Fruits provide vitamins, veggies have nutrients, balanced diet supports functions.</p>
+                <small style="color: #64748B;">All sentences support healthy eating.</small>
+              </div>
+              <div class="mini-pill-card" style="grid-column: 1 / -1;">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 3: Identifying Coherence</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"First, prepare your notebook. Next, write the important information. Finally, review your notes."</p>
+                <small style="color: #64748B;">Transitions connect the steps smoothly.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>A paragraph is a group of related sentences about one main idea.</li>
+              <li>The topic sentence introduces the main idea.</li>
+              <li>Supporting sentences explain and develop the topic sentence.</li>
+              <li>The concluding sentence gives the paragraph a final thought.</li>
+              <li>Unity means keeping all sentences focused on the main topic.</li>
+              <li>Coherence means ideas are connected in a logical and understandable way.</li>
+              <li>Transition words help connect sentences and ideas smoothly.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson17.html" class="btn-primary">Proceed to Lesson 17 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 2: Using Context Clues</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* PINALAKI ANG MAX-WIDTH PARA PUNO ANG BUONG LAKAD NG SCREEN */
+    .lesson-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .pill-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 36px;
+      padding: 40px 48px;
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .hero-oblong-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%);
+      color: #FFFFFF;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15);
+    }
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--deep-blue, #174B85);
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .text-body {
+      color: #1E293B;
+      font-size: 1.1rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .aesthetic-box {
+      background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%);
+      border-left: 6px solid var(--soft-blue, #8DB8EE);
+      border-radius: 20px;
+      padding: 22px 28px;
+      margin: 20px 0;
+      box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03);
+    }
+    .type-pill-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .type-pill-card h5 {
+      color: var(--deep-blue, #174B85);
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .takeaway-pill-card {
+      background: linear-gradient(135deg, #174B85 0%, #113866 100%);
+      color: #FFFFFF;
+      border-radius: 36px;
+      padding: 40px 48px;
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .takeaway-pill-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #F4D38A;
+    }
+    .takeaway-pill-card ul {
+      padding-left: 20px;
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 1 • Lesson 2</span>
+            <h1 style="font-size: 1.9rem;">Using Context Clues</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div id="lockedBanner" hidden style="background: #FEF2F2; border: 1px solid #FCA5A5; color: #991B1B; padding: 20px; border-radius: 16px; text-align: center; margin-bottom: 24px;">
+        <h3 style="font-weight: 800; margin-bottom: 6px;">🔒 Lesson Locked</h3>
+        <p>You must complete the Lesson 1 exam before proceeding to Lesson 2.</p>
+        <a href="levels.html" class="btn-primary" style="display: inline-block; margin-top: 12px; background: #991B1B; color: #FFF;">Go back to Lessons</a>
+      </div>
+
+      <div class="section-box" id="lessonContent" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Define context clues.</li>
+              <li>2. Identify different types of context clues.</li>
+              <li>3. Determine the possible meaning of unfamiliar words.</li>
+              <li>4. Use surrounding information to understand a sentence.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              Readers sometimes encounter unfamiliar words while reading. However, they do not always need a dictionary to understand them.
+            </p>
+            <p class="text-body">
+              The words and sentences surrounding an unfamiliar word may provide clues to its meaning. These clues are called <strong>context clues</strong>.
+            </p>
+
+            <h3 class="section-title">🔍 1. What Are Context Clues?</h3>
+            <p class="text-body">
+              Context clues are hints or pieces of information found in the surrounding words, phrases, or sentences that help readers understand an unfamiliar word.
+            </p>
+            <div class="aesthetic-box">
+              <strong style="color: var(--deep-blue);">✨ Example:</strong><br>
+              <span class="text-body" style="margin: 0; display: block; margin-top: 6px;">"After walking for several hours under the hot sun, Mark felt <em>exhausted</em> and needed to rest."</span>
+              <small style="color: #64748B; font-size: 0.95rem; display: block; margin-top: 4px;">The phrase "needed to rest" suggests that exhausted means very tired.</small>
+            </div>
+
+            <h3 class="section-title">📚 2. Types of Context Clues</h3>
+            
+            <div class="type-pill-card">
+              <h5>A. Definition or Explanation Clues</h5>
+              <p class="text-body" style="font-size: 1rem; margin-bottom: 6px;">The meaning of an unfamiliar word is directly explained in the sentence.</p>
+              <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem;">Example: A habitat, the natural home of an animal, provides food and shelter.</small>
+            </div>
+
+            <div class="type-pill-card">
+              <h5>B. Synonym Clues</h5>
+              <p class="text-body" style="font-size: 1rem; margin-bottom: 6px;">A familiar word with a similar meaning helps explain the unfamiliar word.</p>
+              <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem;">Example: The room was silent and quiet during the examination.</small>
+            </div>
+
+            <div class="type-pill-card">
+              <h5>C. Antonym or Contrast Clues</h5>
+              <p class="text-body" style="font-size: 1rem; margin-bottom: 6px;">An opposite word or contrasting idea provides a hint.</p>
+              <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem;">Example: Unlike his outgoing sister, Daniel is shy and avoids large gatherings.</small>
+            </div>
+
+            <div class="type-pill-card">
+              <h5>D. Example Clues</h5>
+              <p class="text-body" style="font-size: 1rem; margin-bottom: 6px;">Examples in a sentence help explain an unfamiliar word.</p>
+              <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem;">Example: Citrus fruits, such as oranges, lemons, and calamansi, contain vitamin C.</small>
+            </div>
+
+            <div class="type-pill-card">
+              <h5>E. Inference Clues</h5>
+              <p class="text-body" style="font-size: 1rem; margin-bottom: 6px;">Readers use details in the sentence and their understanding of the situation to determine meaning.</p>
+              <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem;">Example: Mia grabbed her umbrella and wore her raincoat before leaving the house.</small>
+            </div>
+
+            <h3 class="section-title">🪜 3. Steps in Using Context Clues</h3>
+            <ol style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem;">
+              <li>Read the entire sentence.</li>
+              <li>Identify the unfamiliar word.</li>
+              <li>Examine the words around it.</li>
+              <li>Look for definitions, examples, similarities, or contrasts.</li>
+              <li>Determine the possible meaning.</li>
+              <li>Read the sentence again to check whether the meaning makes sense.</li>
+            </ol>
+
+            <h3 class="section-title">💡 Additional Sentence Examples</h3>
+            <div class="aesthetic-box">
+              <span class="text-body" style="margin: 0; display: block;">"The athlete was <strong>determined</strong> to finish the race despite being tired."</span>
+              <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem; display: block; margin-top: 4px;">Determined means strongly decided or committed to achieving something.</small>
+            </div>
+            <div class="aesthetic-box">
+              <span class="text-body" style="margin: 0; display: block;">"The instructions were <strong>complicated</strong>, so the students asked for an explanation."</span>
+              <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem; display: block; margin-top: 4px;">Complicated means difficult to understand or deal with.</small>
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>Context clues help readers understand unfamiliar words.</li>
+              <li>Clues may appear in the same sentence or nearby sentences.</li>
+              <li>Common types include definition, synonym, antonym, example, and inference clues.</li>
+              <li>Always consider the entire sentence before deciding on a word's meaning.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson2.html" class="btn-primary">Proceed to Lesson 2 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+
+    if (localStorage.getItem('readefine_lesson1_completed') !== 'true') {
+      document.getElementById('lockedBanner').hidden = false;
+      document.getElementById('lessonContent').hidden = true;
+    }
+  </script>
+</body>
+</html>

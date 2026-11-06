@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 6: Basic Sentence Structure</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .pill-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 36px;
+      padding: 40px 48px;
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .hero-oblong-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%);
+      color: #FFFFFF;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15);
+    }
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--deep-blue, #174B85);
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .text-body {
+      color: #1E293B;
+      font-size: 1.1rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .aesthetic-box {
+      background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%);
+      border-left: 6px solid var(--soft-blue, #8DB8EE);
+      border-radius: 20px;
+      padding: 22px 28px;
+      margin: 20px 0;
+      box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03);
+    }
+    .grid-two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .mini-pill-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      padding: 24px 28px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.02);
+    }
+    .takeaway-pill-card {
+      background: linear-gradient(135deg, #174B85 0%, #113866 100%);
+      color: #FFFFFF;
+      border-radius: 36px;
+      padding: 40px 48px;
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .takeaway-pill-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #F4D38A;
+    }
+    .takeaway-pill-card ul {
+      padding-left: 20px;
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 1 • Lesson 6</span>
+            <h1 style="font-size: 1.9rem;">Basic Sentence Structure</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Define a sentence.</li>
+              <li>2. Identify the basic parts of a sentence.</li>
+              <li>3. Distinguish complete sentences from fragments.</li>
+              <li>4. Construct clear and meaningful sentences.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              A sentence is a group of words that expresses a complete thought. Sentences allow people to share information, ask questions, give instructions, and express feelings.<br>
+              A well-constructed sentence helps readers understand the intended message.
+            </p>
+
+            <h3 class="section-title">📌 1. What Is a Sentence?</h3>
+            <p class="text-body">
+              A sentence is a group of words that expresses a complete thought and follows grammatical rules.
+            </p>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> The students completed their project.<br>
+              <small style="color: #64748B;">This is a complete sentence because it communicates a complete idea.</small>
+            </div>
+
+            <h3 class="section-title">🧩 2. Basic Sentence Elements</h3>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;">Subject</h4>
+                <p class="text-body" style="font-size: 1rem; margin-bottom: 8px;">The subject tells who or what the sentence is about.</p>
+                <small style="color: var(--deep-blue); font-weight: 700;">Example: <em>The teacher</em> explained the lesson.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;">Predicate</h4>
+                <p class="text-body" style="font-size: 1rem; margin-bottom: 8px;">The predicate tells something about the subject. It usually contains a verb.</p>
+                <small style="color: var(--deep-blue); font-weight: 700;">Example: The teacher <em>explained the lesson</em>.</small>
+              </div>
+            </div>
+
+            <h3 class="section-title">📐 3. Basic Sentence Patterns</h3>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; margin-bottom: 16px;">
+              <li><strong>Subject + Verb (S–V):</strong> Birds fly.</li>
+              <li><strong>Subject + Verb + Object (S–V–O):</strong> Maria reads books.</li>
+              <li><strong>Subject + Linking Verb + Complement:</strong> John is intelligent. (The complement describes or identifies the subject.)</li>
+            </ul>
+
+            <h3 class="section-title">⚠️ 4. Complete Sentences and Sentence Fragments</h3>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Complete Sentence</h4>
+                <p class="text-body" style="font-size: 0.95rem;">Contains a complete thought.<br><em>Ex:</em> The students attended the seminar.</p>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Sentence Fragment</h4>
+                <p class="text-body" style="font-size: 0.95rem;">An incomplete group of words.<br><em>Ex:</em> Because the students were late. (Leaves reader wondering what happened).</p>
+              </div>
+            </div>
+
+            <h3 class="section-title">📋 5. Basic Rules of Sentence Construction</h3>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem;">
+              <li>Begin a sentence with a capital letter.</li>
+              <li>Use correct word order.</li>
+              <li>Include a subject and a predicate in a basic complete sentence.</li>
+              <li>Use appropriate punctuation.</li>
+              <li>Make sure the sentence expresses a complete thought.</li>
+            </ul>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>A sentence expresses a complete thought.</li>
+              <li>The subject tells who or what the sentence is about, while the predicate tells something about it.</li>
+              <li>Sentence fragments are incomplete thoughts that need revision.</li>
+              <li>Correct sentence construction improves clarity and communication.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson6.html" class="btn-primary">Proceed to Lesson 6 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

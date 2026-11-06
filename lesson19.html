@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 19: Sentence Combining and Paragraph Development</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container { width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; gap: 28px; }
+    .pill-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06); width: 100%; box-sizing: border-box; }
+    .hero-oblong-badge { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%); color: #FFFFFF; padding: 12px 28px; border-radius: 30px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.15rem; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15); }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--deep-blue, #174B85); font-size: 1.45rem; font-weight: 800; margin-top: 28px; margin-bottom: 14px; }
+    .text-body { color: #1E293B; font-size: 1.1rem; line-height: 1.85; margin-bottom: 16px; }
+    .aesthetic-box { background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%); border-left: 6px solid var(--soft-blue, #8DB8EE); border-radius: 20px; padding: 22px 28px; margin: 20px 0; box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03); }
+    .grid-two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 20px 0; }
+    .mini-pill-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 24px; padding: 24px 28px; box-shadow: 0 6px 15px rgba(0,0,0,0.02); }
+    .takeaway-pill-card { background: linear-gradient(135deg, #174B85 0%, #113866 100%); color: #FFFFFF; border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15); width: 100%; box-sizing: border-box; }
+    .takeaway-pill-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 16px; color: #F4D38A; }
+    .takeaway-pill-card ul { padding-left: 20px; line-height: 1.9; font-size: 1.05rem; }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 2 • Lesson 19</span>
+            <h1 style="font-size: 1.9rem;">Sentence Combining and Paragraph Development</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Explain what sentence combining means.</li>
+              <li>2. Identify different ways of combining sentences.</li>
+              <li>3. Use conjunctions and appropriate punctuation when combining ideas.</li>
+              <li>4. Develop a paragraph by connecting related sentences.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              Writing becomes more organized when sentences are connected properly. Sometimes, two short sentences can be combined to create a smoother and more meaningful sentence.<br>
+              Sentence combining helps writers avoid repetitive wording and improve the flow of their ideas.<br>
+              Paragraph development also involves expanding a main idea by adding relevant explanations, examples, and supporting details.
+            </p>
+
+            <h3 class="section-title">1. What Is Sentence Combining?</h3>
+            <p class="text-body">Sentence combining is the process of joining two or more related sentences to create a clear and meaningful sentence. It helps writers express connected ideas without repeating unnecessary words.</p>
+            <div class="aesthetic-box">
+              <strong>Separate:</strong> Ana likes reading. Ana visits the library every week.<br>
+              ✔ <strong>Combined:</strong> "Ana likes reading, so she visits the library every week."
+            </div>
+
+            <h3 class="section-title">2. Combining Sentences Using Coordinating Conjunctions</h3>
+            <p class="text-body">Coordinating conjunctions connect words, phrases, or independent clauses of equal grammatical importance. Remember them through <strong>FANBOYS</strong>:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li><strong>F</strong>or – introduces a reason.</li>
+              <li><strong>A</strong>nd – adds information.</li>
+              <li><strong>N</strong>or – connects negative ideas.</li>
+              <li><strong>B</strong>ut – shows contrast.</li>
+              <li><strong>O</strong>r – presents a choice.</li>
+              <li><strong>Y</strong>et – shows contrast or an unexpected result.</li>
+              <li><strong>S</strong>o – shows a result.</li>
+            </ul>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> "Mark was tired, but he finished his assignment."
+            </div>
+
+            <h3 class="section-title">3. Combining Sentences Using Subordinating Conjunctions</h3>
+            <p class="text-body">Subordinating conjunctions connect a dependent clause to an independent clause, showing relationships like time, reason, condition, and contrast (e.g., <em>because, although, when, while, since, if, before, after</em>).</p>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> "The students stayed inside because it was raining."
+            </div>
+
+            <h3 class="section-title">4. Combining Sentences Using Relative Pronouns</h3>
+            <p class="text-body">Relative pronouns (e.g., <em>who, whom, whose, which, that</em>) introduce clauses that provide additional information about a noun.</p>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> "The girl who won the competition is my classmate."
+            </div>
+
+            <h3 class="section-title">5. Avoiding Repetition</h3>
+            <p class="text-body">Sentence combining helps eliminate unnecessary repetition of subjects or ideas.</p>
+            <div class="aesthetic-box">
+              ✖ <strong>Repetitive:</strong> Carlo is a responsible student. Carlo completes his assignments. Carlo studies every night.<br>
+              ✔ <strong>Combined:</strong> "Carlo is a responsible student who completes his assignments and studies every night."
+            </div>
+
+            <h3 class="section-title">6. What Is Paragraph Development & Ways to Develop It</h3>
+            <p class="text-body">Paragraph development expands a main idea using details, examples, facts, or explanations.</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li><strong>Giving Examples:</strong> Specific items or scenarios (e.g., apples, bananas, oranges).</li>
+              <li><strong>Providing Facts:</strong> Information that can be checked or proven.</li>
+              <li><strong>Giving Explanations:</strong> Explains how or why something happens.</li>
+              <li><strong>Describing Details:</strong> Provides characteristics of the topic.</li>
+            </ul>
+
+            <h3 class="section-title">7. How to Develop a Clear Paragraph</h3>
+            <p class="text-body">Choose one main idea ➡️ Write a clear topic sentence ➡️ Add related supporting details ➡️ Combine related sentences ➡️ Use transition words ➡️ Arrange logically ➡️ End with a concluding sentence.</p>
+          </div>
+
+          <!-- EXAMPLES GRID -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Using "And"</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"The students cleaned the room and arranged the chairs."</p>
+                <small style="color: #64748B;">Combines two actions performed by the same subject.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 2: Using "Although"</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"Although the examination was difficult, Mia completed it."</p>
+                <small style="color: #64748B;">Shows contrast using a subordinating conjunction.</small>
+              </div>
+              <div class="mini-pill-card" style="grid-column: 1 / -1;">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 3: Developing a Paragraph</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"Time management helps students become organized. It allows them to plan their schedules and complete tasks on time. It also helps them identify their most important responsibilities. Because of these benefits, students should develop good time management habits."</p>
+                <small style="color: #64748B;">Topic sentence expanded with clear supporting details and concluding thought.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>Coordinating conjunctions connect ideas of equal grammatical importance.</li>
+              <li>FANBOYS stands for For, And, Nor, But, Or, Yet, and So.</li>
+              <li>Subordinating conjunctions connect dependent clauses to independent clauses.</li>
+              <li>Relative pronouns introduce clauses that provide information about nouns.</li>
+              <li>Examples, facts, explanations, and descriptions can develop a paragraph effectively.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson19.html" class="btn-primary">Proceed to Lesson 19 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 22: Identifying Bias and Point of View</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container { width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; gap: 28px; }
+    .pill-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06); width: 100%; box-sizing: border-box; }
+    .hero-oblong-badge { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%); color: #FFFFFF; padding: 12px 28px; border-radius: 30px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.15rem; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15); }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--deep-blue, #174B85); font-size: 1.45rem; font-weight: 800; margin-top: 28px; margin-bottom: 14px; }
+    .text-body { color: #1E293B; font-size: 1.1rem; line-height: 1.85; margin-bottom: 16px; }
+    .aesthetic-box { background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%); border-left: 6px solid var(--soft-blue, #8DB8EE); border-radius: 20px; padding: 22px 28px; margin: 20px 0; box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03); }
+    .grid-two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 20px 0; }
+    .mini-pill-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 24px; padding: 24px 28px; box-shadow: 0 6px 15px rgba(0,0,0,0.02); }
+    .takeaway-pill-card { background: linear-gradient(135deg, #174B85 0%, #113866 100%); color: #FFFFFF; border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15); width: 100%; box-sizing: border-box; }
+    .takeaway-pill-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 16px; color: #F4D38A; }
+    .takeaway-pill-card ul { padding-left: 20px; line-height: 1.9; font-size: 1.05rem; }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 3 • Lesson 22</span>
+            <h1 style="font-size: 1.9rem;">Identifying Bias and Point of View</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Define bias and point of view.</li>
+              <li>2. Identify different types of bias in written information.</li>
+              <li>3. Recognize the author's point of view.</li>
+              <li>4. Explain how bias affects the presentation of information.</li>
+              <li>5. Evaluate texts by considering the author's perspective and possible bias.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              Writers communicate information based on their knowledge, experiences, beliefs, and perspectives. Sometimes, the way they present information may favor one side or show an unfair preference. This is known as bias.<br>
+              Understanding bias and point of view helps readers examine how information is presented and recognize that different writers may describe the same event in different ways.
+            </p>
+
+            <h3 class="section-title">1. What Is Bias?</h3>
+            <p class="text-body">Bias is a preference, prejudice, or tendency toward a particular person, group, idea, or side that may influence how information is presented in a one-sided manner.</p>
+
+            <h3 class="section-title">2. Types of Bias</h3>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li><strong>Positive Bias:</strong> Focuses mainly on favorable qualities or achievements (e.g., mentioning only advantages in a review).</li>
+              <li><strong>Negative Bias:</strong> Focuses mainly on unfavorable qualities or weaknesses while ignoring achievements.</li>
+              <li><strong>Selection Bias:</strong> Occurs when examples or survey samples are chosen in a way that does not represent the entire situation.</li>
+              <li><strong>Omission Bias:</strong> Happens when crucial information is left out, resulting in an incomplete presentation.</li>
+            </ul>
+
+            <h3 class="section-title">3. Point of View</h3>
+            <p class="text-body">Point of view refers to the position or perspective from which a writer presents information.</p>
+            <div class="aesthetic-box">
+              • <strong>First Person:</strong> Uses <em>I, me, my, we, our</em>.<br>
+              • <strong>Second Person:</strong> Uses <em>you, your</em>.<br>
+              • <strong>Third Person:</strong> Uses <em>he, she, it, they, their</em>.
+            </div>
+
+            <h3 class="section-title">4. Difference Between Bias and Point of View</h3>
+            <p class="text-body">Bias refers to a preference or tendency that may affect fairness. Point of view refers to the perspective from which information is told. A writer can have a point of view without showing unfair bias.</p>
+
+            <h3 class="section-title">5. Importance of Recognizing Bias and POV</h3>
+            <p class="text-body">Helps readers understand perspectives, identify one-sided claims, consider varied opinions, avoid blind acceptance of texts, and develop critical thinking skills.</p>
+          </div>
+
+          <!-- EXAMPLES GRID -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Positive Bias</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"School A is the only school that provides excellent education."</p>
+                <small style="color: #64748B;">Praises one school without evidence or considering others.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 2: Negative Bias</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"The new school policy caused problems for every student."</p>
+                <small style="color: #64748B;">Focuses solely on negative results with a broad unverified claim.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 3: 1st Person POV</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"I believe that reading every day improves my vocabulary."</p>
+                <small style="color: #64748B;">Uses the pronoun "I".</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 4: 3rd Person POV</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"She explained the importance of responsible internet use."</p>
+                <small style="color: #64748B;">Uses the pronoun "she".</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>Bias is a preference or tendency that can affect fairness.</li>
+              <li>Positive, negative, selection, and omission bias influence presentation.</li>
+              <li>Point of view refers to the narrative perspective used by a writer.</li>
+              <li>A point of view does not automatically mean a text is biased.</li>
+              <li>Recognizing bias helps readers evaluate information fairly.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson22.html" class="btn-primary">Proceed to Lesson 22 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

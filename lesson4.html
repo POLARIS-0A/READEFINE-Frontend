@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 4: Homophones and Commonly Confused Words</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .pill-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 36px;
+      padding: 40px 48px;
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .hero-oblong-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%);
+      color: #FFFFFF;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15);
+    }
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--deep-blue, #174B85);
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .text-body {
+      color: #1E293B;
+      font-size: 1.1rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .aesthetic-box {
+      background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%);
+      border-left: 6px solid var(--soft-blue, #8DB8EE);
+      border-radius: 20px;
+      padding: 22px 28px;
+      margin: 20px 0;
+      box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03);
+    }
+    .grid-two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .mini-pill-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      padding: 24px 28px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.02);
+    }
+    .takeaway-pill-card {
+      background: linear-gradient(135deg, #174B85 0%, #113866 100%);
+      color: #FFFFFF;
+      border-radius: 36px;
+      padding: 40px 48px;
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .takeaway-pill-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #F4D38A;
+    }
+    .takeaway-pill-card ul {
+      padding-left: 20px;
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 1 • Lesson 4</span>
+            <h1 style="font-size: 1.9rem;">Homophones and Commonly Confused Words</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Define homophones.</li>
+              <li>2. Identify commonly confused English words.</li>
+              <li>3. Distinguish words based on spelling and meaning.</li>
+              <li>4. Use commonly confused words correctly in sentences.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              Some English words sound alike but have different meanings and spellings. Other words look or sound similar but are used in different situations.
+            </p>
+            <p class="text-body">
+              Understanding these differences helps prevent mistakes in reading and writing.
+            </p>
+
+            <h3 class="section-title">📌 1. What Are Homophones?</h3>
+            <p class="text-body">
+              Homophones are words that have the same pronunciation but different meanings and usually different spellings.
+            </p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li>Their – There</li>
+              <li>To – Two</li>
+              <li>See – Sea</li>
+              <li>Right – Write</li>
+              <li>Flower – Flour</li>
+            </ul>
+
+            <h3 class="section-title">📚 2. Common Homophones</h3>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;">Their vs. There vs. They're</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 6px;">• <strong>Their:</strong> Shows ownership.<br><em>Ex:</em> Their classroom is clean.</p>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 6px;">• <strong>There:</strong> Refers to a place.<br><em>Ex:</em> The library is over there.</p>
+                <p class="text-body" style="font-size: 0.95rem;">• <strong>They're:</strong> Short for "they are".<br><em>Ex:</em> They're preparing for exams.</p>
+              </div>
+
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;">To vs. Too vs. Two</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 6px;">• <strong>To:</strong> Preposition/infinitive.<br><em>Ex:</em> I want to study.</p>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 6px;">• <strong>Too:</strong> Means also or excessively.<br><em>Ex:</em> I want to join too.</p>
+                <p class="text-body" style="font-size: 0.95rem;">• <strong>Two:</strong> The number 2.<br><em>Ex:</em> She has two notebooks.</p>
+              </div>
+            </div>
+
+            <div class="aesthetic-box" style="margin-top: 16px;">
+              <strong style="color: var(--deep-blue);">Your vs. You're:</strong><br>
+              • <strong>Your:</strong> Shows ownership (<em>Ex:</em> Your answer is correct.)<br>
+              • <strong>You're:</strong> Short form of "you are" (<em>Ex:</em> You're doing well.)
+            </div>
+
+            <h3 class="section-title">⚖️ 3. Commonly Confused Words</h3>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Affect vs. Effect</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 6px;">• <strong>Affect</strong> (Verb): To influence.<br><em>Ex:</em> Lack of sleep can affect concentration.</p>
+                <p class="text-body" style="font-size: 0.95rem;">• <strong>Effect</strong> (Noun): A result.<br><em>Ex:</em> One effect is tiredness.</p>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Then vs. Than</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 6px;">• <strong>Then:</strong> Refers to time/sequence.<br><em>Ex:</em> Finish homework, then rest.</p>
+                <p class="text-body" style="font-size: 0.95rem;">• <strong>Than:</strong> Used in comparisons.<br><em>Ex:</em> This book is longer than that.</p>
+              </div>
+            </div>
+
+            <div class="grid-two-col" style="margin-top: 16px;">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Its vs. It's</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 6px;">• <strong>Its:</strong> Shows possession.<br><em>Ex:</em> The dog wagged its tail.</p>
+                <p class="text-body" style="font-size: 0.95rem;">• <strong>It's:</strong> Short for "it is/has".<br><em>Ex:</em> It's a beautiful day.</p>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Lose vs. Loose</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 6px;">• <strong>Lose:</strong> Misplace/fail to win.<br><em>Ex:</em> Do not lose your ID.</p>
+                <p class="text-body" style="font-size: 0.95rem;">• <strong>Loose:</strong> Not tight.<br><em>Ex:</em> This shirt is loose.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>Homophones sound alike but have different meanings.</li>
+              <li>Correct spelling depends on the intended meaning.</li>
+              <li>Some commonly confused words have different grammatical functions.</li>
+              <li>Always check the meaning and sentence context.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson4.html" class="btn-primary">Proceed to Lesson 4 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

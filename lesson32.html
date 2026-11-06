@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 32: Complex Sentence Structures</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container { width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; gap: 28px; }
+    .pill-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06); width: 100%; box-sizing: border-box; }
+    .hero-oblong-badge { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%); color: #FFFFFF; padding: 12px 28px; border-radius: 30px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.15rem; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15); }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--deep-blue, #174B85); font-size: 1.45rem; font-weight: 800; margin-top: 28px; margin-bottom: 14px; }
+    .text-body { color: #1E293B; font-size: 1.1rem; line-height: 1.85; margin-bottom: 16px; }
+    .aesthetic-box { background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%); border-left: 6px solid var(--soft-blue, #8DB8EE); border-radius: 20px; padding: 22px 28px; margin: 20px 0; box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03); }
+    .grid-two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 20px 0; }
+    .mini-pill-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 24px; padding: 24px 28px; box-shadow: 0 6px 15px rgba(0,0,0,0.02); }
+    .takeaway-pill-card { background: linear-gradient(135deg, #174B85 0%, #113866 100%); color: #FFFFFF; border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15); width: 100%; box-sizing: border-box; }
+    .takeaway-pill-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 16px; color: #F4D38A; }
+    .takeaway-pill-card ul { padding-left: 20px; line-height: 1.9; font-size: 1.05rem; }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 4 • Lesson 32</span>
+            <h1 style="font-size: 1.9rem;">Complex Sentence Structures</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Define clauses and complex sentence structures.</li>
+              <li>2. Differentiate independent and dependent clauses.</li>
+              <li>3. Identify simple, compound, complex, and compound-complex sentences.</li>
+              <li>4. Use coordinating and subordinating conjunctions correctly.</li>
+              <li>5. Construct sentences with different structures.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              Sentences form the foundation of written and spoken communication. Understanding sentence structures helps writers connect thoughts, explain conditions, and express complex relationships between ideas.
+            </p>
+
+            <h3 class="section-title">1. Clauses</h3>
+            <div class="aesthetic-box">
+              • <strong>Independent Clause:</strong> Expresses a complete thought and can stand alone as a sentence.<br>
+              <em>Example: "She finished her assignment."</em><br><br>
+              • <strong>Dependent Clause:</strong> Contains a subject and verb but does not express a complete thought by itself.<br>
+              <em>Example: "Because she finished her assignment..."</em>
+            </div>
+
+            <h3 class="section-title">2. Four Sentence Structures</h3>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li><strong>Simple Sentence:</strong> Contains one independent clause (e.g., <em>"The students studied."</em>).</li>
+              <li><strong>Compound Sentence:</strong> Contains two or more independent clauses joined by coordinating conjunctions—<strong>FANBOYS</strong> (For, And, Nor, But, Or, Yet, So).<br>
+              <em>Example: "She studied hard, and she passed the examination."</em></li>
+              <li><strong>Complex Sentence:</strong> Contains one independent clause and at least one dependent clause joined by subordinating conjunctions (e.g., <em>Because, Although, Since, When, While, If</em>).<br>
+              <em>Example: "She passed the examination because she studied hard."</em></li>
+              <li><strong>Compound-Complex Sentence:</strong> Contains at least two independent clauses and at least one dependent clause.<br>
+              <em>Example: "Although it was raining, the students attended class, and their teacher continued the lesson."</em></li>
+            </ul>
+          </div>
+
+          <!-- EXAMPLES GRID -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Simple</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"The baby slept."</p>
+                <small style="color: #64748B;">Contains one independent clause.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 2: Compound</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"I wanted to study, but my internet connection stopped working."</p>
+                <small style="color: #64748B;">Two independent clauses joined by "but".</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 3: Complex</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"Although she was nervous, she delivered her speech confidently."</p>
+                <small style="color: #64748B;">One dependent clause and one independent clause.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 4: Compound-Complex</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"After the class ended, the students packed their things, and the teacher arranged the chairs."</p>
+                <small style="color: #64748B;">One dependent clause and two independent clauses.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>A clause always contains a subject and a verb.</li>
+              <li>Independent clauses express complete thoughts; dependent clauses do not.</li>
+              <li>Simple sentences contain a single independent clause.</li>
+              <li>Compound and complex sentences connect related ideas using conjunctions (FANBOYS & subordinators).</li>
+              <li>Compound-complex sentences combine multiple independent clauses with dependent clauses.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson32.html" class="btn-primary">Proceed to Lesson 32 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

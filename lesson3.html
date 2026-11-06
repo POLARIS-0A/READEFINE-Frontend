@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 3: Synonyms and Antonyms</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .pill-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 36px;
+      padding: 40px 48px;
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .hero-oblong-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%);
+      color: #FFFFFF;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15);
+    }
+    .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--deep-blue, #174B85);
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .text-body {
+      color: #1E293B;
+      font-size: 1.1rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .aesthetic-box {
+      background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%);
+      border-left: 6px solid var(--soft-blue, #8DB8EE);
+      border-radius: 20px;
+      padding: 22px 28px;
+      margin: 20px 0;
+      box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03);
+    }
+    .grid-two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .mini-pill-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      padding: 24px 28px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.02);
+    }
+    .takeaway-pill-card {
+      background: linear-gradient(135deg, #174B85 0%, #113866 100%);
+      color: #FFFFFF;
+      border-radius: 36px;
+      padding: 40px 48px;
+      box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .takeaway-pill-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #F4D38A;
+    }
+    .takeaway-pill-card ul {
+      padding-left: 20px;
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 1 • Lesson 3</span>
+            <h1 style="font-size: 1.9rem;">Synonyms and Antonyms</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Define synonyms and antonyms.</li>
+              <li>2. Identify words with similar and opposite meanings.</li>
+              <li>3. Use synonyms and antonyms in sentences.</li>
+              <li>4. Choose appropriate words based on context.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              Words can have similar or opposite meanings. Understanding these relationships helps readers expand their vocabulary and avoid repeating the same words in writing.
+            </p>
+            <p class="text-body">
+              Two important word relationships are synonyms and antonyms.
+            </p>
+
+            <h3 class="section-title">📌 1. What Are Synonyms?</h3>
+            <p class="text-body">
+              Synonyms are words that have the same or nearly the same meaning.
+            </p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li>Happy – Joyful</li>
+              <li>Big – Large</li>
+              <li>Begin – Start</li>
+              <li>Difficult – Hard</li>
+              <li>Smart – Intelligent</li>
+            </ul>
+            <div class="aesthetic-box">
+              <strong style="color: var(--deep-blue);">✨ Example Sentence:</strong><br>
+              <span class="text-body" style="margin: 0; display: block; margin-top: 6px;">Original: The examination was <em>difficult</em>.<br>Using a synonym: The examination was <em>challenging</em>.</span>
+              <small style="color: #64748B; font-size: 0.95rem; display: block; margin-top: 4px;">Both difficult and challenging describe something that requires effort.</small>
+            </div>
+
+            <h3 class="section-title">📌 2. What Are Antonyms?</h3>
+            <p class="text-body">
+              Antonyms are words that have opposite meanings.
+            </p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li>Hot – Cold</li>
+              <li>Early – Late</li>
+              <li>Accept – Reject</li>
+              <li>Strong – Weak</li>
+              <li>Increase – Decrease</li>
+            </ul>
+            <div class="aesthetic-box">
+              <strong style="color: var(--deep-blue);">✨ Example Sentence:</strong><br>
+              <span class="text-body" style="margin: 0; display: block; margin-top: 6px;">Original: The room was <em>bright</em>.<br>Opposite: The room was <em>dark</em>.</span>
+            </div>
+
+            <h3 class="section-title">💬 3. Importance of Synonyms & Antonyms</h3>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;">📈 Importance of Synonyms</h4>
+                <ul style="padding-left: 18px; color: #334155; line-height: 1.7; font-size: 0.95rem;">
+                  <li>Prevents unnecessary repetition.</li>
+                  <li>Makes writing more interesting.</li>
+                  <li>Helps readers understand different expressions.</li>
+                  <li>Expands vocabulary.</li>
+                </ul>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;">📉 Importance of Antonyms</h4>
+                <ul style="padding-left: 18px; color: #334155; line-height: 1.7; font-size: 0.95rem;">
+                  <li>Helps explain differences.</li>
+                  <li>Makes comparisons easier.</li>
+                  <li>Improves understanding of word meanings.</li>
+                  <li>Helps communicate contrasting ideas.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 class="section-title">🎯 5. Choosing the Right Word</h3>
+            <p class="text-body">
+              Not all synonyms can be used interchangeably in every situation. Their meanings may be similar but their tone or usage may differ.
+            </p>
+            <div class="aesthetic-box">
+              <strong>Example:</strong> "Childish" and "childlike" both relate to children, but they have different connotations.<br>
+              • <em>Childish</em> often describes immature behavior.<br>
+              • <em>Childlike</em> can describe innocent or playful qualities.
+            </div>
+
+            <h3 class="section-title">🔍 More Examples</h3>
+            <div class="aesthetic-box">
+              <strong>Synonym Example:</strong><br>
+              • The student was brave.<br>
+              • The student was courageous.
+            </div>
+            <div class="aesthetic-box">
+              <strong>Antonym Example:</strong><br>
+              • The road was narrow.<br>
+              • The road was wide.
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>Synonyms have similar meanings.</li>
+              <li>Antonyms have opposite meanings.</li>
+              <li>Choosing appropriate words improves communication.</li>
+              <li>Similar words may still have different uses or tones.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson3.html" class="btn-primary">Proceed to Lesson 3 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

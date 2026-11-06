@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 15: Making Inferences</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container { width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; gap: 28px; }
+    .pill-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06); width: 100%; box-sizing: border-box; }
+    .hero-oblong-badge { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%); color: #FFFFFF; padding: 12px 28px; border-radius: 30px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.15rem; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15); }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--deep-blue, #174B85); font-size: 1.45rem; font-weight: 800; margin-top: 28px; margin-bottom: 14px; }
+    .text-body { color: #1E293B; font-size: 1.1rem; line-height: 1.85; margin-bottom: 16px; }
+    .aesthetic-box { background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%); border-left: 6px solid var(--soft-blue, #8DB8EE); border-radius: 20px; padding: 22px 28px; margin: 20px 0; box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03); }
+    .grid-two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 20px 0; }
+    .mini-pill-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 24px; padding: 24px 28px; box-shadow: 0 6px 15px rgba(0,0,0,0.02); }
+    .takeaway-pill-card { background: linear-gradient(135deg, #174B85 0%, #113866 100%); color: #FFFFFF; border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15); width: 100%; box-sizing: border-box; }
+    .takeaway-pill-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 16px; color: #F4D38A; }
+    .takeaway-pill-card ul { padding-left: 20px; line-height: 1.9; font-size: 1.05rem; }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 2 • Lesson 15</span>
+            <h1 style="font-size: 1.9rem;">Making Inferences</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Define what an inference is.</li>
+              <li>2. Identify textual clues and prior knowledge.</li>
+              <li>3. Distinguish between explicit information and inferences.</li>
+              <li>4. Make reasonable inferences about characters and situations.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <p class="text-body">
+              Sometimes, authors do not directly explain everything in a story or text. They leave clues, and readers use these clues together with what they already know to understand something that is not directly explained.
+            </p>
+
+            <h3 class="section-title">1. What Is an Inference?</h3>
+            <p class="text-body">An inference is a reasonable conclusion that readers make by combining textual clues with what they already know (prior knowledge).</p>
+            <div class="aesthetic-box">
+              <strong>Sentence:</strong> Mark entered the house with wet clothes and an umbrella.<br>
+              🎯 <strong>Inference:</strong> It was probably raining outside.<br>
+              <small style="color: #64748B;">The sentence does not directly say that it was raining, but the details provide clues.</small>
+            </div>
+
+            <h3 class="section-title">2. Textual Clues</h3>
+            <p class="text-body">Textual clues are words, statements, and details in a text that help readers understand information and make inferences. These clues may describe actions, feelings, situations, or events.</p>
+            <div class="aesthetic-box">
+              <strong>Sentence:</strong> Lisa looked at the clock repeatedly and kept checking the door.<br>
+              <strong>Clues:</strong> Repeatedly looked at the clock, kept checking the door.<br>
+              🎯 <strong>Possible Inference:</strong> Lisa may be waiting for someone or something.
+            </div>
+
+            <h3 class="section-title">3. Prior Knowledge</h3>
+            <p class="text-body">Prior knowledge refers to information, experiences, and understanding that readers already have before reading a text. Readers use prior knowledge together with textual clues to make reasonable inferences.</p>
+            <div class="aesthetic-box">
+              <strong>Text:</strong> The children wore thick jackets, gloves, and scarves.<br>
+              <strong>Prior Knowledge:</strong> These clothes are commonly used in cold weather.<br>
+              🎯 <strong>Inference:</strong> The children are probably in a cold place.
+            </div>
+
+            <h3 class="section-title">4. Inference and Explicit Information</h3>
+            <p class="text-body">Explicit information is directly stated in the text, whereas an inference is a conclusion that readers make based on clues and prior knowledge.</p>
+            <div class="aesthetic-box">
+              <strong>Text:</strong> "John carried a birthday cake into the room. His friends shouted, 'Surprise!'"<br>
+              • <strong>Explicit Information:</strong> John carried a birthday cake; his friends shouted "Surprise!"<br>
+              • <strong>Inference:</strong> The friends prepared a surprise celebration.
+            </div>
+
+            <h3 class="section-title">5. Making Inferences About Characters and Situations</h3>
+            <p class="text-body">Readers can make inferences about characters by examining their actions, words, expressions, and reactions, as well as understand situations that are not directly explained.</p>
+            <div class="aesthetic-box">
+              <strong>Example (Character):</strong> Mia smiled widely when she saw the high score on her examination. ➡️ <em>Mia was probably happy or proud.</em><br>
+              <strong>Example (Situation):</strong> The streets were wet, people were carrying umbrellas, and cars moved slowly. ➡️ <em>It had probably rained recently.</em>
+            </div>
+
+            <h3 class="section-title">6. How to Make a Reasonable Inference</h3>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li>Read the text carefully.</li>
+              <li>Identify important words and details.</li>
+              <li>Use prior knowledge.</li>
+              <li>Connect the clues with what is already known.</li>
+              <li>Make a conclusion that is supported by the information.</li>
+            </ul>
+          </div>
+
+          <!-- EXAMPLES GRID -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Inferring Feelings</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">Anna received a gift and immediately smiled while thanking her friend.</p>
+                <small style="color: #64748B;"><strong>Inference:</strong> Anna was happy or grateful.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 2: Inferring Weather</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">People were holding umbrellas while walking along the street.</p>
+                <small style="color: #64748B;"><strong>Inference:</strong> It may be raining.</small>
+              </div>
+              <div class="mini-pill-card" style="grid-column: 1 / -1;">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 3: Inferring a Situation</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">The classroom was empty, the lights were off, and the chairs were arranged neatly.</p>
+                <small style="color: #64748B;"><strong>Inference:</strong> Classes may have already ended or the room is not currently being used.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>An inference is a reasonable conclusion based on clues and prior knowledge.</li>
+              <li>Textual clues are details that help readers understand information.</li>
+              <li>Prior knowledge is what readers already know before reading.</li>
+              <li>Explicit information is directly stated in a text.</li>
+              <li>Inferences are not directly stated but are supported by clues.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson15.html" class="btn-primary">Proceed to Lesson 15 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

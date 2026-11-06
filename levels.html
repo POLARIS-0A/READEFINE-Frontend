@@ -3,11 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>READEFINE - Select Level</title>
+  <title>READEFINE - Learning Levels Hub</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* MODAL / POPUP STYLES */
+    .level-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex: 1;
+      min-height: 0;
+    }
+    .level-card {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      cursor: pointer;
+    }
+    .level-card.unlocked {
+      border: 2px solid var(--soft-blue);
+    }
+    .level-card.unlocked:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(23,75,133,0.06);
+    }
+    .level-card.locked {
+      background: #F8FAFC;
+      opacity: 0.85;
+      cursor: not-allowed;
+    }
+    .badge-unlocked {
+      background: #EAF2FF;
+      color: var(--deep-blue);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .badge-locked {
+      background: #E2E8F0;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* POPUP MODAL FOR LESSONS */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -15,93 +63,74 @@
       width: 100%;
       height: 100%;
       background: rgba(23, 75, 133, 0.4);
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(8px);
       display: none;
       justify-content: center;
       align-items: center;
       z-index: 1000;
     }
-
     .modal-overlay.active {
       display: flex;
     }
-
-    .modal-card {
-      background: var(--white);
+    .level-modal-card {
+      background: #FFFFFF;
       border-radius: 24px;
       width: 90%;
-      max-width: 550px;
-      max-height: 80vh;
-      padding: 32px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      max-width: 650px;
+      max-height: 85vh;
       display: flex;
       flex-direction: column;
+      padding: 32px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+      position: relative;
       animation: popIn 0.25s ease-out;
     }
-
     @keyframes popIn {
       from { transform: scale(0.9); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
-
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .close-modal-btn {
+    .modal-close-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
       background: #F1F5F9;
       border: none;
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-weight: 700;
       cursor: pointer;
       color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
-    .modal-lessons-list {
+    .modal-close-btn:hover {
+      background: #E2E8F0;
+    }
+    .lesson-items-list {
+      overflow-y: auto;
+      margin-top: 16px;
+      padding-right: 4px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      overflow-y: auto;
-      padding-right: 4px;
+      gap: 12px;
     }
-
-    .modal-lesson-item {
+    .lesson-row-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 14px 18px;
       background: #F8FBFF;
       border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--text-dark);
-      font-weight: 600;
-      transition: all 0.2s;
+      border-radius: 14px;
+      transition: background 0.2s;
     }
-
-    .modal-lesson-item:hover {
-      background: var(--light-bg);
+    .lesson-row-item:hover {
+      background: #EAF2FF;
       border-color: var(--soft-blue);
-      transform: translateX(4px);
-    }
-
-    .lesson-title-text {
-      flex: 1;
-      padding-right: 15px;
-      word-break: break-word;
-    }
-
-    .lesson-action-btn {
-      white-space: nowrap;
-      color: var(--deep-blue);
-      font-weight: 700;
-      flex-shrink: 0;
     }
   </style>
 </head>
@@ -117,7 +146,7 @@
           <li><a href="index.html">🌐 Home Page</a></li>
           <li><a href="dashboard.html">🏠 Dashboard</a></li>
           <li><a href="levels.html" class="active">📚 Lessons</a></li>
-          <li><a href="exams.html">📝 Exams</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
           <li><a href="#">📊 Progress</a></li>
           <li><a href="#">👤 Profile</a></li>
           <li><a href="#">⚙️ Settings</a></li>
@@ -136,8 +165,9 @@
         <div class="header-left-group">
           <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
           <div class="welcome-text">
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Curriculum Path</span>
             <h1>Learning Levels</h1>
-            <p>Complete each level and pass its exam to unlock the next stage! 🚀</p>
+            <p>Select a level to view its structured reading and literacy lessons! 🚀</p>
           </div>
         </div>
 
@@ -146,73 +176,69 @@
         </a>
       </div>
 
-      <!-- Levels Grid (4 Levels) -->
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; flex: 1; min-height: 0;">
+      <!-- LEVELS GRID -->
+      <div class="level-grid">
         
         <!-- LEVEL 1 (UNLOCKED) -->
-        <div class="section-box" style="display: flex; flex-direction: column; justify-content: space-between; border: 2px solid var(--soft-blue); cursor: pointer;" onclick="openLevelModal(1)">
+        <div class="level-card unlocked" onclick="openLevelModal('level1Modal')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="background: var(--light-bg); color: var(--deep-blue); padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">Level 1</span>
+              <span class="badge-unlocked">Level 1 Lessons</span>
               <span style="font-size: 1.2rem;">🔓 Unlocked</span>
             </div>
             <h3 style="font-size: 1.4rem; color: var(--deep-blue); margin-bottom: 8px;">Foundations of Literacy</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Building essential reading, vocabulary, and language skills.</p>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">Lessons 1 to 10: Basic vocabulary, context clues, and foundational skills.</p>
           </div>
-
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
-            <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">10 Lessons Available</span>
-            <button class="btn-primary">View Lessons →</button>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">10 Lessons</span>
+            <span class="btn-primary">View Lessons →</span>
           </div>
         </div>
 
         <!-- LEVEL 2 (LOCKED) -->
-        <div class="section-box" style="display: flex; flex-direction: column; justify-content: space-between; background: #F8FAFC; border: 1px solid var(--border-subtle); opacity: 0.8; cursor: pointer;" onclick="openLevelModal(2)">
+        <div class="level-card locked" onclick="showLockedModal('Level 2 Lessons', 'Level 1')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="background: #E2E8F0; color: var(--text-muted); padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">Level 2</span>
+              <span class="badge-locked">Level 2 Lessons</span>
               <span style="font-size: 1.2rem;">🔒 Locked</span>
             </div>
-            <h3 style="font-size: 1.4rem; color: var(--text-muted); margin-bottom: 8px;">Developing Reading and Writing</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Improving comprehension and expressing ideas clearly.</p>
+            <h3 style="font-size: 1.4rem; color: var(--text-muted); margin-bottom: 8px;">Developing Reading Strategies</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">Lessons 11 to 20: Paragraph organization, main ideas, and comprehension.</p>
           </div>
-
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
-            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 1 Exam</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 1 Completion</span>
             <button disabled style="background: #CBD5E1; color: #64748B; border: none; padding: 10px 20px; border-radius: 12px; font-weight: 700; cursor: not-allowed;">Locked</button>
           </div>
         </div>
 
         <!-- LEVEL 3 (LOCKED) -->
-        <div class="section-box" style="display: flex; flex-direction: column; justify-content: space-between; background: #F8FAFC; border: 1px solid var(--border-subtle); opacity: 0.8; cursor: pointer;" onclick="openLevelModal(3)">
+        <div class="level-card locked" onclick="showLockedModal('Level 3 Lessons', 'Level 2')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="background: #E2E8F0; color: var(--text-muted); padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">Level 3</span>
+              <span class="badge-locked">Level 3 Lessons</span>
               <span style="font-size: 1.2rem;">🔒 Locked</span>
             </div>
-            <h3 style="font-size: 1.4rem; color: var(--text-muted); margin-bottom: 8px;">Applied Literacy & Critical Thinking</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Learning to interpret, evaluate, and use information.</p>
+            <h3 style="font-size: 1.4rem; color: var(--text-muted); margin-bottom: 8px;">Applied Literacy</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">Lessons 21 to 30: Critical thinking, fact/opinion analysis, and evaluating sources.</p>
           </div>
-
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
-            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 2 Exam</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 2 Completion</span>
             <button disabled style="background: #CBD5E1; color: #64748B; border: none; padding: 10px 20px; border-radius: 12px; font-weight: 700; cursor: not-allowed;">Locked</button>
           </div>
         </div>
 
         <!-- LEVEL 4 (LOCKED) -->
-        <div class="section-box" style="display: flex; flex-direction: column; justify-content: space-between; background: #F8FAFC; border: 1px solid var(--border-subtle); opacity: 0.8; cursor: pointer;" onclick="openLevelModal(4)">
+        <div class="level-card locked" onclick="showLockedModal('Level 4 Lessons', 'Level 3')">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="background: #E2E8F0; color: var(--text-muted); padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">Level 4</span>
+              <span class="badge-locked">Level 4 Lessons</span>
               <span style="font-size: 1.2rem;">🔒 Locked</span>
             </div>
             <h3 style="font-size: 1.4rem; color: var(--text-muted); margin-bottom: 8px;">Advanced Communication</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Applying literacy skills in academic and real-world situations.</p>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">Lessons 31 to 40: Advanced vocabulary, analytical essays, and complex texts.</p>
           </div>
-
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
-            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 3 Exam</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+            <span style="font-size: 0.9rem; font-weight: 600; color: #94A3B8;">Requires Level 3 Completion</span>
             <button disabled style="background: #CBD5E1; color: #64748B; border: none; padding: 10px 20px; border-radius: 12px; font-weight: 700; cursor: not-allowed;">Locked</button>
           </div>
         </div>
@@ -223,139 +249,175 @@
 
   </div>
 
-  <!-- POP-UP LESSONS SELECTION MODAL -->
-  <div class="modal-overlay" id="levelModal">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div>
-          <h3 style="color: var(--deep-blue); font-size: 1.3rem;" id="modalTitle">Lessons List</h3>
-        </div>
-        <button class="close-modal-btn" onclick="closeLevelModal()">✕</button>
+  <!-- LEVEL 1 MODAL (Lessons 1-10 NAKA-CONNECT NA) -->
+  <div class="modal-overlay" id="level1Modal">
+    <div class="level-modal-card">
+      <button class="modal-close-btn" onclick="closeModals()">✕</button>
+      <h2 style="color: var(--deep-blue); font-size: 1.4rem; font-weight: 800; margin-bottom: 4px;">LEVEL 1 - Foundations of Literacy</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Lessons 1 to 10:</p>
+      <div class="lesson-items-list">
+        <script>
+          const level1Titles = [
+            "Understanding Words and Vocabulary",
+            "Using Context Clues",
+            "Synonyms and Antonyms",
+            "Homophones and Commonly Confused Words",
+            "Parts of Speech",
+            "Basic Sentence Structure",
+            "Subject and Predicate",
+            "Paragraph Main Ideas",
+            "Reading Fluency & Pacing",
+            "Reading and Understanding Short Text"
+          ];
+          for(let i=1; i<=10; i++) {
+            document.write(`
+              <div class="lesson-row-item">
+                <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level1Titles[i-1]}</span>
+                <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+              </div>
+            `);
+          }
+        </script>
       </div>
+    </div>
+  </div>
 
-      <div class="modal-lessons-list" id="modalLessonsContainer">
-        <!-- Dito kusang papasok ang lessons o lock alert -->
+  <!-- LEVEL 2 MODAL (Lessons 11-20 NAKA-CONNECT NA) -->
+  <div class="modal-overlay" id="level2Modal">
+    <div class="level-modal-card">
+      <button class="modal-close-btn" onclick="closeModals()">✕</button>
+      <h2 style="color: var(--deep-blue); font-size: 1.4rem; font-weight: 800; margin-bottom: 4px;">LEVEL 2 - Developing Reading and Writing Skills</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Lessons 11 to 20:</p>
+      <div class="lesson-items-list">
+        <script>
+          const level2Titles = [
+            "Reading Comprehension Strategies",
+            "Identifying Main Ideas",
+            "Recognizing and Supporting Details",
+            "Sequencing Events and Ideas",
+            "Making Inferences",
+            "Understanding Text Structure",
+            "Paragraph Structure and Organization",
+            "Writing Clear and Complete Sentences",
+            "Sentence Combining and Paragraph Development",
+            "Summarizing and Paraphrasing"
+          ];
+          for(let i=11; i<=20; i++) {
+            document.write(`
+              <div class="lesson-row-item">
+                <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level2Titles[i-1]}</span>
+                <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+              </div>
+            `);
+          }
+        </script>
       </div>
+    </div>
+  </div>
+
+  <!-- LEVEL 3 MODAL (Lessons 21-30 NAKA-CONNECT NA) -->
+  <div class="modal-overlay" id="level3Modal">
+    <div class="level-modal-card">
+      <button class="modal-close-btn" onclick="closeModals()">✕</button>
+      <h2 style="color: var(--deep-blue); font-size: 1.4rem; font-weight: 800; margin-bottom: 4px;">LEVEL 3 - Advanced Reading and Writing Skills</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Lessons 21 to 30:</p>
+      <div class="lesson-items-list">
+        <script>
+          const level3Titles = [
+            "Fact and Opinion",
+            "Identifying Bias and Point of View",
+            "Evaluating Sources of Information",
+            "Understanding Tone and Author's Purpose",
+            "Drawing Conclusions",
+            "Comparing and Contrasting Texts",
+            "Critical Reading and Analysis",
+            "Interpreting Graph, Table, and Visual Information",
+            "Understanding Informational and Argumentative Texts",
+            "Building Evidence-Based Arguments"
+          ];
+          for(let i=21; i<=30; i++) {
+            document.write(`
+              <div class="lesson-row-item">
+                <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level3Titles[i-21]}</span>
+                <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+              </div>
+            `);
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEVEL 4 MODAL (Lessons 31-40 NAKA-CONNECT NA) -->
+  <div class="modal-overlay" id="level4Modal">
+    <div class="level-modal-card">
+      <button class="modal-close-btn" onclick="closeModals()">✕</button>
+      <h2 style="color: var(--deep-blue); font-size: 1.4rem; font-weight: 800; margin-bottom: 4px;">LEVEL 4 - Advanced Communication and Literacy</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Lessons 31 to 40:</p>
+      <div class="lesson-items-list">
+        <script>
+          const level4Titles = [
+            "Advanced Vocabulary in Context",
+            "Complex Sentence Structures",
+            "Advanced Grammar and Sentence Correction",
+            "Writing Coherent and Unified Paragraphs",
+            "Essay Writing Fundamentals",
+            "Writing Academic and Formal Texts",
+            "Reading and Analyzing Complex Texts",
+            "Research and Information Literacy",
+            "Effective Written and Verbal Communication",
+            "Practical Literacy in Everyday Situations"
+          ];
+          for(let i=31; i<=40; i++) {
+            document.write(`
+              <div class="lesson-row-item">
+                <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level4Titles[i-31]}</span>
+                <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+              </div>
+            `);
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCKED WARNING MODAL -->
+  <div class="modal-overlay" id="lockedModal">
+    <div class="level-modal-card" style="max-width: 440px; text-align: center;">
+      <span style="font-size: 3rem; margin-bottom: 12px; display: block;">🔒</span>
+      <h3 style="color: var(--deep-blue); font-size: 1.3rem; font-weight: 800; margin-bottom: 10px;" id="lockedModalTitle">Level Locked</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 24px;" id="lockedModalDesc">You must complete the previous level first.</p>
+      <button class="btn-primary" onclick="closeModals()" style="width: 100%; margin: 0 auto;">Got it</button>
     </div>
   </div>
 
   <script>
     const menuToggleBtn = document.getElementById('menuToggleBtn');
     const sidebar = document.getElementById('sidebar');
-    const levelModal = document.getElementById('levelModal');
-    const modalLessonsContainer = document.getElementById('modalLessonsContainer');
+    const lockedModal = document.getElementById('lockedModal');
+    const lockedModalTitle = document.getElementById('lockedModalTitle');
+    const lockedModalDesc = document.getElementById('lockedModalDesc');
 
     menuToggleBtn.addEventListener('click', () => {
       sidebar.classList.toggle('collapsed');
     });
 
-    // Kumpletong exact curriculum mo para sa Level 1 hanggang 4
-    const levelData = {
-      1: {
-        title: "LEVEL 1 - Foundations of Literacy",
-        isUnlocked: true,
-        lessons: [
-          "Understanding Words and Vocabulary",
-          "Using Context Clues",
-          "Synonyms and Antonyms",
-          "Homophones and Commonly Confused Words",
-          "Parts of Speech",
-          "Basic Sentence Structure",
-          "Subject and Predicate",
-          "Basic Grammar and Punctuation",
-          "Sentence Types and Functions",
-          "Reading and Understanding Short Texts"
-        ]
-      },
-      2: {
-        title: "LEVEL 2 - Developing Reading and Writing Skills",
-        isUnlocked: false,
-        lessons: [
-          "Reading Comprehension Strategies",
-          "Identifying Main Ideas",
-          "Recognizing Supporting Details",
-          "Sequencing Events and Ideas",
-          "Making Inferences",
-          "Understanding Text Structure",
-          "Paragraph Structure and Organization",
-          "Writing Clear and Complete Sentences",
-          "Sentence Combining and Paragraph Development",
-          "Summarizing and Paraphrasing"
-        ]
-      },
-      3: {
-        title: "LEVEL 3 - Applied Literacy and Critical Thinking",
-        isUnlocked: false,
-        lessons: [
-          "Fact and Opinion",
-          "Identifying Bias and Point of View",
-          "Evaluating Sources of Information",
-          "Understanding Tone and Author's Purpose",
-          "Drawing Conclusions",
-          "Comparing and Contrasting Texts",
-          "Critical Reading and Analysis",
-          "Interpreting Graphs, Tables, and Visual Information",
-          "Understanding Informational and Argumentative Texts",
-          "Building Evidence-Based Arguments"
-        ]
-      },
-      4: {
-        title: "LEVEL 4 - Advanced Communication and Literacy",
-        isUnlocked: false,
-        lessons: [
-          "Advanced Vocabulary in Context",
-          "Complex Sentence Structures",
-          "Advanced Grammar and Sentence Correction",
-          "Writing Coherent and Unified Paragraphs",
-          "Essay Writing Fundamentals",
-          "Writing Academic and Formal Texts",
-          "Reading and Analyzing Longer Texts",
-          "Research and Information Literacy",
-          "Effective Written and Verbal Communication",
-          "Practical Literacy in Everyday Situations"
-        ]
-      }
-    };
-
-    function openLevelModal(levelNum) {
-      const data = levelData[levelNum];
-      document.getElementById('modalTitle').innerText = data.title;
-      
-      let htmlContent = '';
-
-      // Kapag naka-lock, magpapakita ang locked warning sa gitna ng modal
-      if (!data.isUnlocked) {
-        htmlContent = `
-          <div style="text-align: center; padding: 24px 0;">
-            <span style="font-size: 3rem; display: block; margin-bottom: 12px;">🔒</span>
-            <h4 style="color: var(--deep-blue); font-size: 1.2rem; margin-bottom: 8px;">This Level is Locked</h4>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Complete the previous level and pass its exam first to unlock these lessons.</p>
-          </div>
-        `;
-      } else {
-        // Kapag unlocked, i-render ang 10 lessons nang malinis at walang basang subtitle
-        for (let i = 1; i <= 10; i++) {
-          let fileName = (levelNum === 1 && i === 1) ? 'lesson1.html' : `lesson${levelNum}-${i}.html`;
-          let lessonTitle = data.lessons[i - 1];
-          
-          htmlContent += `
-            <a href="${fileName}" class="modal-lesson-item">
-              <span class="lesson-title-text">Lesson ${i}: ${lessonTitle}</span>
-              <span class="lesson-action-btn">Start →</span>
-            </a>
-          `;
-        }
-      }
-
-      modalLessonsContainer.innerHTML = htmlContent;
-      levelModal.classList.add('active');
+    function openLevelModal(modalId) {
+      document.getElementById(modalId).classList.add('active');
     }
 
-    function closeLevelModal() {
-      levelModal.classList.remove('active');
+    function showLockedModal(levelName, requiredLevel) {
+      lockedModalTitle.innerText = `${levelName} Locked`;
+      lockedModalDesc.innerText = `You must complete all lessons in ${requiredLevel} first to unlock this section!`;
+      lockedModal.classList.add('active');
+    }
+
+    function closeModals() {
+      document.querySelectorAll('.modal-overlay').forEach(modal => {
+        modal.classList.remove('active');
+      });
     }
   </script>
 
 </body>
 </html>
-

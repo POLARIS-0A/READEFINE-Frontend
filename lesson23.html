@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Lesson 23: Evaluating Sources of Information</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .lesson-container { width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; gap: 28px; }
+    .pill-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.06); width: 100%; box-sizing: border-box; }
+    .hero-oblong-badge { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #174B85 0%, #4F83CC 100%); color: #FFFFFF; padding: 12px 28px; border-radius: 30px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.15rem; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(23, 75, 133, 0.15); }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--deep-blue, #174B85); font-size: 1.45rem; font-weight: 800; margin-top: 28px; margin-bottom: 14px; }
+    .text-body { color: #1E293B; font-size: 1.1rem; line-height: 1.85; margin-bottom: 16px; }
+    .aesthetic-box { background: linear-gradient(135deg, #F8FBFF 0%, #EAF2FF 100%); border-left: 6px solid var(--soft-blue, #8DB8EE); border-radius: 20px; padding: 22px 28px; margin: 20px 0; box-shadow: 0 4px 15px rgba(23, 75, 133, 0.03); }
+    .grid-two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin: 20px 0; }
+    .mini-pill-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 24px; padding: 24px 28px; box-shadow: 0 6px 15px rgba(0,0,0,0.02); }
+    .takeaway-pill-card { background: linear-gradient(135deg, #174B85 0%, #113866 100%); color: #FFFFFF; border-radius: 36px; padding: 40px 48px; box-shadow: 0 15px 35px rgba(23, 75, 133, 0.15); width: 100%; box-sizing: border-box; }
+    .takeaway-pill-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 16px; color: #F4D38A; }
+    .takeaway-pill-card ul { padding-left: 20px; line-height: 1.9; font-size: 1.05rem; }
+  </style>
+</head>
+<body>
+
+  <div class="app-frame dashboard-frame">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo">📖 READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html" class="active">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams Hub</a></li>
+          <li><a href="#">📊 Progress</a></li>
+          <li><a href="#">👤 Profile</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+      
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
+          <div class="welcome-text">
+            <span style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Level 3 • Lesson 23</span>
+            <h1 style="font-size: 1.9rem;">Evaluating Sources of Information</h1>
+          </div>
+        </div>
+        <a href="levels.html" class="btn-primary" style="background: var(--white); color: var(--deep-blue); border: 1px solid var(--border-subtle);">← Back to Lessons</a>
+      </div>
+
+      <div class="section-box" style="flex: 1; overflow-y: auto; padding: 24px 32px;">
+        <div class="lesson-container">
+          
+          <!-- OBJECTIVES -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
+              <li>1. Identify different sources of information (Newspapers, Websites, Journals, Interviews, Government publications).</li>
+              <li>2. Differentiate between primary and secondary sources.</li>
+              <li>3. Explain the characteristics of reliable information sources.</li>
+              <li>4. Evaluate online information for accuracy, authority, currency, relevance, and objectivity.</li>
+            </ul>
+          </div>
+
+          <!-- INTRODUCTION & DISCUSSION -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            
+            <h3 class="section-title">1. Common Sources of Information</h3>
+            <p class="text-body">Information can be found in various platforms such as newspapers, websites, academic journals, interviews, and government publications.</p>
+
+            <h3 class="section-title">2. Primary Sources</h3>
+            <p class="text-body">Primary sources provide original or firsthand information about an event, experience, or subject.</p>
+            <div class="aesthetic-box">
+              <strong>Examples:</strong> Diaries, letters, interviews, photographs, original documents, official records.<br>
+              <em>Example:</em> A diary written by a person who experienced a historical event provides firsthand information from someone directly involved.
+            </div>
+
+            <h3 class="section-title">3. Secondary Sources</h3>
+            <p class="text-body">Secondary sources discuss, explain, interpret, or analyze information from primary sources or other materials.</p>
+            <div class="aesthetic-box">
+              <strong>Examples:</strong> Textbooks, biographies, research reviews, historical analyses, documentaries.<br>
+              <em>Example:</em> A history textbook explaining a revolution interprets and organizes information from primary records.
+            </div>
+
+            <h3 class="section-title">4. Characteristics of Reliable Sources</h3>
+            <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li><strong>Accuracy:</strong> Information is correct and supported by verifiable evidence.</li>
+              <li><strong>Authority:</strong> The author or organization has relevant expertise or credentials.</li>
+              <li><strong>Currency:</strong> Information is updated appropriately for current relevance.</li>
+              <li><strong>Relevance:</strong> Information directly relates to the topic being studied.</li>
+              <li><strong>Objectivity:</strong> Information is presented fairly and free from unnecessary bias.</li>
+            </ul>
+
+            <h3 class="section-title">5. Steps in Evaluating Online Information</h3>
+            <ol style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
+              <li>Check the author's name and qualifications.</li>
+              <li>Examine the publishing website or organization.</li>
+              <li>Look for supporting evidence and references.</li>
+              <li>Check the publication or update date.</li>
+              <li>Cross-check information with other reliable sources.</li>
+            </ol>
+          </div>
+
+          <!-- EXAMPLES GRID -->
+          <div class="pill-card">
+            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="grid-two-col">
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Primary Source</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"A signed letter written by a historical leader."</p>
+                <small style="color: #64748B;">Answer: Primary Source (Original document from the author)</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 2: Secondary Source</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"A textbook discussing the life of a historical leader."</p>
+                <small style="color: #64748B;">Answer: Secondary Source (Explains and interprets primary data)</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 3: Potentially Reliable</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"A government website publishes updated population statistics."</p>
+                <small style="color: #64748B;">Official government data, but dates and details should still be checked.</small>
+              </div>
+              <div class="mini-pill-card">
+                <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 4: Questionable Source</h4>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"An anonymous social media post makes a health-related claim without evidence."</p>
+                <small style="color: #64748B;">Lacks verifiable authorship and supporting proof.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- KEY TAKEAWAYS -->
+          <div class="takeaway-pill-card">
+            <h3>🔑 Key Takeaways</h3>
+            <ul>
+              <li>Sources of information provide facts, ideas, and evidence.</li>
+              <li>Primary sources contain original or firsthand information.</li>
+              <li>Secondary sources interpret or analyze existing information.</li>
+              <li>Reliable sources demonstrate accuracy, authority, currency, relevance, and objectivity.</li>
+              <li>Information should always be checked and verified before being used or shared.</li>
+            </ul>
+          </div>
+
+          <!-- NAVIGATION -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 5px;">
+            <a href="levels.html" class="btn-primary" style="background: #F1F5F9; color: var(--text-dark); border: 1px solid var(--border-subtle);">← Lessons Hub</a>
+            <a href="exam-lesson23.html" class="btn-primary">Proceed to Lesson 23 Exam →</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById('menuToggleBtn').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>

@@ -160,12 +160,14 @@
         </div>
         <ul class="landing-nav-links">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#" onclick="openLoginModal()">Lessons</a></li>
-          <li><a href="#" onclick="openLoginModal()">Exams</a></li>
-          <li><a href="#" onclick="openLoginModal()">Progress</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="levels.html">Lessons</a></li>
+          <li><a href="exams.html">Exams</a></li>
+          <!-- Direct nang pumupunta sa dashboard/progress page -->
+          <li><a href="progress.html">Progress</a></li>
         </ul>
         
-        <!-- Pinalitan ko ito para may kasamang 'Log In' text sa tabi ng profile icon -->
+        <!-- Log In / Profile Trigger -->
         <div onclick="openLoginModal()" style="display: flex; align-items: center; gap: 8px; cursor: pointer; background: rgba(255, 255, 255, 0.6); padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-subtle, #E2E8F0); transition: all 0.2s;">
           <span style="font-size: 0.9rem; font-weight: 700; color: var(--deep-blue, #174B85);">Log In</span>
           <div class="profile-icon" style="margin: 0;">👤</div>
@@ -177,7 +179,8 @@
         <div class="hero-text">
           <h1>Read. Learn. Redefine.</h1>
           <p>Eliminate illiteracy, Create your own metamorphosis.</p>
-          <button onclick="openLoginModal()" class="btn-primary" style="border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Learning →</button>
+          <!-- May checker logic na: pag may account na, direkta sa dashboard; pag wala, hihingi ng sign up/login -->
+          <button onclick="handleStartLearning()" class="btn-primary" style="border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Learning →</button>
         </div>
         
         <div class="illustration-box">
@@ -205,15 +208,15 @@
       <h2 class="auth-title">Welcome Back</h2>
       <p class="auth-subtitle">Log in to continue your literacy journey</p>
 
-      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+      <form onsubmit="handleLoginSubmit(event)">
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="name@example.com" required>
+          <input type="email" id="loginEmail" class="form-input" placeholder="name@example.com" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Password</label>
-          <input type="password" class="form-input" placeholder="••••••••" required>
+          <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required>
         </div>
 
         <button type="submit" class="btn-submit">Log In →</button>
@@ -233,20 +236,20 @@
       <h2 class="auth-title">Create Account</h2>
       <p class="auth-subtitle">Join READEFINE and start your learning journey</p>
 
-      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+      <form onsubmit="handleSignupSubmit(event)">
         <div class="form-group">
           <label class="form-label">Full Name</label>
-          <input type="text" class="form-input" placeholder="Juan Dela Cruz" required>
+          <input type="text" id="signupName" class="form-input" placeholder="Juan Dela Cruz" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="name@example.com" required>
+          <input type="email" id="signupEmail" class="form-input" placeholder="name@example.com" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Password</label>
-          <input type="password" class="form-input" placeholder="At least 6 characters" required>
+          <input type="password" id="signupPassword" class="form-input" placeholder="At least 6 characters" required>
         </div>
 
         <button type="submit" class="btn-submit">Sign Up →</button>
@@ -268,8 +271,8 @@
     }
 
     function openSignupModal() {
-      loginModal.classList.remove('active');
-      signupModal.classList.add('active');
+      signupModal.classList.remove('active');
+      loginModal.classList.add('active');
     }
 
     function closeAuthModals() {
@@ -285,6 +288,41 @@
     function switchToLogin() {
       signupModal.classList.remove('active');
       loginModal.classList.add('active');
+    }
+
+    // Checker kung mayroon nang nakasave na account/sesyon sa browser
+    function checkExistingAccount() {
+      // Sinusuri natin kung nag-sign up na o nag-log in na ang user dati
+      const hasAccount = localStorage.getItem('readefine_has_account');
+      const isLoggedIn = localStorage.getItem('readefine_logged_in');
+      return hasAccount === 'true' || isLoggedIn === 'true';
+    }
+
+    // "Start Learning" button logic na may account checker
+    function handleStartLearning() {
+      if (checkExistingAccount()) {
+        // Kapag mayroon nang account, diretso na sa dashboard/susunod na pahina nang hindi na naglo-log in
+        window.location.href = 'dashboard.html';
+      } else {
+        // Kapag wala pang account, bubukas ang Sign Up / Login modal
+        openSignupModal();
+      }
+    }
+
+    // Kapag nag-log in, sine-save natin ang estado na mayroon na siyang account
+    function handleLoginSubmit(event) {
+      event.preventDefault();
+      localStorage.setItem('readefine_has_account', 'true');
+      localStorage.setItem('readefine_logged_in', 'true');
+      window.location.href = 'dashboard.html';
+    }
+
+    // Kapag nag-sign up, sine-save din natin ang estado na mayroon na siyang account
+    function handleSignupSubmit(event) {
+      event.preventDefault();
+      localStorage.setItem('readefine_has_account', 'true');
+      localStorage.setItem('readefine_logged_in', 'true');
+      window.location.href = 'dashboard.html';
     }
   </script>
 
