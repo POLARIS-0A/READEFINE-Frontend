@@ -22,3 +22,23 @@ AFTER REDIRECTS TO LESSON PAGE:
 -PROVIDE SPACES FOR IMAGES/VISUAL TO HELP USER UNDERSTAND LESSON BETTER
 
 AT END OF EVERY LESSON : PROVIDE TESTS (IDENTIFICATION AND ESSAY)
+
+ABOUT US PAGE:
+
+BROUGHT TO YOU BY: POLARIS-0A
+Young BSIT freshman students, aiming to create a better future through the use of the technology we have to day.
+CONTACT US: teampolaris.0a@gmail.com
+
+4 PICTURE SLOT, AND SOME PERSONAL INFO
+________
+PICTURE
+________
+
+NAME: __________
+ROLE: __________
+CONTACT: _______
+
+DOCUMENTATION FILE
+
+
+
