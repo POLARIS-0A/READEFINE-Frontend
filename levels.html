@@ -305,7 +305,7 @@
           for(let i=11; i<=20; i++) {
             document.write(`
               <div class="lesson-row-item">
-                <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level2Titles[i-1]}</span>
+                <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level2Titles[i-11]}</span>
                 <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
               </div>
             `);
@@ -417,6 +417,31 @@
         modal.classList.remove('active');
       });
     }
+
+  fetch('http://localhost:3000/api/chapters')
+  .then(res => res.json())
+  .then(chapters => {
+    const levels = [
+      { modalId: 'level1Modal', from: 1, to: 10 },
+      { modalId: 'level2Modal', from: 11, to: 20 },
+      { modalId: 'level3Modal', from: 21, to: 30 },
+      { modalId: 'level4Modal', from: 31, to: 40 }
+    ];
+
+    levels.forEach(level => {
+      const list = document.querySelector(`#${level.modalId} .lesson-items-list`);
+      const items = chapters.filter(c => c.order_index >= level.from && c.order_index <= level.to);
+      if (!list || items.length === 0) return;
+
+      list.innerHTML = items.map(c => `
+        <div class="lesson-row-item">
+          <span style="font-weight: 600; color: var(--text-dark);">Lesson ${c.order_index}: ${c.title}</span>
+          <a href="lesson${c.order_index}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+        </div>
+      `).join('');
+    });
+  })
+  .catch(err => console.error('Backend error:', err));
   </script>
 
 </body>
