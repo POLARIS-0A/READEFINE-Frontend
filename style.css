@@ -799,4 +799,18 @@ body {
   .quiz-card {
     padding: 18px 14px;
   }
+
+}
+html[data-page="lesson"],
+html[data-page="lesson"] body {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+html[data-page="lesson"] #app,
+html[data-page="lesson"] #app > * {
+  height: auto !important;
+  min-height: 100vh;
+  max-height: none !important;
+  overflow: visible !important;
 }
