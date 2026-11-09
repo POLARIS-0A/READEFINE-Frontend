@@ -814,3 +814,16 @@ html[data-page="lesson"] #app > * {
   max-height: none !important;
   overflow: visible !important;
 }
+html[data-page="exam"],
+html[data-page="exam"] body {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+html[data-page="exam"] #app,
+html[data-page="exam"] #app > * {
+  height: auto !important;
+  min-height: 100vh;
+  max-height: none !important;
+  overflow: visible !important;
+}
