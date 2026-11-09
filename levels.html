@@ -141,7 +141,7 @@
     <!-- LEFT SIDEBAR -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-top">
-        <div class="landing-logo">📖 READEFINE</div>
+        <div class="landing-logo"><img src="ASSETS/logo.png">  READEFINE</div>
         <ul class="sidebar-menu">
           <li><a href="index.html">🌐 Home Page</a></li>
           <li><a href="dashboard.html">🏠 Dashboard</a></li>
@@ -273,7 +273,7 @@
             document.write(`
               <div class="lesson-row-item">
                 <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level1Titles[i-1]}</span>
-                <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+                <a href="lesson.html?id=${i}" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
               </div>
             `);
           }
@@ -306,7 +306,7 @@
             document.write(`
               <div class="lesson-row-item">
                 <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level2Titles[i-1]}</span>
-                <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+                <a href="lesson.html?id=${i}" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
               </div>
             `);
           }
@@ -339,7 +339,7 @@
             document.write(`
               <div class="lesson-row-item">
                 <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level3Titles[i-21]}</span>
-                <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+                <a href="lesson.html?id=${i}" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
               </div>
             `);
           }
@@ -372,7 +372,7 @@
             document.write(`
               <div class="lesson-row-item">
                 <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level4Titles[i-31]}</span>
-                <a href="lesson${i}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+                <a href="lesson.html?id=${i}" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
               </div>
             `);
           }

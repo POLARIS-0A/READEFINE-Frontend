@@ -63,7 +63,12 @@ body {
   color: var(--deep-blue);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+}
+
+.landing-logo img {
+  width: 70px;
+  height: 70px;
 }
 
 .landing-nav-links {
