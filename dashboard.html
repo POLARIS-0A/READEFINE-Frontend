@@ -27,7 +27,7 @@
       </div>
 
       <div class="sidebar-footer">
-        <a href="index.html" class="logout-btn">🚪 Log Out</a>
+        <a href="index.html" class="logout-btn" onclick="localStorage.clear()">🚪 Log Out</a>
       </div>
     </aside>
 
@@ -38,7 +38,7 @@
         <div class="header-left-group">
           <button class="menu-toggle-btn" id="menuToggleBtn">☰</button>
           <div class="welcome-text">
-            <h1>Hello, Learner!</h1>
+            <h1 id="helloName">Hello, Learner!</h1>
             <p>Keep going! You're doing great ✨</p>
           </div>
         </div>
@@ -55,12 +55,12 @@
       <div class="progress-card" id="progress">
         <div class="progress-header">
           <h3>Your Learning Progress</h3>
-          <span style="font-weight: 800; font-size: 1.8rem; color: var(--deep-blue);">40%</span>
+          <span id="progressPercent" style="font-weight: 800; font-size: 1.8rem; color: var(--deep-blue);">0%</span>
         </div>
         <div class="progress-bar-bg">
-          <div class="progress-bar-fill"></div>
+          <div class="progress-bar-fill" id="progressBar" style="width: 0%;"></div>
         </div>
-        <div class="progress-footer-text">2 of 5 lessons completed</div>
+        <div class="progress-footer-text" id="progressText">Loading...</div>
       </div>
 
       <div class="dashboard-grid">
@@ -119,6 +119,30 @@
   </script>
 
 <script src="progress.js"></script>
+
+<script>
+  const TOTAL_LESSONS = 40;
+
+  if (!localStorage.getItem("accessToken")) {
+    window.location.href = "login.html";
+  }
+
+  const user = JSON.parse(localStorage.getItem("user") || "null");
+  const fullName = user?.user_metadata?.full_name;
+  if (fullName) {
+    document.getElementById("helloName").textContent = "Hello, " + fullName.split(" ")[0] + "!";
+  }
+
+  loadProgress().then((progress) => {
+    const done = progress.filter((p) => p.completed).length;
+    const percent = Math.round((done / TOTAL_LESSONS) * 100);
+
+    document.getElementById("progressPercent").textContent = percent + "%";
+    document.getElementById("progressBar").style.width = percent + "%";
+    document.getElementById("progressText").textContent =
+      done + " of " + TOTAL_LESSONS + " lessons completed";
+  });
+</script>
 
 </body>
 </html>

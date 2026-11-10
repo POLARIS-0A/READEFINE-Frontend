@@ -11,9 +11,11 @@
   <div id="app"></div>
   <script>
     const params = new URLSearchParams(location.search);
-    const lessonId = params.get('id');
+    const lessonId = new URLSearchParams(window.location.search).get('id');
+    const id = new URLSearchParams(window.location.search).get('id');
   </script>
   <script src="lesson-data.js"></script>
   <script src="lesson-exam.js"></script>
+  <script src="progress.js"></script>
 </body>
 </html>

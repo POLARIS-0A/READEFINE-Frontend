@@ -96,4 +96,27 @@
   const pageScript = document.createElement("script");
   pageScript.textContent = page.script;
   document.body.appendChild(pageScript);
+
+  if (pageType === "lesson") {
+    const completeBtn = document.createElement("button");
+    completeBtn.type = "button";
+    completeBtn.className = "btn-primary";
+    completeBtn.style.marginTop = "24px";
+    completeBtn.textContent = "✅ Mark Lesson as Completed";
+
+    completeBtn.addEventListener("click", async () => {
+      completeBtn.disabled = true;
+      completeBtn.textContent = "Saving...";
+      try {
+        const result = await saveProgress(lessonId, true, null);
+        completeBtn.textContent = result.ok ? "✅ Completed!" : "Could not save. Log in again.";
+      } catch (err) {
+        completeBtn.textContent = "Cannot reach the server";
+        completeBtn.disabled = false;
+      }
+    });
+
+    document.querySelector(".main-content").appendChild(completeBtn);
+  }
+
 })();
