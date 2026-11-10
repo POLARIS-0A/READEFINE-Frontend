@@ -305,7 +305,7 @@
           for(let i=11; i<=20; i++) {
             document.write(`
               <div class="lesson-row-item">
-                <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level2Titles[i-1]}</span>
+                <span style="font-weight: 600; color: var(--text-dark);">Lesson ${i}: ${level2Titles[i-11]}</span>
                 <a href="lesson.html?id=${i}" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
               </div>
             `);
@@ -436,7 +436,7 @@
       list.innerHTML = items.map(c => `
         <div class="lesson-row-item">
           <span style="font-weight: 600; color: var(--text-dark);">Lesson ${c.order_index}: ${c.title}</span>
-          <a href="lesson${c.order_index}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
+          <a href="lesson.html?id=${c.order_index}.html" class="btn-primary" style="padding: 8px 18px; font-size: 0.9rem; text-decoration: none;">Start →</a>
         </div>
       `).join('');
     });

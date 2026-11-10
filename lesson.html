@@ -9,6 +9,10 @@
 </head>
 <body>
   <div id="app"></div>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const lessonId = params.get('id');
+  </script>
   <script src="lesson-data.js"></script>
   <script src="lesson-exam.js"></script>
 </body>
