@@ -123,30 +123,63 @@
       <h1 class="auth-title">Create Account</h1>
       <p class="auth-subtitle">Join READEFINE and start exploring your literacy path</p>
 
-      <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+            <form id="signupForm">
         <div class="form-group">
           <label class="form-label">Full Name</label>
-          <input type="text" class="form-input" placeholder="Juan Dela Cruz" required>
+          <input type="text" id="fullName" class="form-input" placeholder="Juan Dela Cruz" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="name@example.com" required>
+          <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Password</label>
-          <input type="password" class="form-input" placeholder="At least 6 characters" required>
+          <input type="password" id="password" class="form-input" placeholder="At least 6 characters" minlength="6" required>
         </div>
-  
-          <button href="index.html" class="btn-submit">Sign Up</button>
+
+        <button type="submit" class="btn-submit">Sign Up</button>
+        <p id="message" style="margin-top:12px; font-size:0.9rem; color:#c0392b;"></p>
       </form>
 
       <p class="auth-footer-text">
         Already have an account? <a href="login.html">Log In</a>
       </p>
     </div>
-  </div>        
+  </div>
 
+  <script>
+    const form = document.getElementById("signupForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      message.textContent = "Creating account...";
+
+      try {
+        const res = await fetch("http://localhost:3000/api/auth/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fullName: document.getElementById("fullName").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          message.textContent = data.error;
+          return;
+        }
+
+        window.location.href = "index.html";
+      } catch (err) {
+        message.textContent = "Cannot reach the server. Is the backend running?";
+      }
+    });
+  </script>
 </body>
-</html>
+</html>       
