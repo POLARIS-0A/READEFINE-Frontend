@@ -8,6 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* PINALAKI AT PINAGANDANG GLASSMORPHISM MODALS */
+
+    
+    body{
+      display: block;
+      height: auto;
+      min-height: 100vh;
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -168,7 +178,7 @@
           <li><a href="levels.html">Lessons</a></li>
           <li><a href="exams.html">Exams</a></li>
           <!-- Direct nang pumupunta sa dashboard/progress page -->
-          <li><a href="dashboard.html">Progress</a></li>
+          <li><a href="progress.html">Progress</a></li>
         </ul>
         
         <!-- Log In / Profile Trigger -->
@@ -181,10 +191,18 @@
       <!-- Center Hero Oblong Card -->
       <div class="hero-card">
         <div class="hero-text">
-          <h1>Read. Learn. Define.</h1>
+          <h1>Read, Learn, Define, READEFINE.</h1>
           <p>Eliminate illiteracy, Create your own metamorphosis.</p>
           <!-- May checker logic na: pag may account na, direkta sa dashboard; pag wala, hihingi ng sign up/login -->
-          <button onclick="window.location.href='dashboard.html'" class="btn-primary" style="border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Learning →</button>
+          <button onclick="handleStartLearning()" class="btn-primary" style="border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Learning →</button>
+
+              <!-- Features Badges -->
+            <div class="features-footer">
+              <div class="feature-item">🎧 Interactive Lessons with Audio</div>
+              <div class="feature-item">🤖 AI-Powered Answer Checker</div>
+              <div class="feature-item">📊 Track Your Progress</div>
+            </div>
+
         </div>
         
         <div class="illustration-box">
@@ -192,12 +210,35 @@
         </div>
       </div>
 
-      <!-- Footer Features Badges -->
-      <div class="features-footer">
-        <div class="feature-item">🎧 Interactive Lessons with Audio</div>
-        <div class="feature-item">🤖 AI-Powered Answer Checker</div>
-        <div class="feature-item">📊 Track Your Progress</div>
+      
+
+      
+      <div class="info-card">
+        <div><img src="ASSETS/img-problem.jpg"></div>
+        <div>
+          <h1> THE PROBLEM </h1>
+          <p>Today, many young learners are not able to read well or understand certain context across different types of communication and media. According to the National Literacy Institute's (2026) update, around 739 million adults worldwide still lack basic literacy skills (2024). While global adult literacy rate rose from 86% in 2015 to 88% in 2024, and 93% of ages 15 to 24 are able to read and write. However, this is not caused by just not learning enough, but because some lack the confidence or the proper support to obtain these literacy skills.
+        </p>
+        </div>
       </div>
+
+      <div class="info-card">
+        <div>
+          <h1>THE VISION </h1>
+        <p>To create a the metamorphsis for children and teens who are struggling with English Literacy. </p>
+        </div>
+        <div><img src="ASSETS/img-vision.jpg"></div>
+      </div>
+
+      <div class="info-card">
+        <div><img src="ASSETS/img-mission.jpg"></div>
+        <div>
+          <h1>THE MISSION</h1>
+        <p>READEFINE aims to make reading practice into something friendly, fun, and easy to understand. It aims to provides lessons that start with clear study guides and manageable steps. This will help learners understand difficult words in simple language, what they mean, and how to use them. We do this by providing: VOICED LESSONS, TESTS and a PROGRESS BAR so they may visualize their mastery of English fundamentals or even discover what needs more improvement.
+        </p>
+        </div>
+      </div>
+
 
     </div>
   </div>
