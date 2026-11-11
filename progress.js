@@ -1,5 +1,5 @@
-const API_URL = "https://readifine-backend.vercel.app";
-fetch(`${API_URL}/api/chapters`)
+const API_URL = "https://localhost:3000/api";
+
 function authHeaders() {
   return {
     "Content-Type": "application/json",
