@@ -1,3 +1,18 @@
+window.checkAnswer = async function (question, correctAnswer, userAnswer) {
+  try {
+    const res = await fetch("http://localhost:3000/api/exam/check", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question, correctAnswer, userAnswer }),
+    });
+    if (!res.ok) throw new Error("Server error " + res.status);
+    return await res.json(); // { correct, feedback }
+  } catch (err) {
+    console.error(err);
+    return { correct: false, feedback: "Couldn't check your answer. Please try again." };
+  }
+};
+
 (function () {
   const pageType = document.documentElement.dataset.page;
   const pages = pageType === "lesson" ? window.LESSONS : window.EXAMS;
