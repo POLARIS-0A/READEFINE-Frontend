@@ -150,6 +150,159 @@
     #logo{
       width: 50%;
     }
+
+.card {
+  margin: 12px auto 0;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.card1 {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.8fr);
+  gap: 28px;
+  align-items: center;
+  max-width: 2500px;
+  background: #FFFFFF;
+  border: 1px solid rgba(208, 225, 249, 0.9);
+  border-radius: 30px;
+  padding: 32px 30px 26px;
+  box-shadow: 0 18px 40px rgba(23, 75, 133, 0.08);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  z-index: 0;
+}
+
+.card1::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -5px;
+  right: -5px;
+  background: linear-gradient(var(--text-dark) 60%, var(--primary-blue));
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.5s ease-out;
+}
+
+.card1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 52px rgba(23, 75, 133, 0.12);
+  border-color: rgba(79, 131, 204, 0.5);
+}
+
+.card1:hover::before {
+  transform: scale(80);
+}
+
+.card1 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card1 h1 {
+  margin: 0 0 14px;
+  color: var(--deep-blue);
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  line-height: 1.1;
+}
+
+.card1 .small {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.card-side {
+  display: grid;
+  gap: 16px;
+}
+
+.stat-box {
+  padding: 18px;
+  background: #EAF2FF;
+  border: 1px solid rgba(208, 225, 249, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(23, 75, 133, 0.06);
+}
+
+.stat-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--deep-blue);
+  font: 800 2rem/1 'Plus Jakarta Sans', sans-serif;
+}
+
+.stat-box span {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.card1:hover .small {
+  color: #FFFFFF;
+  transition: color 0.3s ease-out;
+}
+
+.card1:hover h1 {
+  color: #C7DCFA;
+  text-decoration: underline;
+  transition: color 0.3s ease-out;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--text-dark), var(--primary-blue));
+  border-radius: 0 26px 0 26px;
+}
+
+.go-arrow img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.go-arrow {
+  margin: 2px -2px 0 0;
+}
+
+.mission, .vision{
+  text-align: center;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .card1 {
+    grid-template-columns: 1fr;
+    padding: 28px 22px 22px;
+  }
+
+  .card-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .card-side {
+    grid-template-columns: 1fr;
+  }
+}
+
+ 
   </style>
 </head>
 <body>
@@ -183,8 +336,16 @@
         <div class="hero-text">
           <h1>Read. Learn. Define.</h1>
           <p>Eliminate illiteracy, Create your own metamorphosis.</p>
+
+           <!-- Footer Features Badges -->
+        <div class="features-footer">
+          <div class="feature-item">🎧 Interactive Lessons with Audio</div>
+          <div class="feature-item">🤖 AI-Powered Answer Checker</div>
+          <div class="feature-item">📊 Track Your Progress</div>
+        </div>
+
           <!-- May checker logic na: pag may account na, direkta sa dashboard; pag wala, hihingi ng sign up/login -->
-          <button onclick="window.location.href='dashboard.html'" class="btn-primary" style="border: none; cursor: pointer; text-decoration: none; display: inline-block;">Start Learning →</button>
+          <button onclick="window.location.href='dashboard.html'" class="btn-primary" style="border: none; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 8%">Start Learning →</button>
         </div>
         
         <div class="illustration-box">
@@ -192,15 +353,63 @@
         </div>
       </div>
 
-      <!-- Footer Features Badges -->
-      <div class="features-footer">
-        <div class="feature-item">🎧 Interactive Lessons with Audio</div>
-        <div class="feature-item">🤖 AI-Powered Answer Checker</div>
-        <div class="feature-item">📊 Track Your Progress</div>
-      </div>
-
+  
+    <div class="card">
+      <a class="card1" href="#">
+        <div class="card-copy">
+          <h1>THE PROBLEM</h1>
+          <p class="small">Today, many young learners are not able to read or understand certain English information across different types of communication and media. According to the National Literacy Institute (2026), around 739 million adults worldwide still lack basic literacy skills in 2024. However, a majority of 93% of young people aged 15 to 24 do indeed have the ability to read and write, while 7% may struggle with literacy. As small of a percentage it may seem, it is still important to nurture English literacy skills for each individual, as it is the key for many social activities and the enhancement of critical thinking, which opens pathways for better futures and career pathways, as English is a universal language used by many. Here at READEFINE, we believe that Illiteracy is caused by lack the confidence and the proper support, which we aim to solve.</p>
+        </div>
+        <div class="card-side" aria-label="Youth literacy statistics">
+          <div class="stat-box">
+            <strong>93%</strong>
+            <span>Can read and write</span>
+          </div>
+          <div class="stat-box">
+            <strong>7%</strong>
+            <span>May struggle with literacy</span>
+          </div>
+        </div>
+        <div class="go-corner" href="#">
+          <div class="go-arrow">
+            <img src="ASSETS/card-logo.png">
+          </div>
+        </div>
+      </a>
     </div>
-  </div>
+
+    <div class="card">
+      <a class="card1 vision" href="#">
+        <div class="card-copy">
+          <h1>THE VISION</h1>
+          <p class="small">To create a website that eliminates illiteracy, and begin your metamorphosis towards literacy mastery. </p>
+        </div>
+        <div class="go-corner" href="#">
+          <div class="go-arrow">
+            <img src="ASSETS/card-logo.png">
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="card">
+      <a class="card1 mission" href="#">
+        <div class="card-copy">
+          <h1>THE MISSION</h1>
+          <p class="small">
+
+          1. Provide lessons with clear study guides and manageable steps.  <br>
+          2. Help learners understand difficult topics through proper support and explanation: what they mean, and how to use them. <br>
+          3. Enhanced interactivity and engagement through VOICED LESSONS.<br>
+          4. Visualize their level of mastery in English fundamentals through PROGRESS BARS and TESTS. </p>
+        </div>
+        <div class="go-corner" href="#">
+          <div class="go-arrow">
+            <img src="ASSETS/card-logo.png">
+          </div>
+        </div>
+      </a>
+    </div>
 
   <!-- LOGIN MODAL -->
   <div class="modal-overlay" id="loginModal">
@@ -246,7 +455,7 @@
 
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" id="signupEmail" class="form-input" placeholder="name@example.com" required>
+          <input type="email" id="signupEmail" class="form-input" placeholder="name@example.com" requ`ired>
         </div>
 
         <div class="form-group">
@@ -263,7 +472,7 @@
     </div>
   </div>
 
-  <script>
+  <script>1
     const loginModal = document.getElementById('loginModal');
     const signupModal = document.getElementById('signupModal');
 
@@ -326,7 +535,7 @@
       localStorage.setItem('readefine_logged_in', 'true');
       window.location.href = 'dashboard.html';
     }
-  </script>
+  </script>1
 
 </body>
 </html>
