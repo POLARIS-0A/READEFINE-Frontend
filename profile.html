@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READEFINE - Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-frame dashboard-frame">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="landing-logo"><img src="ASSETS/logo.png" alt=""> READEFINE</div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">🌐 Home Page</a></li>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="levels.html">📚 Lessons</a></li>
+          <li><a href="exams.html">📝 Exams</a></li>
+          <li><a href="dashboard.html#progress">📊 Progress</a></li>
+          <li><a href="profile.html" class="active" aria-current="page">👤 Profile</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <a href="index.html" class="logout-btn" onclick="localStorage.removeItem('accessToken'); localStorage.removeItem('user')">🚪 Log Out</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="top-header-bar">
+        <div class="header-left-group">
+          <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle navigation">☰</button>
+          <div class="welcome-text">
+            <h1>My Profile</h1>
+            <p>View your account details</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-box account-profile-card" aria-labelledby="profileName">
+        <div class="account-profile-heading">
+          <div class="account-profile-avatar" id="profileAvatar" aria-hidden="true">L</div>
+          <div>
+            <h2 id="profileName">Learner</h2>
+            <p id="profileEmail"></p>
+          </div>
+        </div>
+        <dl class="account-profile-details">
+          <div class="account-profile-detail">
+            <dt>Full name</dt>
+            <dd id="profileFullName">Learner</dd>
+          </div>
+          <div class="account-profile-detail">
+            <dt>Email address</dt>
+            <dd id="profileEmailDetail"></dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const accessToken = localStorage.getItem("accessToken");
+    if (!accessToken) {
+      window.location.replace("login.html");
+    } else {
+      const user = JSON.parse(localStorage.getItem("user") || "null");
+      const fullName = user?.user_metadata?.full_name || "Learner";
+      const email = user?.email || "No email available";
+      const initials = fullName
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((part) => part[0])
+        .join("")
+        .toUpperCase() || "L";
+
+      document.getElementById("profileName").textContent = fullName;
+      document.getElementById("profileFullName").textContent = fullName;
+      document.getElementById("profileEmail").textContent = email;
+      document.getElementById("profileEmailDetail").textContent = email;
+      document.getElementById("profileAvatar").textContent = initials;
+    }
+
+    document.getElementById("menuToggleBtn").addEventListener("click", () => {
+      document.getElementById("sidebar").classList.toggle("collapsed");
+    });
+  </script>
+</body>
+</html>

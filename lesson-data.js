@@ -104,7 +104,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Explain what vocabulary means.</li>
@@ -116,7 +116,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Words are an important part of everyday communication. We use words when speaking, reading, writing, sending messages, and expressing our thoughts.
             </p>
@@ -124,31 +124,31 @@ window.LESSONS = {
               Understanding words helps people communicate clearly and understand information. Learning new words also allows individuals to express their ideas more accurately.
             </p>
 
-            <h3 class="section-title">📌 1. What Is Vocabulary?</h3>
+            <h3 class="section-title"> 1. What Is Vocabulary?</h3>
             <p class="text-body">
               <strong>Vocabulary</strong> refers to the collection of words that a person knows, understands, and uses in communication. It develops through reading, listening, speaking, writing, and learning new information.
             </p>
 
             <div class="aesthetic-box">
-              <strong style="color: var(--deep-blue);">✨ Example:</strong><br>
+              <strong style="color: var(--deep-blue);"> Example:</strong><br>
               <span class="text-body" style="margin: 0; display: block; margin-top: 6px;">A student who knows the words <em>"confident," "responsible,"</em> and <em>"determined"</em> can use these words to describe people, actions, and situations effectively.</span>
             </div>
 
-            <h3 class="section-title">💬 2. Types of Vocabulary</h3>
+            <h3 class="section-title"> 2. Types of Vocabulary</h3>
             <div class="grid-two-col">
               <div class="mini-pill-card">
-                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;">🎧 Receptive Vocabulary</h4>
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;"> Receptive Vocabulary</h4>
                 <p class="text-body" style="font-size: 1rem; margin-bottom: 12px;">Words that a person understands when reading or listening, but may not regularly use when speaking or writing.</p>
                 <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem;">Example: Understanding "generous" while reading a story.</small>
               </div>
               <div class="mini-pill-card">
-                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;">✍️ Expressive Vocabulary</h4>
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;"> Expressive Vocabulary</h4>
                 <p class="text-body" style="font-size: 1rem; margin-bottom: 12px;">Words that a person can actively use when speaking or writing to communicate with others.</p>
                 <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem;">Example: Using "generous" to describe a helpful friend.</small>
               </div>
             </div>
 
-            <h3 class="section-title">⭐ 3. Importance of Vocabulary</h3>
+            <h3 class="section-title"> 3. Importance of Vocabulary</h3>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem;">
               <li>Improves reading comprehension.</li>
               <li>Helps people express ideas clearly.</li>
@@ -157,7 +157,7 @@ window.LESSONS = {
               <li>Helps learners understand academic and everyday information.</li>
             </ul>
 
-            <h3 class="section-title">🚀 4. How to Improve Vocabulary</h3>
+            <h3 class="section-title"> 4. How to Improve Vocabulary</h3>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem;">
               <li>Read books, articles, and other written materials.</li>
               <li>Listen carefully to conversations and discussions.</li>
@@ -166,7 +166,7 @@ window.LESSONS = {
               <li>Practice using new words in sentences.</li>
             </ul>
 
-            <h3 class="section-title">🔍 Word Examples</h3>
+            <h3 class="section-title"> Word Examples</h3>
             <div class="aesthetic-box">
               <strong>Word:</strong> Responsible<br>
               <strong>Meaning:</strong> Able to be trusted to do what is expected or required.<br>
@@ -181,7 +181,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Vocabulary is a collection of words a person knows and uses.</li>
               <li>Receptive vocabulary involves understanding words; Expressive involves using them.</li>
@@ -308,7 +308,7 @@ window.LESSONS = {
       
 
       <div id="lockedBanner" hidden style="background: #FEF2F2; border: 1px solid #FCA5A5; color: #991B1B; padding: 20px; border-radius: 16px; text-align: center; margin-bottom: 24px;">
-        <h3 style="font-weight: 800; margin-bottom: 6px;">🔒 Lesson Locked</h3>
+        <h3 style="font-weight: 800; margin-bottom: 6px;"> Lesson Locked</h3>
         <p>You must complete the Lesson 1 exam before proceeding to Lesson 2.</p>
         <a href="levels.html" class="btn-primary" style="display: inline-block; margin-top: 12px; background: #991B1B; color: #FFF;">Go back to Lessons</a>
       </div>
@@ -318,7 +318,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define context clues.</li>
@@ -330,7 +330,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Readers sometimes encounter unfamiliar words while reading. However, they do not always need a dictionary to understand them.
             </p>
@@ -338,17 +338,17 @@ window.LESSONS = {
               The words and sentences surrounding an unfamiliar word may provide clues to its meaning. These clues are called <strong>context clues</strong>.
             </p>
 
-            <h3 class="section-title">🔍 1. What Are Context Clues?</h3>
+            <h3 class="section-title"> 1. What Are Context Clues?</h3>
             <p class="text-body">
               Context clues are hints or pieces of information found in the surrounding words, phrases, or sentences that help readers understand an unfamiliar word.
             </p>
             <div class="aesthetic-box">
-              <strong style="color: var(--deep-blue);">✨ Example:</strong><br>
+              <strong style="color: var(--deep-blue);"> Example:</strong><br>
               <span class="text-body" style="margin: 0; display: block; margin-top: 6px;">"After walking for several hours under the hot sun, Mark felt <em>exhausted</em> and needed to rest."</span>
               <small style="color: #64748B; font-size: 0.95rem; display: block; margin-top: 4px;">The phrase "needed to rest" suggests that exhausted means very tired.</small>
             </div>
 
-            <h3 class="section-title">📚 2. Types of Context Clues</h3>
+            <h3 class="section-title"> 2. Types of Context Clues</h3>
             
             <div class="type-pill-card">
               <h5>A. Definition or Explanation Clues</h5>
@@ -380,7 +380,7 @@ window.LESSONS = {
               <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem;">Example: Mia grabbed her umbrella and wore her raincoat before leaving the house.</small>
             </div>
 
-            <h3 class="section-title">🪜 3. Steps in Using Context Clues</h3>
+            <h3 class="section-title"> 3. Steps in Using Context Clues</h3>
             <ol style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem;">
               <li>Read the entire sentence.</li>
               <li>Identify the unfamiliar word.</li>
@@ -390,7 +390,7 @@ window.LESSONS = {
               <li>Read the sentence again to check whether the meaning makes sense.</li>
             </ol>
 
-            <h3 class="section-title">💡 Additional Sentence Examples</h3>
+            <h3 class="section-title"> Additional Sentence Examples</h3>
             <div class="aesthetic-box">
               <span class="text-body" style="margin: 0; display: block;">"The athlete was <strong>determined</strong> to finish the race despite being tired."</span>
               <small style="color: var(--deep-blue); font-weight: 700; font-size: 0.95rem; display: block; margin-top: 4px;">Determined means strongly decided or committed to achieving something.</small>
@@ -403,7 +403,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Context clues help readers understand unfamiliar words.</li>
               <li>Clues may appear in the same sentence or nearby sentences.</li>
@@ -538,7 +538,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define synonyms and antonyms.</li>
@@ -550,7 +550,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Words can have similar or opposite meanings. Understanding these relationships helps readers expand their vocabulary and avoid repeating the same words in writing.
             </p>
@@ -558,7 +558,7 @@ window.LESSONS = {
               Two important word relationships are synonyms and antonyms.
             </p>
 
-            <h3 class="section-title">📌 1. What Are Synonyms?</h3>
+            <h3 class="section-title"> 1. What Are Synonyms?</h3>
             <p class="text-body">
               Synonyms are words that have the same or nearly the same meaning.
             </p>
@@ -570,12 +570,12 @@ window.LESSONS = {
               <li>Smart – Intelligent</li>
             </ul>
             <div class="aesthetic-box">
-              <strong style="color: var(--deep-blue);">✨ Example Sentence:</strong><br>
+              <strong style="color: var(--deep-blue);"> Example Sentence:</strong><br>
               <span class="text-body" style="margin: 0; display: block; margin-top: 6px;">Original: The examination was <em>difficult</em>.<br>Using a synonym: The examination was <em>challenging</em>.</span>
               <small style="color: #64748B; font-size: 0.95rem; display: block; margin-top: 4px;">Both difficult and challenging describe something that requires effort.</small>
             </div>
 
-            <h3 class="section-title">📌 2. What Are Antonyms?</h3>
+            <h3 class="section-title"> 2. What Are Antonyms?</h3>
             <p class="text-body">
               Antonyms are words that have opposite meanings.
             </p>
@@ -587,14 +587,14 @@ window.LESSONS = {
               <li>Increase – Decrease</li>
             </ul>
             <div class="aesthetic-box">
-              <strong style="color: var(--deep-blue);">✨ Example Sentence:</strong><br>
+              <strong style="color: var(--deep-blue);"> Example Sentence:</strong><br>
               <span class="text-body" style="margin: 0; display: block; margin-top: 6px;">Original: The room was <em>bright</em>.<br>Opposite: The room was <em>dark</em>.</span>
             </div>
 
-            <h3 class="section-title">💬 3. Importance of Synonyms & Antonyms</h3>
+            <h3 class="section-title"> 3. Importance of Synonyms & Antonyms</h3>
             <div class="grid-two-col">
               <div class="mini-pill-card">
-                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;">📈 Importance of Synonyms</h4>
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;"> Importance of Synonyms</h4>
                 <ul style="padding-left: 18px; color: #334155; line-height: 1.7; font-size: 0.95rem;">
                   <li>Prevents unnecessary repetition.</li>
                   <li>Makes writing more interesting.</li>
@@ -603,7 +603,7 @@ window.LESSONS = {
                 </ul>
               </div>
               <div class="mini-pill-card">
-                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;">📉 Importance of Antonyms</h4>
+                <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;"> Importance of Antonyms</h4>
                 <ul style="padding-left: 18px; color: #334155; line-height: 1.7; font-size: 0.95rem;">
                   <li>Helps explain differences.</li>
                   <li>Makes comparisons easier.</li>
@@ -613,7 +613,7 @@ window.LESSONS = {
               </div>
             </div>
 
-            <h3 class="section-title">🎯 5. Choosing the Right Word</h3>
+            <h3 class="section-title"> 5. Choosing the Right Word</h3>
             <p class="text-body">
               Not all synonyms can be used interchangeably in every situation. Their meanings may be similar but their tone or usage may differ.
             </p>
@@ -623,7 +623,7 @@ window.LESSONS = {
               • <em>Childlike</em> can describe innocent or playful qualities.
             </div>
 
-            <h3 class="section-title">🔍 More Examples</h3>
+            <h3 class="section-title"> More Examples</h3>
             <div class="aesthetic-box">
               <strong>Synonym Example:</strong><br>
               • The student was brave.<br>
@@ -638,7 +638,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Synonyms have similar meanings.</li>
               <li>Antonyms have opposite meanings.</li>
@@ -768,7 +768,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define homophones.</li>
@@ -780,7 +780,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Some English words sound alike but have different meanings and spellings. Other words look or sound similar but are used in different situations.
             </p>
@@ -788,7 +788,7 @@ window.LESSONS = {
               Understanding these differences helps prevent mistakes in reading and writing.
             </p>
 
-            <h3 class="section-title">📌 1. What Are Homophones?</h3>
+            <h3 class="section-title"> 1. What Are Homophones?</h3>
             <p class="text-body">
               Homophones are words that have the same pronunciation but different meanings and usually different spellings.
             </p>
@@ -800,7 +800,7 @@ window.LESSONS = {
               <li>Flower – Flour</li>
             </ul>
 
-            <h3 class="section-title">📚 2. Common Homophones</h3>
+            <h3 class="section-title"> 2. Common Homophones</h3>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;">Their vs. There vs. They're</h4>
@@ -823,7 +823,7 @@ window.LESSONS = {
               • <strong>You're:</strong> Short form of "you are" (<em>Ex:</em> You're doing well.)
             </div>
 
-            <h3 class="section-title">⚖️ 3. Commonly Confused Words</h3>
+            <h3 class="section-title"> 3. Commonly Confused Words</h3>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Affect vs. Effect</h4>
@@ -853,7 +853,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Homophones sound alike but have different meanings.</li>
               <li>Correct spelling depends on the intended meaning.</li>
@@ -983,7 +983,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Identify the major parts of speech.</li>
@@ -995,7 +995,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Every word in a sentence has a role. Some words name people, places, and things. Others describe actions, qualities, or relationships.<br>
               These roles are called <strong>parts of speech</strong>.
@@ -1061,7 +1061,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <p style="margin-bottom: 12px; font-size: 1.05rem;">The eight major parts of speech are:</p>
             <ul>
               <li>1. Noun &nbsp;&bull;&nbsp; 2. Pronoun &nbsp;&bull;&nbsp; 3. Verb &nbsp;&bull;&nbsp; 4. Adjective</li>
@@ -1191,7 +1191,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define a sentence.</li>
@@ -1203,13 +1203,13 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               A sentence is a group of words that expresses a complete thought. Sentences allow people to share information, ask questions, give instructions, and express feelings.<br>
               A well-constructed sentence helps readers understand the intended message.
             </p>
 
-            <h3 class="section-title">📌 1. What Is a Sentence?</h3>
+            <h3 class="section-title"> 1. What Is a Sentence?</h3>
             <p class="text-body">
               A sentence is a group of words that expresses a complete thought and follows grammatical rules.
             </p>
@@ -1218,7 +1218,7 @@ window.LESSONS = {
               <small style="color: #64748B;">This is a complete sentence because it communicates a complete idea.</small>
             </div>
 
-            <h3 class="section-title">🧩 2. Basic Sentence Elements</h3>
+            <h3 class="section-title"> 2. Basic Sentence Elements</h3>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;">Subject</h4>
@@ -1232,14 +1232,14 @@ window.LESSONS = {
               </div>
             </div>
 
-            <h3 class="section-title">📐 3. Basic Sentence Patterns</h3>
+            <h3 class="section-title"> 3. Basic Sentence Patterns</h3>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; margin-bottom: 16px;">
               <li><strong>Subject + Verb (S–V):</strong> Birds fly.</li>
               <li><strong>Subject + Verb + Object (S–V–O):</strong> Maria reads books.</li>
               <li><strong>Subject + Linking Verb + Complement:</strong> John is intelligent. (The complement describes or identifies the subject.)</li>
             </ul>
 
-            <h3 class="section-title">⚠️ 4. Complete Sentences and Sentence Fragments</h3>
+            <h3 class="section-title"> 4. Complete Sentences and Sentence Fragments</h3>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Complete Sentence</h4>
@@ -1251,7 +1251,7 @@ window.LESSONS = {
               </div>
             </div>
 
-            <h3 class="section-title">📋 5. Basic Rules of Sentence Construction</h3>
+            <h3 class="section-title"> 5. Basic Rules of Sentence Construction</h3>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem;">
               <li>Begin a sentence with a capital letter.</li>
               <li>Use correct word order.</li>
@@ -1263,7 +1263,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>A sentence expresses a complete thought.</li>
               <li>The subject tells who or what the sentence is about, while the predicate tells something about it.</li>
@@ -1315,7 +1315,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Identify the subject and predicate of a sentence.</li>
@@ -1327,7 +1327,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               A sentence is made up of important parts that work together to express a complete thought. Two of its main components are the subject and predicate.<br>
               Understanding these components helps learners construct grammatically correct sentences.
@@ -1377,7 +1377,7 @@ window.LESSONS = {
               • <em>Complete predicate:</em> have completed their assignments
             </div>
 
-            <h3 class="section-title">✨ More Examples</h3>
+            <h3 class="section-title"> More Examples</h3>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1</h4>
@@ -1394,7 +1394,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>The subject tells who or what the sentence is about.</li>
               <li>The predicate tells what the subject does or what is said about it.</li>
@@ -1441,7 +1441,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Explain the importance of grammar and punctuation.</li>
@@ -1453,7 +1453,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Grammar provides rules for organizing words into meaningful sentences. Punctuation marks help readers understand how sentences are structured and how ideas are connected.<br>
               Without proper grammar and punctuation, written messages may become confusing or difficult to understand.
@@ -1463,8 +1463,8 @@ window.LESSONS = {
             <p class="text-body">Grammar refers to the rules and principles that guide how words are formed, arranged, and used in a language.</p>
             <div class="aesthetic-box">
               <strong>Example:</strong><br>
-              ❌ Incorrect: She go to school every day.<br>
-              ✔️ Correct: She goes to school every day.
+               Incorrect: She go to school every day.<br>
+               Correct: She goes to school every day.
             </div>
 
             <h3 class="section-title">2. What Is Punctuation?</h3>
@@ -1507,21 +1507,21 @@ window.LESSONS = {
             </ul>
             <div class="aesthetic-box">
               <strong>Example:</strong><br>
-              ❌ Incorrect: maria lives in batangas.<br>
-              ✔️ Correct: Maria lives in Batangas.
+               Incorrect: maria lives in batangas.<br>
+               Correct: Maria lives in Batangas.
             </div>
 
             <h3 class="section-title">5. Common Grammar Errors</h3>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.05rem;">
-              <li><strong>Subject-Verb Agreement:</strong> <em>He play basketball.</em> ➡️ <em>He plays basketball.</em></li>
-              <li><strong>Incorrect Verb Form:</strong> <em>She have a new laptop.</em> ➡️ <em>She has a new laptop.</em></li>
-              <li><strong>Sentence Fragment:</strong> <em>Because I was busy.</em> ➡️ <em>I could not attend because I was busy.</em></li>
+              <li><strong>Subject-Verb Agreement:</strong> <em>He play basketball.</em>  <em>He plays basketball.</em></li>
+              <li><strong>Incorrect Verb Form:</strong> <em>She have a new laptop.</em>  <em>She has a new laptop.</em></li>
+              <li><strong>Sentence Fragment:</strong> <em>Because I was busy.</em>  <em>I could not attend because I was busy.</em></li>
             </ul>
           </div>
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Grammar organizes words correctly.</li>
               <li>Punctuation clarifies written messages.</li>
@@ -1568,7 +1568,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Identify the four types of sentences according to function.</li>
@@ -1580,7 +1580,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               People use sentences for different purposes. Sometimes they share information, ask questions, give instructions, or express strong emotions.<br>
               Understanding sentence types helps learners communicate their intentions clearly.
@@ -1633,7 +1633,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <p style="margin-bottom: 12px; font-size: 1.05rem;">There are four basic sentence types according to function:</p>
             <ul>
               <li>1. Declarative – makes a statement.</li>
@@ -1681,7 +1681,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Explain reading comprehension.</li>
@@ -1694,7 +1694,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Reading is not only about recognizing words. It also involves understanding the message, identifying important information, and connecting ideas.<br>
               Reading comprehension is an important skill because it helps individuals understand textbooks, instructions, news articles, online information, and everyday written communication.
@@ -1708,7 +1708,7 @@ window.LESSONS = {
             <div class="aesthetic-box">
               <strong>Example Passage:</strong><br>
               "Reading regularly helps students improve their vocabulary. It also strengthens their understanding of different topics and develops their ability to express ideas."<br><br>
-              🎯 <strong>Main Idea:</strong> Reading regularly helps students improve their learning and communication skills.
+               <strong>Main Idea:</strong> Reading regularly helps students improve their learning and communication skills.
             </div>
 
             <h3 class="section-title">3. Supporting Details</h3>
@@ -1725,7 +1725,7 @@ window.LESSONS = {
             <div class="aesthetic-box">
               <strong>Example Passage:</strong><br>
               "Anna reviewed her notes every night, completed practice exercises, and asked questions whenever she did not understand a topic."<br><br>
-              🎯 <strong>Conclusion:</strong> Anna is actively preparing for her examination.
+               <strong>Conclusion:</strong> Anna is actively preparing for her examination.
             </div>
 
             <h3 class="section-title">5. Reading Strategies</h3>
@@ -1751,7 +1751,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Reading comprehension means understanding and interpreting written information.</li>
               <li>The main idea is the central message.</li>
@@ -1801,7 +1801,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define reading comprehension.</li>
@@ -1813,7 +1813,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Reading is not only about recognizing words and reading sentences. It also involves understanding the meaning and information presented in a text.<br>
               Reading comprehension is the ability to understand, interpret, and remember what has been read.<br>
@@ -1889,7 +1889,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Skimming</h4>
@@ -1916,7 +1916,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Reading comprehension means understanding what you read.</li>
               <li>Previewing helps readers prepare before reading.</li>
@@ -1971,7 +1971,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define the main idea of a text.</li>
@@ -1983,7 +1983,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Every paragraph or passage communicates information about a particular topic. Some information explains the overall message, while other information provides examples and additional explanations.<br>
               The main idea is the most important point that the author wants readers to understand.<br>
@@ -1994,21 +1994,21 @@ window.LESSONS = {
             <p class="text-body">The main idea is the central point or most important message of a paragraph or passage. It tells what the text is mostly about.</p>
             <div class="aesthetic-box">
               <strong>Paragraph:</strong> Reading books provides many benefits. It improves vocabulary, develops imagination, and helps people gain new knowledge.<br>
-              🎯 <strong>Main Idea:</strong> Reading books provides many benefits.
+               <strong>Main Idea:</strong> Reading books provides many benefits.
             </div>
 
             <h3 class="section-title">2. What Is a Topic?</h3>
             <p class="text-body">The topic is the general subject being discussed in a paragraph or passage. It is usually expressed in a word or short phrase.</p>
             <div class="aesthetic-box">
               <strong>Paragraph:</strong> Regular exercise helps people maintain good health. It strengthens the body, improves energy, and supports overall wellness.<br>
-              📌 <strong>Topic:</strong> Exercise<br>
-              🎯 <strong>Main Idea:</strong> Regular exercise helps people maintain good health.
+               <strong>Topic:</strong> Exercise<br>
+               <strong>Main Idea:</strong> Regular exercise helps people maintain good health.
             </div>
 
             <h3 class="section-title">3. What Is a Supporting Detail?</h3>
             <p class="text-body">Supporting details are pieces of information that explain, describe, or provide evidence for the main idea. They help readers understand the central message more clearly.</p>
             <div class="aesthetic-box">
-              🎯 <strong>Main Idea:</strong> Drinking enough water is important for the body.<br><br>
+               <strong>Main Idea:</strong> Drinking enough water is important for the body.<br><br>
               <strong>Supporting Details:</strong><br>
               • Water helps prevent dehydration.<br>
               • Water supports normal body functions.<br>
@@ -2019,14 +2019,14 @@ window.LESSONS = {
             <p class="text-body">A stated main idea is directly expressed in the paragraph. Readers can identify it by looking for a sentence that clearly communicates the central point.</p>
             <div class="aesthetic-box">
               <strong>Paragraph:</strong> Exercise is important for maintaining a healthy body. It strengthens muscles, improves endurance, and supports overall health.<br>
-              🎯 <strong>Stated Main Idea:</strong> Exercise is important for maintaining a healthy body.
+               <strong>Stated Main Idea:</strong> Exercise is important for maintaining a healthy body.
             </div>
 
             <h3 class="section-title">5. Implied Main Idea</h3>
             <p class="text-body">An implied main idea is not directly written in one sentence. Readers must understand the supporting details and determine the central message.</p>
             <div class="aesthetic-box">
               <strong>Paragraph:</strong> Ana studies every evening. She reviews her notes, completes practice exercises, and asks questions when she does not understand a lesson.<br>
-              🎯 <strong>Implied Main Idea:</strong> Ana works hard to improve her academic performance.
+               <strong>Implied Main Idea:</strong> Ana works hard to improve her academic performance.
             </div>
 
             <h3 class="section-title">6. How to Identify the Main Idea</h3>
@@ -2040,8 +2040,8 @@ window.LESSONS = {
             </ul>
             <div class="aesthetic-box">
               <strong>Paragraph:</strong> Plants need sunlight, water, and nutrients to grow. Sunlight helps plants produce food, while water and nutrients support their development.<br>
-              📌 <strong>Topic:</strong> Plants<br>
-              🎯 <strong>Main Idea:</strong> Plants need certain things to grow.<br>
+               <strong>Topic:</strong> Plants<br>
+               <strong>Main Idea:</strong> Plants need certain things to grow.<br>
               <strong>Supporting Details:</strong> Sunlight, water, and nutrients help plants develop.
             </div>
 
@@ -2051,7 +2051,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Sleep</h4>
@@ -2076,7 +2076,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>1. The main idea is the central message of a text.</li>
               <li>2. Supporting details explain the main idea.</li>
@@ -2131,7 +2131,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define supporting details.</li>
@@ -2143,7 +2143,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               A paragraph usually contains a main idea and several supporting details. The main idea tells readers what the paragraph is mostly about, while supporting details provide information that explains or develops that idea.<br>
               Recognizing supporting details helps readers understand information more completely. It also allows them to identify examples, facts, explanations, and descriptions that make the main idea clearer.
@@ -2152,7 +2152,7 @@ window.LESSONS = {
             <h3 class="section-title">1. What Are Supporting Details?</h3>
             <p class="text-body">Supporting details are pieces of information that explain, describe, or provide evidence for the main idea of a paragraph or passage. They help readers understand the central message by giving additional information.</p>
             <div class="aesthetic-box">
-              🎯 <strong>Main Idea:</strong> Eating fruits is beneficial to health.<br><br>
+               <strong>Main Idea:</strong> Eating fruits is beneficial to health.<br><br>
               <strong>Supporting Details:</strong><br>
               • Fruits contain vitamins and minerals.<br>
               • Fruits provide dietary fiber.<br>
@@ -2171,7 +2171,7 @@ window.LESSONS = {
             <h3 class="section-title">3. Relevant Supporting Details</h3>
             <p class="text-body">Relevant supporting details are directly connected to the main idea. They help explain or develop the central message of the paragraph.</p>
             <div class="aesthetic-box">
-              🎯 <strong>Main Idea:</strong> Reading improves learning.<br><br>
+               <strong>Main Idea:</strong> Reading improves learning.<br><br>
               <strong>Relevant Details:</strong><br>
               • Reading develops vocabulary.<br>
               • Reading provides new information.<br>
@@ -2181,16 +2181,16 @@ window.LESSONS = {
             <h3 class="section-title">4. Irrelevant Details</h3>
             <p class="text-body">Irrelevant details are pieces of information that do not directly support or explain the main idea. They may be true, but they do not contribute to the central topic.</p>
             <div class="aesthetic-box">
-              🎯 <strong>Main Idea:</strong> Regular exercise supports physical health.<br><br>
-              ✔ Exercise strengthens the body. <em>(Relevant)</em><br>
-              ✔ Exercise improves endurance. <em>(Relevant)</em><br>
-              ✖ My favorite color is blue. <em>(Irrelevant)</em>
+               <strong>Main Idea:</strong> Regular exercise supports physical health.<br><br>
+               Exercise strengthens the body. <em>(Relevant)</em><br>
+               Exercise improves endurance. <em>(Relevant)</em><br>
+               My favorite color is blue. <em>(Irrelevant)</em>
             </div>
 
             <h3 class="section-title">5. How Supporting Details Develop the Main Idea</h3>
             <p class="text-body">Supporting details help develop the main idea by giving readers more information. They can explain why something happens, provide examples, describe a situation, or present evidence.</p>
             <div class="aesthetic-box">
-              🎯 <strong>Main Idea:</strong> Saving money is a useful habit.<br><br>
+               <strong>Main Idea:</strong> Saving money is a useful habit.<br><br>
               <strong>Supporting Details:</strong><br>
               • It helps people prepare for future needs.<br>
               • It can help pay for unexpected expenses.<br>
@@ -2209,14 +2209,14 @@ window.LESSONS = {
             </ul>
             <div class="aesthetic-box">
               <strong>Paragraph:</strong> School libraries are useful places for students. They provide books, learning materials, and quiet spaces for studying. Students can also use library resources for research.<br><br>
-              🎯 <strong>Main Idea:</strong> School libraries are useful places for students.<br>
+               <strong>Main Idea:</strong> School libraries are useful places for students.<br>
               <strong>Supporting Details:</strong> They provide books and learning materials; they offer quiet spaces; they provide resources for research.
             </div>
           </div>
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Relevant vs. Irrelevant</h4>
@@ -2249,7 +2249,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>1. Supporting details explain the main idea.</li>
               <li>2. They provide facts, examples, and explanations.</li>
@@ -2304,7 +2304,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define sequencing.</li>
@@ -2316,7 +2316,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Information in stories, instructions, and paragraphs is often presented in a particular order. Events may happen one after another, while instructions may need to be followed step by step.<br>
               Sequencing is the process of arranging events or ideas in the order in which they happen or should be understood.<br>
@@ -2390,7 +2390,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Chronological Order</h4>
@@ -2420,7 +2420,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Sequencing means arranging events or ideas in the correct order.</li>
               <li>Chronological order arranges events according to time.</li>
@@ -2476,7 +2476,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define what an inference is.</li>
@@ -2488,7 +2488,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Sometimes, authors do not directly explain everything in a story or text. They leave clues, and readers use these clues together with what they already know to understand something that is not directly explained.
             </p>
@@ -2497,7 +2497,7 @@ window.LESSONS = {
             <p class="text-body">An inference is a reasonable conclusion that readers make by combining textual clues with what they already know (prior knowledge).</p>
             <div class="aesthetic-box">
               <strong>Sentence:</strong> Mark entered the house with wet clothes and an umbrella.<br>
-              🎯 <strong>Inference:</strong> It was probably raining outside.<br>
+               <strong>Inference:</strong> It was probably raining outside.<br>
               <small style="color: #64748B;">The sentence does not directly say that it was raining, but the details provide clues.</small>
             </div>
 
@@ -2506,7 +2506,7 @@ window.LESSONS = {
             <div class="aesthetic-box">
               <strong>Sentence:</strong> Lisa looked at the clock repeatedly and kept checking the door.<br>
               <strong>Clues:</strong> Repeatedly looked at the clock, kept checking the door.<br>
-              🎯 <strong>Possible Inference:</strong> Lisa may be waiting for someone or something.
+               <strong>Possible Inference:</strong> Lisa may be waiting for someone or something.
             </div>
 
             <h3 class="section-title">3. Prior Knowledge</h3>
@@ -2514,7 +2514,7 @@ window.LESSONS = {
             <div class="aesthetic-box">
               <strong>Text:</strong> The children wore thick jackets, gloves, and scarves.<br>
               <strong>Prior Knowledge:</strong> These clothes are commonly used in cold weather.<br>
-              🎯 <strong>Inference:</strong> The children are probably in a cold place.
+               <strong>Inference:</strong> The children are probably in a cold place.
             </div>
 
             <h3 class="section-title">4. Inference and Explicit Information</h3>
@@ -2528,8 +2528,8 @@ window.LESSONS = {
             <h3 class="section-title">5. Making Inferences About Characters and Situations</h3>
             <p class="text-body">Readers can make inferences about characters by examining their actions, words, expressions, and reactions, as well as understand situations that are not directly explained.</p>
             <div class="aesthetic-box">
-              <strong>Example (Character):</strong> Mia smiled widely when she saw the high score on her examination. ➡️ <em>Mia was probably happy or proud.</em><br>
-              <strong>Example (Situation):</strong> The streets were wet, people were carrying umbrellas, and cars moved slowly. ➡️ <em>It had probably rained recently.</em>
+              <strong>Example (Character):</strong> Mia smiled widely when she saw the high score on her examination.  <em>Mia was probably happy or proud.</em><br>
+              <strong>Example (Situation):</strong> The streets were wet, people were carrying umbrellas, and cars moved slowly.  <em>It had probably rained recently.</em>
             </div>
 
             <h3 class="section-title">6. How to Make a Reasonable Inference</h3>
@@ -2544,7 +2544,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Inferring Feelings</h4>
@@ -2566,7 +2566,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>An inference is a reasonable conclusion based on clues and prior knowledge.</li>
               <li>Textual clues are details that help readers understand information.</li>
@@ -2621,7 +2621,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define text structure.</li>
@@ -2633,7 +2633,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Writers organize information in different ways depending on the purpose of their writing. Some texts explain how events happen, while others compare ideas, describe problems, or present solutions.<br>
               Text structure refers to the way information and ideas are organized in a written text.<br>
@@ -2696,7 +2696,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Description</h4>
@@ -2718,7 +2718,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Text structure is the way information is organized in a text.</li>
               <li>Description explains characteristics of a subject.</li>
@@ -2775,7 +2775,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define a paragraph.</li>
@@ -2787,7 +2787,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Writing is made up of sentences that communicate ideas. These sentences are grouped into paragraphs to organize information and make writing easier to understand.<br>
               A paragraph is a group of related sentences that develop one main idea.<br>
@@ -2827,9 +2827,9 @@ window.LESSONS = {
             <p class="text-body">Unity means that all sentences in a paragraph are related to one main idea. Every sentence must contribute to the topic.</p>
             <div class="aesthetic-box">
               <strong>Topic Sentence:</strong> Online learning provides flexibility for students.<br>
-              ✔ Students can access lessons from different locations. <em>(Related)</em><br>
-              ✔ Recorded lessons can be reviewed when needed. <em>(Related)</em><br>
-              ✖ My favorite food is fried chicken. <em>(Unrelated detail!)</em>
+               Students can access lessons from different locations. <em>(Related)</em><br>
+               Recorded lessons can be reviewed when needed. <em>(Related)</em><br>
+               My favorite food is fried chicken. <em>(Unrelated detail!)</em>
             </div>
 
             <h3 class="section-title">6. Coherence in a Paragraph</h3>
@@ -2853,7 +2853,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Paragraph Parts</h4>
@@ -2862,7 +2862,7 @@ window.LESSONS = {
               </div>
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 2: Identifying Unity</h4>
-                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">Healthy eating topic ➡️ Fruits provide vitamins, veggies have nutrients, balanced diet supports functions.</p>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">Healthy eating topic  Fruits provide vitamins, veggies have nutrients, balanced diet supports functions.</p>
                 <small style="color: #64748B;">All sentences support healthy eating.</small>
               </div>
               <div class="mini-pill-card" style="grid-column: 1 / -1;">
@@ -2875,7 +2875,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>A paragraph is a group of related sentences about one main idea.</li>
               <li>The topic sentence introduces the main idea.</li>
@@ -2932,7 +2932,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Explain what makes a sentence clear and complete.</li>
@@ -2944,7 +2944,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Sentences are important because they allow people to express complete thoughts and communicate information.<br>
               A clear and complete sentence helps readers understand the message without confusion. However, some sentences may be incomplete or contain too many connected ideas without proper punctuation.<br>
@@ -2968,27 +2968,27 @@ window.LESSONS = {
             <h3 class="section-title">3. Complete Sentence vs. Sentence Fragment</h3>
             <p class="text-body">A complete sentence expresses a complete thought and contains both a subject and a predicate. A <strong>sentence fragment</strong> is a group of words that fails to express a complete thought because it is missing key parts.</p>
             <div class="aesthetic-box">
-              ✖ <strong>Fragment:</strong> "Because it was raining." <em>(Incomplete thought)</em><br>
-              ✔ <strong>Complete:</strong> "Because it was raining, the students stayed inside."<br><br>
-              ✖ <strong>Fragment:</strong> "The boy in the classroom." <em>(Missing predicate action)</em><br>
-              ✔ <strong>Complete:</strong> "The boy in the classroom is reading."
+               <strong>Fragment:</strong> "Because it was raining." <em>(Incomplete thought)</em><br>
+               <strong>Complete:</strong> "Because it was raining, the students stayed inside."<br><br>
+               <strong>Fragment:</strong> "The boy in the classroom." <em>(Missing predicate action)</em><br>
+               <strong>Complete:</strong> "The boy in the classroom is reading."
             </div>
 
             <h3 class="section-title">4. Run-On Sentences</h3>
             <p class="text-body">A run-on sentence occurs when two or more independent clauses are joined incorrectly without appropriate punctuation or connecting words.</p>
             <div class="aesthetic-box">
-              ✖ <strong>Incorrect:</strong> "I studied for the examination I reviewed my notes."<br>
-              ✔ <strong>Correct Version 1:</strong> "I studied for the examination, and I reviewed my notes."<br>
-              ✔ <strong>Correct Version 2:</strong> "I studied for the examination. I reviewed my notes."
+               <strong>Incorrect:</strong> "I studied for the examination I reviewed my notes."<br>
+               <strong>Correct Version 1:</strong> "I studied for the examination, and I reviewed my notes."<br>
+               <strong>Correct Version 2:</strong> "I studied for the examination. I reviewed my notes."
             </div>
 
             <h3 class="section-title">5. Writing Clear & Specific Sentences</h3>
             <p class="text-body">A clear sentence communicates an idea directly without unnecessary fluff or confusing arrangements. It should identify specific persons, objects, and situations.</p>
             <div class="aesthetic-box">
-              ✖ <strong>Unclear:</strong> "The assignment that was given by the teacher yesterday needs to be done by the students."<br>
-              ✔ <strong>Clearer:</strong> "Students need to complete the assignment given yesterday."<br><br>
-              ✖ <strong>Vague:</strong> "She brought it."<br>
-              ✔ <strong>Specific:</strong> "Mia brought her notebook to class."
+               <strong>Unclear:</strong> "The assignment that was given by the teacher yesterday needs to be done by the students."<br>
+               <strong>Clearer:</strong> "Students need to complete the assignment given yesterday."<br><br>
+               <strong>Vague:</strong> "She brought it."<br>
+               <strong>Specific:</strong> "Mia brought her notebook to class."
             </div>
 
             <h3 class="section-title">6. How to Write Clear and Complete Sentences</h3>
@@ -3004,7 +3004,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Complete Sentence</h4>
@@ -3013,17 +3013,17 @@ window.LESSONS = {
               </div>
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 2: Fragment Corrected</h4>
-                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"After finishing the activity." ➡️ "After finishing the activity, the students submitted their work."</p>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"After finishing the activity."  "After finishing the activity, the students submitted their work."</p>
                 <small style="color: #64748B;">Added independent clause to complete the thought.</small>
               </div>
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 3: Run-On Corrected</h4>
-                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"Maria likes reading she visits the library every week." ➡️ "...likes reading, so she visits..."</p>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"Maria likes reading she visits the library every week."  "...likes reading, so she visits..."</p>
                 <small style="color: #64748B;">Joined correctly with comma and coordinating conjunction.</small>
               </div>
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 4: Clear Expression</h4>
-                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"The thing was placed there by him." ➡️ "Mark placed the book on the table."</p>
+                <p class="text-body" style="font-size: 0.95rem; margin-bottom: 4px;">"The thing was placed there by him."  "Mark placed the book on the table."</p>
                 <small style="color: #64748B;">Direct, active, and specific vocabulary.</small>
               </div>
             </div>
@@ -3031,7 +3031,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>A sentence is a group of words that expresses a complete thought.</li>
               <li>A sentence usually contains a subject and a predicate.</li>
@@ -3087,7 +3087,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Explain what sentence combining means.</li>
@@ -3099,7 +3099,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Writing becomes more organized when sentences are connected properly. Sometimes, two short sentences can be combined to create a smoother and more meaningful sentence.<br>
               Sentence combining helps writers avoid repetitive wording and improve the flow of their ideas.<br>
@@ -3110,7 +3110,7 @@ window.LESSONS = {
             <p class="text-body">Sentence combining is the process of joining two or more related sentences to create a clear and meaningful sentence. It helps writers express connected ideas without repeating unnecessary words.</p>
             <div class="aesthetic-box">
               <strong>Separate:</strong> Ana likes reading. Ana visits the library every week.<br>
-              ✔ <strong>Combined:</strong> "Ana likes reading, so she visits the library every week."
+               <strong>Combined:</strong> "Ana likes reading, so she visits the library every week."
             </div>
 
             <h3 class="section-title">2. Combining Sentences Using Coordinating Conjunctions</h3>
@@ -3143,8 +3143,8 @@ window.LESSONS = {
             <h3 class="section-title">5. Avoiding Repetition</h3>
             <p class="text-body">Sentence combining helps eliminate unnecessary repetition of subjects or ideas.</p>
             <div class="aesthetic-box">
-              ✖ <strong>Repetitive:</strong> Carlo is a responsible student. Carlo completes his assignments. Carlo studies every night.<br>
-              ✔ <strong>Combined:</strong> "Carlo is a responsible student who completes his assignments and studies every night."
+               <strong>Repetitive:</strong> Carlo is a responsible student. Carlo completes his assignments. Carlo studies every night.<br>
+               <strong>Combined:</strong> "Carlo is a responsible student who completes his assignments and studies every night."
             </div>
 
             <h3 class="section-title">6. What Is Paragraph Development & Ways to Develop It</h3>
@@ -3157,12 +3157,12 @@ window.LESSONS = {
             </ul>
 
             <h3 class="section-title">7. How to Develop a Clear Paragraph</h3>
-            <p class="text-body">Choose one main idea ➡️ Write a clear topic sentence ➡️ Add related supporting details ➡️ Combine related sentences ➡️ Use transition words ➡️ Arrange logically ➡️ End with a concluding sentence.</p>
+            <p class="text-body">Choose one main idea  Write a clear topic sentence  Add related supporting details  Combine related sentences  Use transition words  Arrange logically  End with a concluding sentence.</p>
           </div>
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Using "And"</h4>
@@ -3184,7 +3184,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Coordinating conjunctions connect ideas of equal grammatical importance.</li>
               <li>FANBOYS stands for For, And, Nor, But, Or, Yet, and So.</li>
@@ -3239,7 +3239,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Differentiate between summarizing and paraphrasing.</li>
@@ -3251,7 +3251,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               A summary focuses on the central message and removes unnecessary details, repeated information, and minor examples.<br>
               Paraphrasing is expressing information from a text using different words and sentence structures while keeping its original meaning.
@@ -3266,22 +3266,22 @@ window.LESSONS = {
             </ul>
             <div class="aesthetic-box">
               <strong>Original:</strong> "Exercise helps improve physical fitness. It strengthens muscles, supports heart health, and increases endurance."<br>
-              ✔ <strong>Good Summary:</strong> "Exercise provides several benefits for physical health."
+               <strong>Good Summary:</strong> "Exercise provides several benefits for physical health."
             </div>
 
             <h3 class="section-title">2. Steps in Summarizing</h3>
-            <p class="text-body">Read carefully ➡️ Identify main idea ➡️ Extract key supporting details ➡️ Remove fluff ➡️ Write concise version ➡️ Verify accuracy.</p>
+            <p class="text-body">Read carefully  Identify main idea  Extract key supporting details  Remove fluff  Write concise version  Verify accuracy.</p>
             <div class="aesthetic-box">
               <strong>Original:</strong> "Trees are important to the environment. They provide oxygen, give shelter to animals, and help reduce the amount of carbon dioxide in the atmosphere."<br>
-              ✔ <strong>Summary:</strong> "Trees help the environment by providing oxygen, supporting wildlife, and absorbing carbon dioxide."
+               <strong>Summary:</strong> "Trees help the environment by providing oxygen, supporting wildlife, and absorbing carbon dioxide."
             </div>
 
             <h3 class="section-title">3. Paraphrasing & Its Techniques</h3>
             <p class="text-body">Unlike summarizing, paraphrasing keeps most detailed information while changing wording and sentence structure.</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 16px;">
-              <li><strong>Using Synonyms:</strong> Replace words with contextually correct equivalents (e.g., "happy" ➡️ "joyful").</li>
+              <li><strong>Using Synonyms:</strong> Replace words with contextually correct equivalents (e.g., "happy"  "joyful").</li>
               <li><strong>Changing Sentence Structure:</strong> Rearrange active/passive voice or sentence order.</li>
-              <li><strong>Changing Word Forms:</strong> Transition words between parts of speech (e.g., "made a decision" ➡️ "decided").</li>
+              <li><strong>Changing Word Forms:</strong> Transition words between parts of speech (e.g., "made a decision"  "decided").</li>
               <li><strong>Combining/Separating Ideas:</strong> Restructure long or short sentences cleanly.</li>
             </ul>
 
@@ -3297,7 +3297,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Summarizing</h4>
@@ -3322,7 +3322,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Summarizing presents the most important ideas in a shorter form.</li>
               <li>Paraphrasing restates information using different words and structures.</li>
@@ -3377,7 +3377,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Differentiate between a fact and an opinion.</li>
@@ -3389,7 +3389,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             
             <h3 class="section-title">1. What Is a Fact?</h3>
             <p class="text-body">A fact is a statement that can be proven true or verified using evidence, observation, research, or reliable records.</p>
@@ -3423,7 +3423,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1 (Fact)</h4>
@@ -3450,7 +3450,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Facts can be verified through evidence.</li>
               <li>Opinions express personal beliefs, feelings, or judgments.</li>
@@ -3505,7 +3505,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define bias and point of view.</li>
@@ -3518,7 +3518,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Writers communicate information based on their knowledge, experiences, beliefs, and perspectives. Sometimes, the way they present information may favor one side or show an unfair preference. This is known as bias.<br>
               Understanding bias and point of view helps readers examine how information is presented and recognize that different writers may describe the same event in different ways.
@@ -3552,7 +3552,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Positive Bias</h4>
@@ -3579,7 +3579,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Bias is a preference or tendency that can affect fairness.</li>
               <li>Positive, negative, selection, and omission bias influence presentation.</li>
@@ -3634,7 +3634,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Identify different sources of information (Newspapers, Websites, Journals, Interviews, Government publications).</li>
@@ -3646,7 +3646,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             
             <h3 class="section-title">1. Common Sources of Information</h3>
             <p class="text-body">Information can be found in various platforms such as newspapers, websites, academic journals, interviews, and government publications.</p>
@@ -3686,7 +3686,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Primary Source</h4>
@@ -3713,7 +3713,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Sources of information provide facts, ideas, and evidence.</li>
               <li>Primary sources contain original or firsthand information.</li>
@@ -3768,7 +3768,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define tone and author's purpose.</li>
@@ -3781,7 +3781,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Every written text communicates a message in a particular way. Some writers aim to inform readers, while others want to entertain, persuade, or explain something. The words and expressions they use also create a certain feeling or attitude.<br><br>
               Understanding tone and author's purpose allows readers to recognize not only what a text says but also how and why the writer communicates the message.
@@ -3824,7 +3824,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Tone</h4>
@@ -3851,7 +3851,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Tone is the writer's attitude toward the subject or audience.</li>
               <li>Author's purpose is the reason a text is written.</li>
@@ -3906,7 +3906,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define what a conclusion is in reading comprehension.</li>
@@ -3918,7 +3918,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               When reading a report showing that many students improved their reading scores after regular practice, a reader may conclude that consistent reading practice can support reading development.
             </p>
@@ -3944,7 +3944,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Weather Observation</h4>
@@ -3966,7 +3966,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>A conclusion is a judgment reached after examining information.</li>
               <li>Drawing conclusions requires evidence and logical reasoning.</li>
@@ -4021,7 +4021,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of this lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define comparing and contrasting.</li>
@@ -4034,7 +4034,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Different texts may discuss the same subject but present different information, ideas, or perspectives. Comparing and contrasting allows readers to examine how two or more texts are alike and how they differ.<br><br>
               This skill is useful in reading, research, decision-making, and evaluating different viewpoints. It helps readers understand information more completely by examining similarities and differences.
@@ -4067,7 +4067,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Comparison</h4>
@@ -4094,7 +4094,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Comparing identifies similarities between subjects or texts.</li>
               <li>Contrasting identifies differences between subjects or texts.</li>
@@ -4149,7 +4149,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define critical reading and critical analysis.</li>
@@ -4162,7 +4162,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Critical reading requires looking beyond the literal meaning of words to consider the quality, validity, and logic of a message.
             </p>
@@ -4201,7 +4201,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Claim</h4>
@@ -4228,7 +4228,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Critical reading involves questioning and evaluating written information.</li>
               <li>Critical analysis examines how ideas are presented and supported.</li>
@@ -4290,7 +4290,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define visual information and data interpretation.</li>
@@ -4303,7 +4303,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Information is not always presented through paragraphs and sentences. Writers often use graphs, tables, and charts to organize data so it is easier to digest and compare quickly.
             </p>
@@ -4331,7 +4331,7 @@ window.LESSONS = {
 
           <!-- VISUAL ILLUSTRATIONS & EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📊 Visual Illustrations & Examples</div>
+            <div class="hero-oblong-badge"> Visual Illustrations & Examples</div>
             <p class="text-body" style="font-size: 1rem; color: #64748B;">Surfacted below are actual visual representations to help you clearly identify and interpret each format:</p>
             
             <div class="grid-two-col">
@@ -4455,7 +4455,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Visual information presents data through graphs, tables, and charts.</li>
               <li>Tables organize data into rows and columns for exact numerical lookup.</li>
@@ -4510,7 +4510,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define informational and argumentative texts.</li>
@@ -4523,7 +4523,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             
             <h3 class="section-title">1. Informational Text</h3>
             <p class="text-body">
@@ -4558,7 +4558,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Summary Examples</div>
+            <div class="hero-oblong-badge"> Summary Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Informational Text</h4>
@@ -4585,7 +4585,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Informational texts provide facts and explanations about a topic.</li>
               <li>Argumentative texts present a claim supported by reasons and evidence.</li>
@@ -4640,7 +4640,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define evidence-based arguments.</li>
@@ -4653,7 +4653,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               People often express opinions about issues in school, at home, and in society. However, a strong argument requires more than stating a belief—it must be backed by relevant evidence and logical explanations.
             </p>
@@ -4689,7 +4689,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Strong Argument</h4>
@@ -4711,7 +4711,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Evidence-based arguments use facts and reliable information to support claims.</li>
               <li>Claims, reasons, evidence, and explanations strengthen arguments.</li>
@@ -4766,7 +4766,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define advanced vocabulary, denotation, and connotation.</li>
@@ -4779,7 +4779,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Advanced vocabulary refers to words commonly used in academic, professional, or formal contexts. Utilizing precise words helps express ideas more clearly and effectively.
             </p>
@@ -4820,7 +4820,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Commence</h4>
@@ -4847,7 +4847,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Advanced vocabulary helps communicate ideas more accurately and professionally.</li>
               <li>Context clues enable readers to decode unfamiliar vocabulary.</li>
@@ -4902,7 +4902,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define clauses and complex sentence structures.</li>
@@ -4915,7 +4915,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Sentences form the foundation of written and spoken communication. Understanding sentence structures helps writers connect thoughts, explain conditions, and express complex relationships between ideas.
             </p>
@@ -4942,7 +4942,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Simple</h4>
@@ -4969,7 +4969,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>A clause always contains a subject and a verb.</li>
               <li>Independent clauses express complete thoughts; dependent clauses do not.</li>
@@ -5024,7 +5024,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Identify common grammatical errors in sentences.</li>
@@ -5037,7 +5037,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Grammar provides rules that help people communicate ideas clearly and correctly. Advanced grammar focuses on recognizing common errors, refining sentence structure, and polishing academic or professional writing.
             </p>
@@ -5059,7 +5059,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Subject-Verb Agreement</h4>
@@ -5086,7 +5086,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Subject-verb agreement ensures subjects and verbs match in number and person.</li>
               <li>Verb tense consistency maintains logical time continuity across sentences.</li>
@@ -5141,7 +5141,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define coherence and unity in paragraph writing.</li>
@@ -5154,7 +5154,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               A paragraph is a group of related sentences developing one central idea. However, a good paragraph requires more than putting random sentences together; its ideas must be logically organized and connected smoothly through unity and coherence.
             </p>
@@ -5185,7 +5185,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Unified Paragraph</h4>
@@ -5212,7 +5212,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Unity ensures all sentences within a paragraph support a single central idea.</li>
               <li>Coherence links ideas logically and smoothly for optimal readability.</li>
@@ -5267,7 +5267,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define an essay and identify its basic structure.</li>
@@ -5280,7 +5280,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               An essay is a structured piece of writing that discusses, explains, describes, or argues about a particular subject. Mastering essay fundamentals allows learners to present ideas logically and effectively across academic and professional domains.
             </p>
@@ -5314,7 +5314,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Thesis Statement</h4>
@@ -5341,7 +5341,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>An essay consists of an introduction, body paragraphs, and a conclusion.</li>
               <li>The introduction establishes the topic and contains the central thesis statement.</li>
@@ -5396,7 +5396,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define academic and formal writing.</li>
@@ -5409,7 +5409,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Academic and formal writing are essential communication styles used to present information, analyze topics, and report research findings professionally in educational and professional settings.
             </p>
@@ -5437,7 +5437,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Tone Shift</h4>
@@ -5464,7 +5464,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Academic writing communicates information in educational and research environments.</li>
               <li>Formal writing relies on professional, polite, and respectful language conventions.</li>
@@ -5519,7 +5519,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Identify types and characteristics of longer texts.</li>
@@ -5532,7 +5532,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Longer texts (such as research articles, academic essays, reports, book chapters, and long-form informational articles) contain multiple sections that develop ideas in greater depth. Analyzing them requires specific strategies to track arguments and maintain comprehension.
             </p>
@@ -5559,7 +5559,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Research Article Analysis</h4>
@@ -5586,7 +5586,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Longer texts consist of multiple sections building up complex ideas.</li>
               <li>The central idea serves as the unifying message connecting the entire document.</li>
@@ -5641,7 +5641,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define research and information literacy.</li>
@@ -5654,7 +5654,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Information literacy is the ability to recognize when information is needed and to locate, evaluate, and use it responsibly. In an era where information is instantly accessible online, these skills are crucial for academic success.
             </p>
@@ -5683,7 +5683,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Information Gathering</h4>
@@ -5710,7 +5710,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Research is a systematic process of investigating questions and analyzing data.</li>
               <li>Information literacy requires locating, evaluating, and using information responsibly.</li>
@@ -5765,7 +5765,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define written and verbal communication.</li>
@@ -5778,7 +5778,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Communication allows people to share information, express thoughts, and build relationships through writing, speaking, listening, and nonverbal expressions. Effective communication ensures messages are clear, appropriate, and suitable for the audience.
             </p>
@@ -5803,7 +5803,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Written Communication</h4>
@@ -5830,7 +5830,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Written communication transmits information via text and written symbols.</li>
               <li>Verbal communication relies on spoken words and interactive dialogue.</li>
@@ -5885,7 +5885,7 @@ window.LESSONS = {
           
           <!-- OBJECTIVES -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">🎯 Learning Objectives</div>
+            <div class="hero-oblong-badge"> Learning Objectives</div>
             <p class="text-body" style="font-weight: 600; margin-bottom: 12px;">At the end of the lesson, learners should be able to:</p>
             <ul style="padding-left: 20px; color: #334155; line-height: 1.9; font-size: 1.1rem; font-weight: 500;">
               <li>Define practical literacy and its importance in everyday life.</li>
@@ -5898,7 +5898,7 @@ window.LESSONS = {
 
           <!-- INTRODUCTION & DISCUSSION -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">💡 Introduction & Discussion</div>
+            <div class="hero-oblong-badge"> Introduction & Discussion</div>
             <p class="text-body">
               Practical literacy goes beyond academic tasks—it is the ability to apply reading, writing, comprehension, and critical thinking skills to complete daily responsibilities, foster personal independence, and navigate real-life situations.
             </p>
@@ -5920,7 +5920,7 @@ window.LESSONS = {
 
           <!-- EXAMPLES GRID -->
           <div class="pill-card">
-            <div class="hero-oblong-badge">📌 Practical Examples</div>
+            <div class="hero-oblong-badge"> Practical Examples</div>
             <div class="grid-two-col">
               <div class="mini-pill-card">
                 <h4 style="color: var(--deep-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 8px;">Example 1: Scholarship Application Form</h4>
@@ -5947,7 +5947,7 @@ window.LESSONS = {
 
           <!-- KEY TAKEAWAYS -->
           <div class="takeaway-pill-card">
-            <h3>🔑 Key Takeaways</h3>
+            <h3> Key Takeaways</h3>
             <ul>
               <li>Practical literacy connects language skills directly to daily life responsibilities.</li>
               <li>Functional reading and writing empower individuals to complete everyday tasks.</li>
