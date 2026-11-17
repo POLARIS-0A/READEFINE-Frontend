@@ -31,7 +31,6 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
   }
 
   function sidebar(activePage) {
-    const lessonActive = activePage === "lesson" ? ' class="active"' : "";
     const examActive = activePage === "exam" ? ' class="active"' : "";
 
     const markup = `
@@ -41,7 +40,7 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
           <ul class="sidebar-menu">
             <li><a href="index.html">🌐 Home Page</a></li>
             <li><a href="dashboard.html">🏠 Dashboard</a></li>
-            <li><a href="levels.html"${lessonActive}>📚 Lessons</a></li>
+            <li><a href="levels.html">📚 Lessons</a></li>
             <li><a href="exams.html"${examActive}>📝 Exams Hub</a></li>
             <li><a href="#">📊 Progress</a></li>
             <li><a href="profile.html">👤 Profile</a></li>

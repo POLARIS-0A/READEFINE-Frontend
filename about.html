@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>READEFINE - Read. Learn. Redefine.</title>
+  <title>READEFINE - About Us</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -219,19 +219,23 @@
         transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1), background-color 200ms ease, box-shadow 200ms ease;
         transform-origin: bottom center;
     }
-    .profile-deck:hover .c1{
+    .profile-deck:hover .c1,
+    .profile-deck.is-expanded .c1{
         transform: rotate(-30deg) translate(-100px,-20px);
     }
 
-    .profile-deck:hover .c2{
+    .profile-deck:hover .c2,
+    .profile-deck.is-expanded .c2{
         transform: rotate(-10deg) translate(-50px,-10px);
     }
 
-    .profile-deck:hover .c3{
+    .profile-deck:hover .c3,
+    .profile-deck.is-expanded .c3{
         transform: rotate(5deg) translate(-10px, -10px);
     }
 
-    .profile-deck:hover .c4{
+    .profile-deck:hover .c4,
+    .profile-deck.is-expanded .c4{
         transform: rotate(30deg) translate(30px,-10px);
     }
 
@@ -322,12 +326,11 @@
       <!-- Top Navigation -->
       <nav class="landing-nav">
         <div class="landing-logo">
-          <img src="ASSETS/logo.png">  READEFINE
+          <img src="ASSETS/logo.png" alt="">  READEFINE
         </div>
         <ul class="landing-nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="levels.html">Lessons</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
           <li><a href="exams.html">Exams</a></li>
           <!-- Direct nang pumupunta sa dashboard/progress page -->
           <li><a href="dashboard.html">Progress</a></li>
@@ -343,11 +346,11 @@
       </div>
   </div>
 
-  <h1 style = "text-align: center; margin: 20px 0;">READEFINE's Developers</h1>
+  <h2 style="text-align: center; margin: 20px 0;">READEFINE's Developers</h2>
 
-  <div class="profile-deck" role="group" tabindex="0" aria-label="Developer cards. Press Enter or Space to spread or stack the cards." aria-expanded="false">
+  <div class="profile-deck" role="button" tabindex="0" aria-label="Toggle developer cards" aria-expanded="false">
     <div class = "profile-card c1" style="z-index: 1;">
-        <img src="ASSETS/prof-pic-1.jpg">
+        <img src="ASSETS/backend-pic.jpe" alt="Judelyn Buyagon">
         <div class="profile-text">
             <h2>JUDELYN BUYAGON</h2>
             <p>BACK-END DEVELOPER</p>
@@ -355,7 +358,7 @@
     </div>
 
     <div class = "profile-card c2" style="z-index: 1;">
-        <img src="ASSETS/prof-pic-1.jpg">
+        <img src="ASSETS/prof-pic-1.jpg" alt="Kirsten Campoy">
         <div class="profile-text">
             <h2>KIRSTEN CAMPOY</h2>
             <p>FULLSTACK DEVELOPER</p>
@@ -363,7 +366,7 @@
     </div>
 
     <div class = "profile-card c3" style="z-index: 2;">
-        <img src="ASSETS/prof-pic-1.jpg">
+        <img src="ASSETS/prof-pic-1.jpg" alt="Allisa Lualhati">
         <div class="profile-text">
             <h2>ALLISA LUALHATI</h2>
             <p>FRONT-END DEVELOPER</p>
@@ -371,7 +374,7 @@
     </div>
 
     <div class = "profile-card c4" style="z-index: 1;">
-        <img src="ASSETS/prof-pic-1.jpg">
+        <img src="ASSETS/prof-pic-1.jpg" alt="Leslie Maala">
         <div class="profile-text">
             <h2>LESLIE MAALA</h2>
             <p>GRAPHIC DESIGNER</p>
@@ -379,6 +382,50 @@
     </div>
   </div>
 
+
+
+  <div class="card" role="button" tabindex="0" aria-label="Show Judelyn Buyagon's profile details" aria-expanded="false">
+    <div class="additional">
+      <div class="user-card">
+        <div class="card-img">
+          <img src="ASSETS/backend-pic.jpe" alt="Judelyn Buyagon">
+        </div>
+      </div>
+      <div class="more-info">
+        <h1>Judelyn Buyagon</h1>
+        <div class="coords">
+          <span>POLARIS-1A</span>
+        </div>
+        <div class="coords">
+          <span>BACK-END DEVELOPER</span>
+          <span>Philippines</span>
+        </div>
+        <div class="stats">
+          <div>
+            <div class="title">Role</div>
+            <div class="value">Backend</div>
+          </div>
+          <div>
+            <div class="title">Team</div>
+            <div class="value">1A</div>
+          </div>
+          <div>
+            <div class="title">Project</div>
+            <div class="value">Readifine</div>
+          </div>
+          <div>
+            <div class="title">Location</div>
+            <div class="value">PH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="general">
+      <h1>Judelyn Buyagon</h1>
+      <p>Back-end developer for the READEFINE project.</p>
+      <span class="more">Hover, tap, or press Enter for details</span>
+    </div>
+  </div>
 
   <script>
     const profileDeck = document.querySelector(".profile-deck");
@@ -392,6 +439,20 @@
       if (event.target === profileDeck && (event.key === "Enter" || event.key === " ")) {
         event.preventDefault();
         toggleProfileDeck();
+      }
+    });
+
+    const profileCard = document.querySelector(".card");
+    const toggleProfileCard = () => {
+      const isExpanded = profileCard.classList.toggle("is-expanded");
+      profileCard.setAttribute("aria-expanded", String(isExpanded));
+    };
+
+    profileCard.addEventListener("click", toggleProfileCard);
+    profileCard.addEventListener("keydown", (event) => {
+      if (event.target === profileCard && (event.key === "Enter" || event.key === " ")) {
+        event.preventDefault();
+        toggleProfileCard();
       }
     });
   </script>
