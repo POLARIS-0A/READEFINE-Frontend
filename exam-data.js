@@ -5,6 +5,27 @@ window.EXAMS = {
     heading: "Understanding Words Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Vocabulary",
+        "Synonym",
+        "Antonym",
+        "Word meaning / Definition",
+        "Expressive vocabulary (word usage)",
+        "Adjective",
+        "Vocabulary development / Word learning",
+        "Verb",
+        "Word comprehension / Receptive vocabulary",
+        "Phrase"
+      ],
+      multipleChoice: [
+        "A",
+        "B",
+        "C",
+        "A",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card {
       background: #FFFFFF;
@@ -334,6 +355,27 @@ window.EXAMS = {
     heading: "Using Context Clues Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Context clues",
+        "Definition clue (direct definition)",
+        "Example clue",
+        "Contrast clue (antonym clue)",
+        "Synonym clue (similar-word clue)",
+        "Context",
+        "Unfamiliar word",
+        "Using context clues (inferring from context)",
+        "Description clue",
+        "Contextual information"
+      ],
+      multipleChoice: [
+        "A",
+        "B",
+        "A",
+        "A",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card {
       background: #FFFFFF;
@@ -680,6 +722,27 @@ window.EXAMS = {
     heading: "Synonyms and Antonyms Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Synonyms",
+        "Antonyms",
+        "Pretty / Attractive / Lovely",
+        "Selfish / Stingy / Mean",
+        "Start / Commence",
+        "Modern / Recent / New",
+        "Synonymy (similar-meaning relationship)",
+        "Antonymy (opposite-meaning relationship)",
+        "Fast / Rapid / Speedy",
+        "Defeat / Loss"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "A",
+        "D",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card {
       background: #FFFFFF;
@@ -1010,6 +1073,27 @@ window.EXAMS = {
     heading: "Homophones Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Homophones",
+        "She's",
+        "There",
+        "Hear",
+        "Write",
+        "Their",
+        "Its",
+        "English / Math (a school subject)",
+        "More",
+        "Than"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "B",
+        "B",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card {
       background: #FFFFFF;
@@ -1342,6 +1426,27 @@ window.EXAMS = {
     heading: "Parts of Speech Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Noun",
+        "Verb",
+        "Adjective",
+        "Adverb",
+        "Pronoun",
+        "Preposition",
+        "Conjunction",
+        "Interjection",
+        "Adverb",
+        "Adjective"
+      ],
+      multipleChoice: [
+        "C",
+        "C",
+        "B",
+        "B",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card {
       background: #FFFFFF;
@@ -1674,6 +1779,27 @@ window.EXAMS = {
     heading: "Sentence Structure Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Sentence",
+        "Subject",
+        "Predicate",
+        "Complete sentence",
+        "Sentence fragment",
+        "Simple sentence",
+        "Compound sentence",
+        "Complex sentence",
+        "Doer (subject performing the action)",
+        "Predicate / Subject complement"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "B",
+        "B",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card {
       background: #FFFFFF;
@@ -2006,6 +2132,27 @@ window.EXAMS = {
     heading: "Subject and Predicate Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Subject (complete subject)",
+        "Predicate (complete predicate)",
+        "Simple subject",
+        "Simple predicate",
+        "Complete subject",
+        "Complete predicate",
+        "The little boy",
+        "Are preparing for the presentation",
+        "Students",
+        "Played"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "C",
+        "D",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -2190,6 +2337,27 @@ window.EXAMS = {
     heading: "Grammar and Punctuation Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Grammar",
+        "Period",
+        "Question mark",
+        "Exclamation point / mark",
+        "Comma",
+        "Apostrophe",
+        "Semicolon (or comma with a conjunction)",
+        "Sentence capitalization",
+        "Proper-noun capitalization",
+        "Quotation marks"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "A",
+        "B",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -2374,6 +2542,27 @@ window.EXAMS = {
     heading: "Sentence Types and Functions Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Declarative sentence",
+        "Interrogative sentence",
+        "Imperative sentence",
+        "Exclamatory sentence",
+        "Declarative",
+        "Interrogative",
+        "Imperative",
+        "Exclamatory",
+        "Imperative",
+        "Exclamatory"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "A",
+        "D",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -2558,6 +2747,27 @@ window.EXAMS = {
     heading: "Reading Short Texts Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Main idea",
+        "Supporting details",
+        "Short text / Passage",
+        "Topic / Subject",
+        "Author's message (theme)",
+        "Reading comprehension",
+        "Explicit / Stated information",
+        "Inference",
+        "Summary",
+        "Author"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "C",
+        "B",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -2749,6 +2959,27 @@ window.EXAMS = {
     heading: "Reading Comprehension Strategies Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Reading comprehension",
+        "Previewing",
+        "Predicting",
+        "Skimming",
+        "Scanning",
+        "Visualizing",
+        "Making connections",
+        "Summarizing",
+        "Monitoring comprehension",
+        "Asking questions (questioning)"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "A",
+        "B",
+        "D"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -2999,6 +3230,27 @@ window.EXAMS = {
     heading: "Identifying Main Ideas Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Main idea",
+        "Topic",
+        "Supporting details",
+        "Stated / Explicit main idea",
+        "Implied main idea",
+        "Identifying the main idea",
+        "Supporting details",
+        "Topic",
+        "Topic sentence",
+        "Main idea / Author's central message"
+      ],
+      multipleChoice: [
+        "B",
+        "B",
+        "A",
+        "C",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -3249,6 +3501,27 @@ window.EXAMS = {
     heading: "Recognizing Supporting Details Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Supporting details",
+        "Facts",
+        "Examples",
+        "Descriptive details",
+        "Explanatory details / Reasons",
+        "Relevant details",
+        "Irrelevant details",
+        "Main idea",
+        "Additional / Elaborating details",
+        "Identifying relevant details"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "A",
+        "B",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -3499,6 +3772,27 @@ window.EXAMS = {
     heading: "Sequencing Events and Ideas Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Sequencing",
+        "Chronological order",
+        "Logical order",
+        "Sequence / Signal words",
+        "Beginning / Introduction",
+        "Middle / Body (development)",
+        "Ending / Conclusion",
+        "First",
+        "Finally",
+        "Chronological order"
+      ],
+      multipleChoice: [
+        "A",
+        "B",
+        "C",
+        "D",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -3749,6 +4043,27 @@ window.EXAMS = {
     heading: "Making Inferences Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Inference",
+        "Textual clues",
+        "Prior / Background knowledge",
+        "Explicit information",
+        "Implied conclusion (inference)",
+        "Making inferences",
+        "Character clues / Textual clues",
+        "Conclusion",
+        "Prior knowledge / Background knowledge",
+        "Textual evidence / Supporting details"
+      ],
+      multipleChoice: [
+        "B",
+        "A",
+        "C",
+        "A",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -3999,6 +4314,27 @@ window.EXAMS = {
     heading: "Understanding Text Structure Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Text structure",
+        "Description",
+        "Sequence (chronological order)",
+        "Comparison (similarities)",
+        "Contrast (differences)",
+        "Cause and effect",
+        "Cause",
+        "Effect",
+        "Problem and solution",
+        "Signal words"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "A",
+        "C",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -4249,6 +4585,27 @@ window.EXAMS = {
     heading: "Paragraph Structure and Organization Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Paragraph",
+        "Topic sentence",
+        "Supporting sentences",
+        "Concluding sentence",
+        "Unity",
+        "Coherence",
+        "Transitions / Transition words",
+        "Main idea",
+        "Paragraph organization",
+        "Topic sentence"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "A",
+        "B",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -4499,6 +4856,22 @@ window.EXAMS = {
     heading: "Writing Clear and Complete Sentences Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Sentence",
+        "Subject",
+        "Predicate",
+        "Clarity",
+        "Clear writing (clear sentence writing)"
+      ],
+      multipleChoice: [
+        "B",
+        "B",
+        "C",
+        "B",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -4729,6 +5102,27 @@ window.EXAMS = {
     heading: "Sentence Combining and Paragraph Development Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Sentence combining",
+        "Conjunctions",
+        "Coordinating conjunctions (FANBOYS)",
+        "Subordinating conjunction",
+        "Relative pronoun",
+        "Paragraph development / Elaboration",
+        "Examples",
+        "Facts / Evidence",
+        "Repetition / Redundancy",
+        "Transition word / Transitions"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "B",
+        "C",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -4979,6 +5373,27 @@ window.EXAMS = {
     heading: "Summarizing and Paraphrasing Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Summarizing",
+        "Paraphrasing",
+        "Main idea",
+        "Summary",
+        "Synonyms / Rewording",
+        "Restructuring (sentence rearrangement)",
+        "Plagiarism",
+        "Accuracy / Faithfulness",
+        "Objectivity",
+        "Citation / Acknowledging sources"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "A",
+        "C",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -5229,6 +5644,27 @@ window.EXAMS = {
     heading: "Fact and Opinion Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Fact",
+        "Opinion",
+        "Evidence",
+        "Opinion signal word (e.g., \"I think\" / \"I believe\")",
+        "Verifiable fact",
+        "Preference",
+        "Evaluating fact and opinion",
+        "Value judgment / Recommendation",
+        "Supporting evidence",
+        "Judgment / Opinion"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "B",
+        "C",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -5479,6 +5915,27 @@ window.EXAMS = {
     heading: "Identifying Bias and Point of View Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Bias",
+        "Point of view",
+        "Positive bias",
+        "Negative bias",
+        "Selection bias",
+        "Omission bias",
+        "First-person point of view",
+        "Second-person point of view",
+        "Third-person point of view",
+        "Objectivity / Open-mindedness"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "B",
+        "C",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -5729,6 +6186,27 @@ window.EXAMS = {
     heading: "Evaluating Sources of Information Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Sources of information",
+        "Primary sources",
+        "Secondary sources",
+        "Accuracy",
+        "Authority / Credibility",
+        "Currency",
+        "Relevance",
+        "Objectivity",
+        "Memoir / Personal account",
+        "Source evaluation"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "C",
+        "B",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -5979,6 +6457,27 @@ window.EXAMS = {
     heading: "Understanding Tone and Author's Purpose Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Tone",
+        "Author's purpose",
+        "Formal tone",
+        "Informal tone",
+        "Humorous tone",
+        "Optimistic / Hopeful tone",
+        "To inform (informative)",
+        "To persuade (persuasive)",
+        "To entertain",
+        "Diction / Word choice"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "B",
+        "A",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -6229,6 +6728,27 @@ window.EXAMS = {
     heading: "Drawing Conclusions Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Conclusion",
+        "Drawing conclusions / Reasoning",
+        "Evidence",
+        "Reasoning",
+        "Unsupported conclusion / Hasty generalization",
+        "Contextual information / Details",
+        "Final / Justified conclusion",
+        "Critical thinking",
+        "Supporting details",
+        "Concluding statement"
+      ],
+      multipleChoice: [
+        "B",
+        "A",
+        "C",
+        "B",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -6479,6 +6999,27 @@ window.EXAMS = {
     heading: "Comparing and Contrasting Texts Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Comparing",
+        "Contrasting",
+        "Comparison signal word (e.g., similarly, likewise)",
+        "Contrast signal word (e.g., however, unlike)",
+        "Point-by-point method",
+        "Block method",
+        "Similarity signal (e.g., both, likewise)",
+        "Contrast phrase (e.g., on the other hand)",
+        "Comparing and contrasting texts",
+        "Differences / Contrasting details"
+      ],
+      multipleChoice: [
+        "C",
+        "D",
+        "A",
+        "B",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -6729,6 +7270,27 @@ window.EXAMS = {
     heading: "Critical Reading and Analysis Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Critical reading",
+        "Text analysis / Analysis",
+        "Claim",
+        "Evidence",
+        "Assumption",
+        "Claim / Assertion",
+        "Evaluating an argument",
+        "Source",
+        "Weakness in reasoning / Insufficient evidence",
+        "Critical thinking"
+      ],
+      multipleChoice: [
+        "C",
+        "B",
+        "C",
+        "B",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -6979,6 +7541,27 @@ window.EXAMS = {
     heading: "Interpreting Graphs and Tables Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Visual data / Visual information",
+        "Table",
+        "Bar graph",
+        "Line graph",
+        "Pie chart",
+        "Labels",
+        "Scale / Value",
+        "Trend",
+        "Data interpretation / Visual literacy",
+        "Title / Heading"
+      ],
+      multipleChoice: [
+        "B",
+        "A",
+        "B",
+        "B",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -7229,6 +7812,27 @@ window.EXAMS = {
     heading: "Informational vs. Argumentative Texts Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Informational text",
+        "Argumentative text",
+        "Claim / Position (thesis)",
+        "Reasons",
+        "Evidence",
+        "Counterargument",
+        "Rebuttal",
+        "Conclusion",
+        "To inform / Explain facts",
+        "To persuade / Defend a position"
+      ],
+      multipleChoice: [
+        "A",
+        "C",
+        "B",
+        "B",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -7479,6 +8083,27 @@ window.EXAMS = {
     heading: "Building Evidence-Based Arguments Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Evidence-based argument",
+        "Claim",
+        "Reason",
+        "Evidence",
+        "Explanation / Reasoning",
+        "Counterargument",
+        "Rebuttal",
+        "Unsupported claim",
+        "Overgeneralization",
+        "Ad hominem (personal attack)"
+      ],
+      multipleChoice: [
+        "C",
+        "B",
+        "A",
+        "C",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -7730,6 +8355,27 @@ window.EXAMS = {
     heading: "Advanced Vocabulary in Context Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Advanced vocabulary",
+        "Context-based word meaning (context clues)",
+        "Denotation",
+        "Connotation",
+        "Synonyms",
+        "Antonyms",
+        "Homonyms (homophones / homographs)",
+        "Word family / Words from the same root",
+        "Positive connotation",
+        "Negative connotation"
+      ],
+      multipleChoice: [
+        "B",
+        "A",
+        "B",
+        "B",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -7980,6 +8626,27 @@ window.EXAMS = {
     heading: "Complex Sentence Structures Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Clause",
+        "Independent clause",
+        "Dependent clause",
+        "Simple sentence",
+        "Compound sentence",
+        "Complex sentence",
+        "Compound-complex sentence",
+        "Coordinating conjunctions (FANBOYS)",
+        "Subordinating conjunction",
+        "Simple sentence"
+      ],
+      multipleChoice: [
+        "C",
+        "B",
+        "C",
+        "C",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -8230,6 +8897,27 @@ window.EXAMS = {
     heading: "Advanced Grammar and Sentence Correction Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Subject-verb agreement",
+        "Verb tense consistency / Correct tense",
+        "Pronoun-antecedent agreement",
+        "Modifier",
+        "Sentence fragment",
+        "Run-on sentence",
+        "Present tense",
+        "Past tense",
+        "Sentence correction / Proofreading",
+        "Sentence revision / Editing"
+      ],
+      multipleChoice: [
+        "C",
+        "B",
+        "C",
+        "B or C",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -8480,6 +9168,27 @@ window.EXAMS = {
     heading: "Writing Coherent and Unified Paragraphs Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Unity",
+        "Coherence",
+        "Topic sentence",
+        "Supporting sentences",
+        "Concluding sentence",
+        "Transitions / Transition words",
+        "Furthermore / Also / Moreover",
+        "However / But / On the other hand",
+        "Main idea",
+        "Organization (paragraph organization)"
+      ],
+      multipleChoice: [
+        "B",
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -8730,6 +9439,27 @@ window.EXAMS = {
     heading: "Essay Writing Fundamentals Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Essay",
+        "Introduction",
+        "Thesis statement",
+        "Body",
+        "Conclusion",
+        "Narrative essay",
+        "Descriptive essay",
+        "Expository essay",
+        "Argumentative essay",
+        "Revising / Revision"
+      ],
+      multipleChoice: [
+        "B",
+        "B",
+        "A",
+        "A",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -8980,6 +9710,27 @@ window.EXAMS = {
     heading: "Writing Academic and Formal Texts Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Academic writing",
+        "Formal writing",
+        "Clarity",
+        "Objectivity",
+        "Organization / Logical order",
+        "Accuracy",
+        "Formal language",
+        "Research writing / Academic writing",
+        "Slang / Informal language",
+        "Formal / Academic communication"
+      ],
+      multipleChoice: [
+        "A",
+        "B",
+        "B",
+        "C",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -9230,6 +9981,27 @@ window.EXAMS = {
     heading: "Reading and Analyzing Longer Texts Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Longer texts / Extended texts",
+        "Central idea / Main idea",
+        "Supporting details",
+        "Previewing",
+        "Active reading",
+        "Annotating",
+        "Summarizing",
+        "Rereading",
+        "Text analysis",
+        "Reading focus / Sustained attention"
+      ],
+      multipleChoice: [
+        "C",
+        "A",
+        "B",
+        "B",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -9480,6 +10252,27 @@ window.EXAMS = {
     heading: "Research and Information Literacy Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Research",
+        "Information literacy",
+        "Research questions",
+        "Source evaluation",
+        "Plagiarism",
+        "Citation / Documentation",
+        "APA style",
+        "Organizing and analyzing information",
+        "Acknowledgment / Attribution",
+        "Academic integrity / Ethical use of information"
+      ],
+      multipleChoice: [
+        "B",
+        "C",
+        "B",
+        "A",
+        "B"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -9730,6 +10523,27 @@ window.EXAMS = {
     heading: "Effective Written and Verbal Communication Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Written communication",
+        "Verbal / Oral communication",
+        "Sender",
+        "Message",
+        "Channel / Medium",
+        "Receiver",
+        "Feedback",
+        "Active listening",
+        "Audience",
+        "Context / Setting"
+      ],
+      multipleChoice: [
+        "C",
+        "B",
+        "A",
+        "A",
+        "C"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
@@ -9980,6 +10794,27 @@ window.EXAMS = {
     heading: "Practical Literacy in Everyday Situations Exam",
     backHref: "exams.html",
     backText: "← Back to Exams Hub",
+    answerKey: {
+      identification: [
+        "Practical / Functional literacy",
+        "Functional reading",
+        "Functional writing",
+        "Digital literacy",
+        "Financial literacy",
+        "Health literacy",
+        "Everyday / Practical reading",
+        "Receipt",
+        "Job description / Job posting",
+        "Functional / Everyday literacy"
+      ],
+      multipleChoice: [
+        "A",
+        "B",
+        "B",
+        "B",
+        "A"
+      ]
+    },
     styles: `
     .quiz-card { background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 24px; padding: 32px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); }
     .quiz-question { font-weight: 700; color: var(--deep-blue); margin-bottom: 14px; font-size: 1.05rem; }
