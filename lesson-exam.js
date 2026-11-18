@@ -535,19 +535,103 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
     </div>
     ${page.outsideContent}`;
 
-  if (pageType === "exam" && page.answerKey) {
-    const answerKeyStyle = document.createElement("style");
-    answerKeyStyle.textContent = answerKeyStyles;
-    document.head.appendChild(answerKeyStyle);
+  if (pageType === "exam") {
+    fetch(`http://localhost:3000/api/exam/answer-sheets/${lessonId}`)
+      .then((response) => {
+        if (!response.ok) throw new Error("Answer sheet not found");
+        return response.json();
+      })
+      .then((answerKey) => {
+        page.answerKey = answerKey;
+        const answerKeyStyle = document.createElement("style");
+        answerKeyStyle.textContent = answerKeyStyles;
+        document.head.appendChild(answerKeyStyle);
 
-    const examContainer = document.querySelector(".main-content .section-box");
-    if (examContainer) examContainer.insertAdjacentHTML("beforeend", answerKeyPanel(page));
-    setupAnswerKey();
+        const examContainer = document.querySelector(".main-content .section-box");
+        if (examContainer) examContainer.insertAdjacentHTML("beforeend", answerKeyPanel(page));
+        setupAnswerKey();
+      })
+      .catch((error) => console.error(error));
   }
 
   const pageScript = document.createElement("script");
   pageScript.textContent = page.script;
   document.body.appendChild(pageScript);
+
+  if (pageType === "exam") {
+    const originalValidateAndSubmitExam = window.validateAndSubmitExam;
+
+    window.validateAndSubmitExam = async function () {
+      const idInputs = [...document.querySelectorAll(".id-input")];
+      const multipleChoiceAnswers = [];
+      for (let i = 1; i <= 5; i++) {
+        const checked = document.querySelector(`input[name="mc${i}"]:checked`);
+        multipleChoiceAnswers.push(checked ? checked.value : "");
+      }
+      const essayInput = document.getElementById("essayInput");
+      const essayQuestion = document.querySelector(".quiz-card:last-of-type .quiz-question")?.textContent?.trim();
+
+      if (idInputs.some((input) => !input.value.trim()) ||
+          multipleChoiceAnswers.some((answer) => !answer) ||
+          !essayInput?.value.trim()) {
+        if (typeof originalValidateAndSubmitExam === "function") {
+          originalValidateAndSubmitExam();
+        }
+        return;
+      }
+
+      const statusModal = document.getElementById("statusModal");
+      const modalIcon = document.getElementById("modalIcon");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDesc = document.getElementById("modalDesc");
+      const modalBtn = document.getElementById("modalBtn");
+
+      modalIcon.textContent = "⏳";
+      modalTitle.textContent = "Checking Your Exam";
+      modalDesc.textContent = "Checking identification, multiple choice, and essay responses...";
+      modalBtn.textContent = "Please wait";
+      statusModal.classList.add("active");
+
+      try {
+        const response = await fetch(`http://localhost:3000/api/exam/submit`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            lessonId,
+            identificationAnswers: idInputs.map((input) => input.value),
+            multipleChoiceAnswers,
+            essayQuestion,
+            essayAnswer: essayInput.value,
+          }),
+        });
+        if (!response.ok) throw new Error("Exam check failed");
+        const result = await response.json();
+
+        if (result.passed) {
+          if (typeof originalValidateAndSubmitExam === "function") {
+            originalValidateAndSubmitExam();
+          }
+          modalIcon.textContent = "🎉";
+          modalTitle.textContent = "Exam Submitted";
+          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback}`;
+          modalBtn.textContent = "Go to Exams Hub";
+        } else {
+          isExamSubmitted = false;
+          modalIcon.textContent = "📝";
+          modalTitle.textContent = "Exam Submitted";
+          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback}`;
+          modalBtn.textContent = "Review Answers";
+          modalBtn.onclick = closeStatusModal;
+        }
+      } catch (error) {
+        console.error(error);
+        modalIcon.textContent = "⚠️";
+        modalTitle.textContent = "Checking Failed";
+        modalDesc.textContent = "The exam could not be checked. Please try submitting again.";
+        modalBtn.textContent = "Return to Exam";
+      }
+    };
+  }
 
   if (pageType === "lesson") {
     const completeBtn = document.createElement("button");
