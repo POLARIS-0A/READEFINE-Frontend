@@ -1,6 +1,6 @@
 window.checkAnswer = async function (question, correctAnswer, userAnswer) {
   try {
-    const res = await fetch("https://readefine-backend-pssem5qv5-temmies-projects-f070e36f.vercel.app//api/exam/check", {
+    const res = await fetch("https://readefine-backend-pssem5qv5-temmies-projects-f070e36f.vercel.app/api/exam/check", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ question, correctAnswer, userAnswer }),
@@ -468,7 +468,7 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
       statusModal.classList.add("active");
 
       try {
-        const response = await fetch(`https://readefine-backend-pssem5qv5-temmies-projects-f070e36f.vercel.app//api/exam/submit`, {
+        const response = await fetch(`https://readefine-backend-pssem5qv5-temmies-projects-f070e36f.vercel.app/api/exam/submit`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
