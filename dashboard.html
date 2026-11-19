@@ -60,6 +60,7 @@
           <div class="progress-bar-fill" id="progressBar" style="width: 0%;"></div>
         </div>
         <div class="progress-footer-text" id="progressText">Loading...</div>
+        <ul id="progressList" aria-live="polite" style="margin: 16px 0 0; padding-left: 22px; color: var(--text-muted);"></ul>
       </div>
 
       <div class="dashboard-grid">
@@ -121,10 +122,14 @@
   }
 
   loadProgress().then((progress) => {
-    const done = progress.filter((p) => p.completed).length;
+    const completedLessons = progress
+      .filter((entry) => entry.completed)
+      .sort((a, b) => Number(a.lesson_id) - Number(b.lesson_id));
+    const done = completedLessons.length;
     const percent = Math.round((done / TOTAL_LESSONS) * 100);
     const level = Math.min(4, Math.floor(done / 10) + 1);
     const rankNames = ["Beginner Reader", "Word Explorer", "Sentence Builder", "Story Reader"];
+    const progressList = document.getElementById("progressList");
 
     document.getElementById("progressPercent").textContent = percent + "%";
     document.getElementById("progressBar").style.width = percent + "%";
@@ -132,9 +137,20 @@
       done + " of " + TOTAL_LESSONS + " lessons completed";
     document.getElementById("currentRank").textContent =
       "Level " + level + " · " + rankNames[level - 1];
+    progressList.replaceChildren();
+    if (completedLessons.length === 0) {
+      progressList.textContent = "No completed lessons yet.";
+    } else {
+      for (const entry of completedLessons) {
+        const item = document.createElement("li");
+        item.textContent = "Lesson " + entry.lesson_id + " completed";
+        progressList.appendChild(item);
+      }
+    }
   }).catch((error) => {
     document.getElementById("progressText").textContent = error.message || "Could not load progress.";
     document.getElementById("currentRank").textContent = "Progress unavailable";
+    document.getElementById("progressList").textContent = "Progress could not be loaded.";
   });
 </script>
 

@@ -490,7 +490,7 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
               progressMessage = " Progress saved.";
             } catch (error) {
               console.error("Could not save exam progress:", error);
-              progressMessage = " Exam passed, but progress could not be saved.";
+              progressMessage = ` Exam passed, but progress could not be saved: ${error.message}`;
             }
           } else {
             progressMessage = " Log in to save your progress.";
