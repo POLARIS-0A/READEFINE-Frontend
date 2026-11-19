@@ -48,7 +48,7 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
           </ul>
         </div>
         <div class="sidebar-footer">
-          <a href="index.html" class="logout-btn">🚪 Log Out</a>
+          <a href="index.html" class="logout-btn" onclick="localStorage.removeItem('accessToken'); localStorage.removeItem('user'); localStorage.removeItem('readefine_logged_in'); localStorage.removeItem('readefine_has_account')">🚪 Log Out</a>
         </div>
       </aside>`;
     return activePage === "lesson"
@@ -483,12 +483,24 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
         const result = await response.json();
 
         if (result.passed) {
+          let progressMessage;
+          if (localStorage.getItem("accessToken")) {
+            try {
+              await saveProgress(lessonId, true, result.score);
+              progressMessage = " Progress saved.";
+            } catch (error) {
+              console.error("Could not save exam progress:", error);
+              progressMessage = " Exam passed, but progress could not be saved.";
+            }
+          } else {
+            progressMessage = " Log in to save your progress.";
+          }
           if (typeof originalValidateAndSubmitExam === "function") {
             originalValidateAndSubmitExam();
           }
           modalIcon.textContent = "🎉";
           modalTitle.textContent = "Exam Submitted";
-          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback}`;
+          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback}${progressMessage}`;
           modalBtn.textContent = "Go to Exams Hub";
         } else {
           isExamSubmitted = false;
@@ -520,9 +532,9 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
       completeBtn.textContent = "Saving...";
       try {
         const result = await saveProgress(lessonId, true, null);
-        completeBtn.textContent = result.ok ? "✅ Completed!" : "Could not save. Log in again.";
+        completeBtn.textContent = result.ok ? "✅ Completed!" : "Could not save. Please try again.";
       } catch (err) {
-        completeBtn.textContent = "Cannot reach the server";
+        completeBtn.textContent = err.message || "Could not save progress.";
         completeBtn.disabled = false;
       }
     });

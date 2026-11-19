@@ -323,8 +323,8 @@
         </ul>
         
         <!-- Log In / Profile Trigger -->
-        <div onclick="openLoginModal()" style="display: flex; align-items: center; gap: 8px; cursor: pointer; background: rgba(255, 255, 255, 0.6); padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-subtle, #E2E8F0); transition: all 0.2s;">
-          <span style="font-size: 0.9rem; font-weight: 700; color: var(--deep-blue, #174B85);">Log In</span>
+        <div id="authNavButton" onclick="handleAuthNavClick()" role="button" tabindex="0" style="display: flex; align-items: center; gap: 8px; cursor: pointer; background: rgba(255, 255, 255, 0.6); padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-subtle, #E2E8F0); transition: all 0.2s;">
+          <span id="authNavLabel" style="font-size: 0.9rem; font-weight: 700; color: var(--deep-blue, #174B85);">Log In</span>
           <div class="profile-icon" style="margin: 0;">👤</div>
         </div>
       </nav>
@@ -476,6 +476,36 @@
     const loginModal = document.getElementById('loginModal');
     const signupModal = document.getElementById('signupModal');
 
+    function updateAuthNav() {
+      const loggedIn = Boolean(localStorage.getItem('accessToken'));
+      document.getElementById('authNavLabel').textContent = loggedIn ? 'Log Out' : 'Log In';
+      document.getElementById('authNavButton').setAttribute(
+        'aria-label',
+        loggedIn ? 'Log out' : 'Log in'
+      );
+    }
+
+    function handleAuthNavClick() {
+      if (localStorage.getItem('accessToken')) {
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('user');
+        localStorage.removeItem('readefine_logged_in');
+        localStorage.removeItem('readefine_has_account');
+        updateAuthNav();
+        return;
+      }
+      openLoginModal();
+    }
+
+    document.getElementById('authNavButton').addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleAuthNavClick();
+      }
+    });
+
+    updateAuthNav();
+
     function openLoginModal() {
       signupModal.classList.remove('active');
       loginModal.classList.add('active');
@@ -501,12 +531,8 @@
       loginModal.classList.add('active');
     }
 
-    // Checker kung mayroon nang nakasave na account/sesyon sa browser
     function checkExistingAccount() {
-      // Sinusuri natin kung nag-sign up na o nag-log in na ang user dati
-      const hasAccount = localStorage.getItem('readefine_has_account');
-      const isLoggedIn = localStorage.getItem('readefine_logged_in');
-      return hasAccount === 'true' || isLoggedIn === 'true';
+      return Boolean(localStorage.getItem('accessToken'));
     }
 
     // "Start Learning" button logic na may account checker
@@ -546,7 +572,8 @@
         localStorage.setItem('user', JSON.stringify(data.user));
         localStorage.setItem('readefine_has_account', 'true');
         localStorage.setItem('readefine_logged_in', 'true');
-        window.location.href = 'dashboard.html';
+        updateAuthNav();
+        closeAuthModals();
       } catch (error) {
         message.textContent = 'Cannot reach the server. Is the backend running?';
       }
@@ -575,19 +602,27 @@
           return;
         }
 
-        if (data.accessToken) {
-          localStorage.setItem('accessToken', data.accessToken);
-        }
-        localStorage.setItem('user', JSON.stringify(data.user));
-        localStorage.setItem('readefine_has_account', 'true');
-        localStorage.setItem('readefine_logged_in', 'true');
-
         if (data.requiresEmailConfirmation) {
+          localStorage.removeItem('accessToken');
+          localStorage.removeItem('user');
+          localStorage.removeItem('readefine_has_account');
+          localStorage.removeItem('readefine_logged_in');
           message.style.color = '#174B85';
           message.textContent = 'Account created. Please confirm your email, then log in.';
+          updateAuthNav();
           return;
         }
 
+        if (!data.accessToken) {
+          message.textContent = 'Account created, but sign-in is not ready. Please log in after confirming your email.';
+          return;
+        }
+
+        localStorage.setItem('accessToken', data.accessToken);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        localStorage.setItem('readefine_has_account', 'true');
+        localStorage.setItem('readefine_logged_in', 'true');
+        updateAuthNav();
         window.location.href = 'dashboard.html';
       } catch (error) {
         message.textContent = 'Cannot reach the server. Is the backend running?';

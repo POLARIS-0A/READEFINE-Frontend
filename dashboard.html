@@ -26,7 +26,7 @@
       </div>
 
       <div class="sidebar-footer">
-        <a href="index.html" class="logout-btn" onclick="localStorage.clear()">🚪 Log Out</a>
+        <a href="index.html" class="logout-btn" onclick="localStorage.removeItem('accessToken'); localStorage.removeItem('user'); localStorage.removeItem('readefine_logged_in'); localStorage.removeItem('readefine_has_account')">🚪 Log Out</a>
       </div>
     </aside>
 
@@ -46,7 +46,7 @@
           <span>⭐</span>
           <div class="level-info">
             <h4>Current Level</h4>
-            <p>Beginner</p>
+            <p id="currentRank">Level 1 · Beginner Reader</p>
           </div>
         </div>
       </div>
@@ -123,11 +123,18 @@
   loadProgress().then((progress) => {
     const done = progress.filter((p) => p.completed).length;
     const percent = Math.round((done / TOTAL_LESSONS) * 100);
+    const level = Math.min(4, Math.floor(done / 10) + 1);
+    const rankNames = ["Beginner Reader", "Word Explorer", "Sentence Builder", "Story Reader"];
 
     document.getElementById("progressPercent").textContent = percent + "%";
     document.getElementById("progressBar").style.width = percent + "%";
     document.getElementById("progressText").textContent =
       done + " of " + TOTAL_LESSONS + " lessons completed";
+    document.getElementById("currentRank").textContent =
+      "Level " + level + " · " + rankNames[level - 1];
+  }).catch((error) => {
+    document.getElementById("progressText").textContent = error.message || "Could not load progress.";
+    document.getElementById("currentRank").textContent = "Progress unavailable";
   });
 </script>
 
