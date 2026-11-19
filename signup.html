@@ -175,6 +175,19 @@
           return;
         }
 
+        if (data.accessToken) {
+          localStorage.setItem("accessToken", data.accessToken);
+        }
+        localStorage.setItem("user", JSON.stringify(data.user));
+        localStorage.setItem("readefine_has_account", "true");
+        localStorage.setItem("readefine_logged_in", "true");
+
+        if (data.requiresEmailConfirmation) {
+          message.style.color = "#174B85";
+          message.textContent = "Account created. Please confirm your email, then log in.";
+          return;
+        }
+
         window.location.href = "index.html";
       } catch (err) {
         message.textContent = "Cannot reach the server. Is the backend running?";

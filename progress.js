@@ -1,4 +1,4 @@
-const API_URL = "https://localhost:3000/api";
+const API = "http://localhost:3000/api";
 
 function authHeaders() {
   return {

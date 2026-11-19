@@ -77,112 +77,6 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
       </div>`;
   }
 
-  function textFromHtml(html) {
-    const holder = document.createElement("div");
-    holder.innerHTML = html;
-    return (holder.textContent || "").replace(/\s+/g, " ").trim();
-  }
-
-  function multipleChoiceAnswerText(content, answers) {
-    const part2Start = content.indexOf("PART II");
-    const part2End = content.indexOf("PART III");
-    const part2 = part2Start === -1 ? "" : content.slice(part2Start, part2End === -1 ? undefined : part2End);
-    const labels = {};
-    const labelPattern = /<label[^>]*>\s*<input[^>]*name="mc(\d+)"[^>]*value="([A-D])"[^>]*>([\s\S]*?)<\/label>/g;
-    let match;
-    while ((match = labelPattern.exec(part2))) {
-      labels[`${match[1]}${match[2]}`] = textFromHtml(match[3]);
-    }
-
-    return answers.map((answer, index) => answer.split(/\s+or\s+/i).map((letter) => {
-      const cleaned = letter.trim();
-      const label = labels[`${index + 1}${cleaned}`];
-      const optionText = label ? label.replace(/^[A-D][.)]\s*/, "") : "";
-      return optionText ? `${cleaned}. ${optionText}` : cleaned;
-    }).join(" or "));
-  }
-
-  function answerKeyPanel(page) {
-    if (!page.answerKey) return "";
-
-    const identificationItems = page.answerKey.identification
-      .map((answer) => `<li>${escapeHtml(answer)}</li>`)
-      .join("");
-    const multipleChoiceItems = multipleChoiceAnswerText(page.content, page.answerKey.multipleChoice)
-      .map((answer) => `<li>${escapeHtml(answer)}</li>`)
-      .join("");
-
-    return `
-      <div class="answer-key-card">
-        <button type="button" class="answer-key-toggle" id="answerKeyToggle" aria-expanded="false" aria-controls="answerKeyContent">
-          <span aria-hidden="true">🔑</span>
-          <span class="answer-key-toggle-label">Show Answer Key</span>
-          <span class="answer-key-chevron" aria-hidden="true">▾</span>
-        </button>
-        <div class="answer-key-content" id="answerKeyContent" hidden>
-          <p class="answer-key-note">Correct answers for Parts I and II only. Essay responses are evaluated separately.</p>
-          <div class="answer-key-grid">
-            <section class="answer-key-section">
-              <h4>Part I. Identification</h4>
-              <ol class="answer-key-list">${identificationItems}</ol>
-            </section>
-            <section class="answer-key-section">
-              <h4>Part II. Multiple Choice</h4>
-              <ol class="answer-key-list">${multipleChoiceItems}</ol>
-            </section>
-          </div>
-        </div>
-      </div>`;
-  }
-
-  const answerKeyStyles = `
-    .answer-key-card {
-      background: var(--white);
-      border: 1px solid var(--border-subtle);
-      border-radius: 20px;
-      padding: 20px 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-    .answer-key-toggle {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-      padding: 12px 16px;
-      border: 1px solid var(--soft-blue);
-      border-radius: 12px;
-      background: #EAF2FF;
-      color: var(--deep-blue);
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-    .answer-key-toggle:hover { background: #DCE9FF; }
-    .answer-key-chevron { margin-left: auto; transition: transform 0.2s ease; }
-    .answer-key-toggle[aria-expanded="true"] .answer-key-chevron { transform: rotate(180deg); }
-    .answer-key-content { padding: 18px 4px 4px; }
-    .answer-key-content[hidden] { display: none; }
-    .answer-key-note { color: var(--text-muted); font-size: 0.9rem; margin: 0 0 16px; }
-    .answer-key-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-    .answer-key-section h4 { color: var(--deep-blue); font-size: 1rem; margin: 0 0 10px; }
-    .answer-key-list { padding-left: 20px; color: var(--text-dark); font-size: 0.95rem; line-height: 1.8; }
-  `;
-
-  function setupAnswerKey() {
-    const toggle = document.getElementById("answerKeyToggle");
-    const content = document.getElementById("answerKeyContent");
-    if (!toggle || !content) return;
-
-    toggle.addEventListener("click", () => {
-      const isOpen = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!isOpen));
-      content.hidden = isOpen;
-      toggle.querySelector(".answer-key-toggle-label").textContent = isOpen ? "Show Answer Key" : "Hide Answer Key";
-    });
-  }
-
   function lessonReaderControls() {
     return `
       <div class="lesson-reader-controls" id="lessonReaderControls" role="group" aria-label="Lesson reader" hidden>
@@ -534,25 +428,6 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
       </main>
     </div>
     ${page.outsideContent}`;
-
-  if (pageType === "exam") {
-    fetch(`http://localhost:3000/api/exam/answer-sheets/${lessonId}`)
-      .then((response) => {
-        if (!response.ok) throw new Error("Answer sheet not found");
-        return response.json();
-      })
-      .then((answerKey) => {
-        page.answerKey = answerKey;
-        const answerKeyStyle = document.createElement("style");
-        answerKeyStyle.textContent = answerKeyStyles;
-        document.head.appendChild(answerKeyStyle);
-
-        const examContainer = document.querySelector(".main-content .section-box");
-        if (examContainer) examContainer.insertAdjacentHTML("beforeend", answerKeyPanel(page));
-        setupAnswerKey();
-      })
-      .catch((error) => console.error(error));
-  }
 
   const pageScript = document.createElement("script");
   pageScript.textContent = page.script;

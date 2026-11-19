@@ -318,7 +318,6 @@
         <ul class="landing-nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="exams.html">Exams</a></li>
           <!-- Direct nang pumupunta sa dashboard/progress page -->
           <li><a href="dashboard.html">Progress</a></li>
         </ul>
@@ -430,6 +429,7 @@
         </div>
 
         <button type="submit" class="btn-submit">Log In →</button>
+        <p id="loginMessage" style="margin-top:12px; font-size:0.9rem; color:#c0392b;"></p>
       </form>
 
       <p class="auth-footer-text">
@@ -454,7 +454,7 @@
 
         <div class="form-group">
           <label class="form-label">Email Address</label>
-          <input type="email" id="signupEmail" class="form-input" placeholder="name@example.com" requ`ired>
+          <input type="email" id="signupEmail" class="form-input" placeholder="name@example.com" required>
         </div>
 
         <div class="form-group">
@@ -463,6 +463,7 @@
         </div>
 
         <button type="submit" class="btn-submit">Sign Up →</button>
+        <p id="signupMessage" style="margin-top:12px; font-size:0.9rem; color:#c0392b;"></p>
       </form>
 
       <p class="auth-footer-text">
@@ -471,7 +472,7 @@
     </div>
   </div>
 
-  <script>1
+  <script>
     const loginModal = document.getElementById('loginModal');
     const signupModal = document.getElementById('signupModal');
 
@@ -481,8 +482,8 @@
     }
 
     function openSignupModal() {
-      signupModal.classList.remove('active');
-      loginModal.classList.add('active');
+      loginModal.classList.remove('active');
+      signupModal.classList.add('active');
     }
 
     function closeAuthModals() {
@@ -520,21 +521,79 @@
     }
 
     // Kapag nag-log in, sine-save natin ang estado na mayroon na siyang account
-    function handleLoginSubmit(event) {
+    async function handleLoginSubmit(event) {
       event.preventDefault();
-      localStorage.setItem('readefine_has_account', 'true');
-      localStorage.setItem('readefine_logged_in', 'true');
-      window.location.href = 'dashboard.html';
+      const message = document.getElementById('loginMessage');
+      message.textContent = 'Logging in...';
+
+      try {
+        const response = await fetch('http://localhost:3000/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: document.getElementById('loginEmail').value,
+            password: document.getElementById('loginPassword').value,
+          }),
+        });
+        const data = await response.json();
+
+        if (!response.ok) {
+          message.textContent = data.error || 'Login failed.';
+          return;
+        }
+
+        localStorage.setItem('accessToken', data.accessToken);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        localStorage.setItem('readefine_has_account', 'true');
+        localStorage.setItem('readefine_logged_in', 'true');
+        window.location.href = 'dashboard.html';
+      } catch (error) {
+        message.textContent = 'Cannot reach the server. Is the backend running?';
+      }
     }
 
     // Kapag nag-sign up, sine-save din natin ang estado na mayroon na siyang account
-    function handleSignupSubmit(event) {
+    async function handleSignupSubmit(event) {
       event.preventDefault();
-      localStorage.setItem('readefine_has_account', 'true');
-      localStorage.setItem('readefine_logged_in', 'true');
-      window.location.href = 'dashboard.html';
+      const message = document.getElementById('signupMessage');
+      message.textContent = 'Creating account...';
+
+      try {
+        const response = await fetch('http://localhost:3000/api/auth/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fullName: document.getElementById('signupName').value,
+            email: document.getElementById('signupEmail').value,
+            password: document.getElementById('signupPassword').value,
+          }),
+        });
+        const data = await response.json();
+
+        if (!response.ok) {
+          message.textContent = data.error || 'Sign up failed.';
+          return;
+        }
+
+        if (data.accessToken) {
+          localStorage.setItem('accessToken', data.accessToken);
+        }
+        localStorage.setItem('user', JSON.stringify(data.user));
+        localStorage.setItem('readefine_has_account', 'true');
+        localStorage.setItem('readefine_logged_in', 'true');
+
+        if (data.requiresEmailConfirmation) {
+          message.style.color = '#174B85';
+          message.textContent = 'Account created. Please confirm your email, then log in.';
+          return;
+        }
+
+        window.location.href = 'dashboard.html';
+      } catch (error) {
+        message.textContent = 'Cannot reach the server. Is the backend running?';
+      }
     }
-  </script>1
+  </script>
 
 </body>
 </html>
