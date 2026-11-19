@@ -1,4 +1,4 @@
-const API = "https://readefine-backend-pssem5qv5-temmies-projects-f070e36f.vercel.app/api";
+const API = "https://readefine-backend.vercel.app//api";
 
 function authHeaders() {
   return {
