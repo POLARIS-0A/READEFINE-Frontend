@@ -1087,6 +1087,7 @@ html[data-page="exam"] #app > * {
   overflow-wrap: anywhere;
 }
 
+
 .account-profile-details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1223,13 +1224,89 @@ html[data-page="exam"] #app > * {
 }
 
 
+.dev-info {
+  max-width: 850px;
+  height: auto;
+  display: grid;
+  margin: clamp(24px, 4vw, 48px) auto 64px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 18px 48px rgba(23, 75, 133, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.info {
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  text-align: justify;
+  color: var(--text-dark);
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  line-height: 1.8;
+}
+
+.dev-info .info {
+  min-height: 260px;
+  justify-content: center;
+}
+
+.dev-info-reversed {
+  max-width: 850px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
+  align-items: center;
+  gap: 16px;
+}
+
+.dev-info-reversed > .info {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: none;
+}
+
+.dev-info-reversed > .container {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 24px 0 48px;
+}
+
+.dev-info .info .contact-hint {
+  margin-top: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .dev-info-reversed {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dev-info-reversed > .info {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .dev-info-reversed > .container {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 12px auto 24px;
+  }
+}
+
 
 
 .card {
-  width: 450px;
-  height: 250px;
+  width: 50%;
+  height: 50%;
   border-radius: 50px;
-  background-color: #fff;
+  color: var(--text-dark);
   background: linear-gradient(#f8f8f8, #fff);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
@@ -1241,6 +1318,12 @@ html[data-page="exam"] #app > * {
 .card h1 {
   text-align: center;
 }
+
+.job-title{
+  font-weight: lighter;
+  font-size: 20px;
+}
+
 
 .card-img img{
   width: 100px;
@@ -1392,4 +1475,125 @@ html[data-page="exam"] #app > * {
   bottom: 1rem;
   right: 1rem;
   font-size: 0.9em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 24px auto 48px;
+  padding: 0 16px;
+}
+
+.card-wrapper {
+  position: relative;
+  width: min(100%, 400px);
+  aspect-ratio: 8 / 10;
+}
+
+.container .card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 16px;
+}
+
+.container .card-image {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: #000;
+  transition: transform 0.8s;
+}
+
+.container .card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.4s;
+}
+
+.container .card:hover .card-image,
+.container .card.is-expanded .card-image {
+  transform: translateY(-100px);
+}
+
+.container .card:hover .card-image img,
+.container .card.is-expanded .card-image img {
+  opacity: 0.5;
+}
+
+.container .social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: translate(-50%, -50%);
+}
+
+.container .social-icons li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: transform 0.4s, opacity 0.4s, background-color 0.2s;
+}
+
+.container .social-icons img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.container .card:hover .social-icons li a,
+.container .card.is-expanded .social-icons li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container .social-icons li a:hover {
+  background: #EAF2FF;
+}
+
+.container .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.container .details h2 {
+  margin: 18px 0 0;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 12px;
+  }
+
+  .container .details h2 {
+    font-size: 1.15rem;
+  }
 }
