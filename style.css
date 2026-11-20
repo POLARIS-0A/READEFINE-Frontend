@@ -822,6 +822,13 @@ body {
     padding: 20px;
   }
 
+  .level-card .btn-primary,
+  .exam-card .btn-primary {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
   .level-card h3,
   .exam-card h3 {
     font-size: 1.2rem !important;
@@ -973,7 +980,7 @@ html[data-page="exam"] #app > * {
   width: min(100%, 360px);
 }
 
-.landing-page .card {
+.landing-page .home-card {
   min-width: 0;
 }
 
