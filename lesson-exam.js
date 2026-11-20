@@ -435,6 +435,82 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
 
   if (pageType === "exam") {
     const originalValidateAndSubmitExam = window.validateAndSubmitExam;
+    const examForm = document.querySelector("form");
+    const attemptNotice = document.createElement("div");
+    attemptNotice.setAttribute("role", "status");
+    attemptNotice.setAttribute("aria-live", "polite");
+    attemptNotice.style.cssText = "display:none; padding:14px 18px; border-radius:12px; font-weight:600;";
+    examForm?.prepend(attemptNotice);
+
+    function showAttemptNotice(message, completed) {
+      attemptNotice.textContent = message;
+      attemptNotice.style.display = "block";
+      attemptNotice.style.background = completed ? "#EAF7EF" : "#EAF2FF";
+      attemptNotice.style.color = completed ? "#176B3A" : "var(--deep-blue)";
+    }
+
+    async function restoreSavedAttempt() {
+      const accessToken = localStorage.getItem("accessToken");
+      if (!accessToken) return;
+
+      try {
+        const response = await fetch(`https://readefine-backend.vercel.app/api/exam/attempt/${lessonId}`, {
+          headers: { Authorization: `Bearer ${accessToken}` },
+        });
+        const result = await response.json();
+        if (response.status === 401) {
+          localStorage.removeItem("accessToken");
+          localStorage.removeItem("user");
+          localStorage.removeItem("readefine_logged_in");
+          localStorage.removeItem("readefine_has_account");
+        }
+        if (!response.ok) throw new Error(result.error || "Could not load your saved exam answers.");
+
+        if (!result.attempt) return;
+        const attempt = result.attempt;
+        const idInputs = [...document.querySelectorAll(".id-input")];
+        if (!Array.isArray(attempt.identification_answers) ||
+            attempt.identification_answers.length !== idInputs.length ||
+            !Array.isArray(attempt.multiple_choice_answers) ||
+            attempt.multiple_choice_answers.length !== 5 ||
+            typeof attempt.essay_answer !== "string") {
+          throw new Error("Your saved exam answers could not be displayed.");
+        }
+
+        const alreadyEditing = idInputs.some((input) => input.value.trim()) ||
+          [...document.querySelectorAll('input[type="radio"]:checked')].length > 0 ||
+          document.getElementById("essayInput").value.trim();
+        if (alreadyEditing) {
+          showAttemptNotice(`A previous exam attempt was submitted with a score of ${attempt.score}/${attempt.total}. Your current answers were kept.`, Boolean(result.lessonCompleted));
+          return;
+        }
+
+        idInputs.forEach((input, index) => {
+          input.value = String(attempt.identification_answers[index] ?? "");
+        });
+        attempt.multiple_choice_answers.forEach((answer, index) => {
+          document.querySelectorAll(`input[name="mc${index + 1}"]`).forEach((option) => {
+            option.checked = option.value === String(answer);
+          });
+        });
+        document.getElementById("essayInput").value = attempt.essay_answer;
+
+        const lessonCompleted = Boolean(result.lessonCompleted);
+        if (lessonCompleted) {
+          isExamSubmitted = true;
+          document.getElementById("nextLessonBtn")?.classList.remove("btn-disabled");
+        }
+        const message = lessonCompleted
+          ? `You have passed this exam. Your latest submitted answers are shown below. Latest score: ${attempt.score}/${attempt.total}.`
+          : `Your last exam attempt was submitted. Its saved answers are shown below; you can edit them and retake the exam. Score: ${attempt.score}/${attempt.total}.`;
+        showAttemptNotice(message, lessonCompleted);
+      } catch (error) {
+        console.error(error);
+        showAttemptNotice(error.message || "Could not load your saved exam answers.", false);
+      }
+    }
+
+    restoreSavedAttempt();
 
     window.validateAndSubmitExam = async function () {
       const idInputs = [...document.querySelectorAll(".id-input")];
@@ -492,6 +568,7 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
           if (typeof originalValidateAndSubmitExam === "function") {
             originalValidateAndSubmitExam();
           }
+          showAttemptNotice(`Exam completed. Your submitted answers and lesson progress were saved. Score: ${result.score}/${result.total}.`, true);
           modalIcon.textContent = "🎉";
           modalTitle.textContent = "Exam Submitted";
           modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback} Your answers and lesson progress were saved.`;
@@ -499,6 +576,7 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
         } else {
           isExamSubmitted = false;
           document.getElementById("nextLessonBtn")?.classList.add("btn-disabled");
+          showAttemptNotice(`Your exam attempt is complete and your answers were saved. Score: ${result.score}/${result.total}. You can review or edit the answers below and retake the exam.`, false);
           modalIcon.textContent = "📝";
           modalTitle.textContent = "Perfect Score Required";
           modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback} Your answers were saved. You need a perfect score to continue. Please review your answers and retake the exam.`;
