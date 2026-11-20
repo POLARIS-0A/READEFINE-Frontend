@@ -324,18 +324,23 @@
     <div class="landing-container">
       
       <!-- Top Navigation -->
-      <nav class="landing-nav">
+       <nav class="landing-nav">
         <div class="landing-logo">
-          <img src="ASSETS/logo.png" alt="">  READEFINE
+           <img src="ASSETS/logo.png"> READEFINE
         </div>
         <ul class="landing-nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About us</a></li>
           <li><a href="exams.html" data-auth-required="true">Exams</a></li>
           <li><a href="dashboard.html#progress" data-auth-required="true">Progress</a></li>
           <li><a href="levels.html" data-auth-required="true">Lessons</a></li>
         </ul>
         
+        <!-- Log In / Profile Trigger -->
+        <div id="authNavButton" onclick="handleAuthNavClick()" role="button" tabindex="0" style="display: flex; align-items: center; gap: 8px; cursor: pointer; background: rgba(255, 255, 255, 0.6); padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-subtle, #E2E8F0); transition: all 0.2s;">
+          <span id="authNavLabel" style="font-size: 0.9rem; font-weight: 700; color: var(--deep-blue, #174B85);">Log In</span>
+          <div class="profile-icon" style="margin: 0;">👤</div>
+        </div>
       </nav>
 
       <!-- Center Hero Oblong Card -->
