@@ -468,9 +468,15 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
       statusModal.classList.add("active");
 
       try {
+        const accessToken = localStorage.getItem("accessToken");
+        if (!accessToken) throw new Error("Please log in before submitting so your exam answers can be saved.");
+
         const response = await fetch(`https://readefine-backend.vercel.app/api/exam/submit`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
           body: JSON.stringify({
             lessonId,
             identificationAnswers: idInputs.map((input) => input.value),
@@ -479,35 +485,23 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
             essayAnswer: essayInput.value,
           }),
         });
-        if (!response.ok) throw new Error("Exam check failed");
         const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Exam check failed.");
 
         if (result.passed && result.score === result.total) {
-          let progressMessage;
-          if (localStorage.getItem("accessToken")) {
-            try {
-              await saveProgress(lessonId, true, result.score);
-              progressMessage = " Progress saved.";
-            } catch (error) {
-              console.error("Could not save exam progress:", error);
-              progressMessage = ` Exam passed, but progress could not be saved: ${error.message}`;
-            }
-          } else {
-            progressMessage = " Log in to save your progress.";
-          }
           if (typeof originalValidateAndSubmitExam === "function") {
             originalValidateAndSubmitExam();
           }
           modalIcon.textContent = "🎉";
           modalTitle.textContent = "Exam Submitted";
-          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback}${progressMessage}`;
+          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback} Your answers and lesson progress were saved.`;
           modalBtn.textContent = "Go to Exams Hub";
         } else {
           isExamSubmitted = false;
           document.getElementById("nextLessonBtn")?.classList.add("btn-disabled");
           modalIcon.textContent = "📝";
           modalTitle.textContent = "Perfect Score Required";
-          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback} You need a perfect score to continue. Please review your answers and retake the exam.`;
+          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback} Your answers were saved. You need a perfect score to continue. Please review your answers and retake the exam.`;
           modalBtn.textContent = "Retake Exam";
           modalBtn.onclick = closeStatusModal;
         }
@@ -515,7 +509,7 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
         console.error(error);
         modalIcon.textContent = "⚠️";
         modalTitle.textContent = "Checking Failed";
-        modalDesc.textContent = "The exam could not be checked. Please try submitting again.";
+        modalDesc.textContent = error.message || "The exam could not be checked or saved. Please try submitting again.";
         modalBtn.textContent = "Return to Exam";
       }
     };
