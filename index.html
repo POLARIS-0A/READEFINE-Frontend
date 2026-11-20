@@ -316,10 +316,11 @@
            <img src="ASSETS/logo.png"> READEFINE
         </div>
         <ul class="landing-nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About us</a></li>
-          <!-- Direct nang pumupunta sa dashboard/progress page -->
-          <li><a href="dashboard.html">Progress</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Homepage</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="exams.html" data-auth-required="true">Exams</a></li>
+          <li><a href="dashboard.html#progress" data-auth-required="true">Progress</a></li>
+          <li><a href="levels.html" data-auth-required="true">Lessons</a></li>
         </ul>
         
         <!-- Log In / Profile Trigger -->
@@ -475,6 +476,7 @@
   <script>
     const loginModal = document.getElementById('loginModal');
     const signupModal = document.getElementById('signupModal');
+    let pendingAuthDestination = null;
 
     function updateAuthNav() {
       const loggedIn = Boolean(localStorage.getItem('accessToken'));
@@ -505,6 +507,15 @@
     });
 
     updateAuthNav();
+
+    document.querySelectorAll('.landing-nav-links a[data-auth-required]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        if (localStorage.getItem('accessToken')) return;
+        event.preventDefault();
+        pendingAuthDestination = link.getAttribute('href');
+        openLoginModal();
+      });
+    });
 
     function openLoginModal() {
       signupModal.classList.remove('active');
@@ -573,6 +584,10 @@
         localStorage.setItem('readefine_has_account', 'true');
         localStorage.setItem('readefine_logged_in', 'true');
         updateAuthNav();
+        if (pendingAuthDestination) {
+          window.location.href = pendingAuthDestination;
+          return;
+        }
         closeAuthModals();
       } catch (error) {
         message.textContent = 'Cannot reach the server. Is the backend running?';
@@ -623,7 +638,7 @@
         localStorage.setItem('readefine_has_account', 'true');
         localStorage.setItem('readefine_logged_in', 'true');
         updateAuthNav();
-        window.location.href = 'dashboard.html';
+        window.location.href = pendingAuthDestination || 'dashboard.html';
       } catch (error) {
         message.textContent = 'Cannot reach the server. Is the backend running?';
       }
