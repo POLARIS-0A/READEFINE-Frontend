@@ -482,7 +482,7 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
         if (!response.ok) throw new Error("Exam check failed");
         const result = await response.json();
 
-        if (result.passed) {
+        if (result.passed && result.score === result.total) {
           let progressMessage;
           if (localStorage.getItem("accessToken")) {
             try {
@@ -504,10 +504,11 @@ window.checkAnswer = async function (question, correctAnswer, userAnswer) {
           modalBtn.textContent = "Go to Exams Hub";
         } else {
           isExamSubmitted = false;
+          document.getElementById("nextLessonBtn")?.classList.add("btn-disabled");
           modalIcon.textContent = "📝";
-          modalTitle.textContent = "Exam Submitted";
-          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback}`;
-          modalBtn.textContent = "Review Answers";
+          modalTitle.textContent = "Perfect Score Required";
+          modalDesc.textContent = `Score: ${result.score}/${result.total}. ${result.essay.feedback} You need a perfect score to continue. Please review your answers and retake the exam.`;
+          modalBtn.textContent = "Retake Exam";
           modalBtn.onclick = closeStatusModal;
         }
       } catch (error) {
