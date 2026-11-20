@@ -316,10 +316,11 @@
            <img src="ASSETS/logo.png"> READEFINE
         </div>
         <ul class="landing-nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <!-- Direct nang pumupunta sa dashboard/progress page -->
-          <li><a href="dashboard.html">Progress</a></li>
+          <li><a href="exams.html" data-auth-required="true">Exams</a></li>
+          <li><a href="dashboard.html#progress" data-auth-required="true">Progress</a></li>
+          <li><a href="levels.html" data-auth-required="true">Lessons</a></li>
         </ul>
         
         <!-- Log In / Profile Trigger -->
@@ -505,6 +506,15 @@
     });
 
     updateAuthNav();
+
+    document.querySelectorAll('.landing-nav-links a[data-auth-required]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        if (localStorage.getItem('accessToken')) return;
+        event.preventDefault();
+        const destination = link.getAttribute('href');
+        window.location.href = 'login.html?redirect=' + encodeURIComponent(destination);
+      });
+    });
 
     function openLoginModal() {
       signupModal.classList.remove('active');

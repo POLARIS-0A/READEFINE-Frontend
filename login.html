@@ -219,6 +219,9 @@
   <script>
   const form = document.getElementById("loginForm");
   const message = document.getElementById("message");
+  const requestedDestination = new URLSearchParams(window.location.search).get("redirect");
+  const postLoginDestination = ["exams.html", "dashboard.html#progress", "levels.html"]
+    .includes(requestedDestination) ? requestedDestination : "index.html";
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -243,7 +246,7 @@
 
       localStorage.setItem("accessToken", data.accessToken);
       localStorage.setItem("user", JSON.stringify(data.user));
-      window.location.href = "index.html";
+      window.location.href = postLoginDestination;
     } catch (err) {
       message.textContent = "Cannot reach the server. Is the backend running?";
     }

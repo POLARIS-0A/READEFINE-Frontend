@@ -331,9 +331,9 @@
         <ul class="landing-nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active" aria-current="page">About</a></li>
-          <li><a href="exams.html">Exams</a></li>
-          <!-- Direct nang pumupunta sa dashboard/progress page -->
-          <li><a href="dashboard.html">Progress</a></li>
+          <li><a href="exams.html" data-auth-required="true">Exams</a></li>
+          <li><a href="dashboard.html#progress" data-auth-required="true">Progress</a></li>
+          <li><a href="levels.html" data-auth-required="true">Lessons</a></li>
         </ul>
         
       </nav>
@@ -428,6 +428,15 @@
   </div>
 
   <script>
+    document.querySelectorAll('.landing-nav-links a[data-auth-required]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        if (localStorage.getItem('accessToken')) return;
+        event.preventDefault();
+        const destination = link.getAttribute('href');
+        window.location.href = 'login.html?redirect=' + encodeURIComponent(destination);
+      });
+    });
+
     const profileDeck = document.querySelector(".profile-deck");
     const toggleProfileDeck = () => {
       const isExpanded = profileDeck.classList.toggle("is-expanded");
