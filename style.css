@@ -1225,10 +1225,13 @@ html[data-page="exam"] #app > * {
 
 
 .dev-info {
+  width: min(100%, 850px);
   max-width: 850px;
+  min-width: 0;
   height: auto;
   display: grid;
   margin: clamp(24px, 4vw, 48px) auto 64px;
+  padding: clamp(12px, 2vw, 24px);
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.52);
@@ -1254,8 +1257,28 @@ html[data-page="exam"] #app > * {
 }
 
 .dev-info .info {
-  min-height: 260px;
+  min-height: 0;
+  padding: clamp(20px, 3vw, 30px);
   justify-content: center;
+}
+
+.dev-info .container {
+  max-width: 100%;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 28px);
+  padding: 0;
+}
+
+.dev-info .card-wrapper {
+  flex: 1 1 260px;
+  width: min(100%, 400px);
+}
+
+.dev-info .container > .info {
+  flex: 1 1 280px;
+  max-width: none;
 }
 
 .dev-info-reversed {
@@ -1284,18 +1307,37 @@ html[data-page="exam"] #app > * {
 }
 
 @media (max-width: 760px) {
+  .dev-info {
+    margin-bottom: 40px;
+    padding: 16px;
+  }
+
+  .dev-info:not(.dev-info-reversed) > .container {
+    flex-direction: column;
+  }
+
+  .dev-info .card-wrapper {
+    flex-basis: auto;
+    width: min(100%, 320px);
+  }
+
+  .dev-info .container > .info {
+    flex-basis: auto;
+    width: 100%;
+  }
+
   .dev-info-reversed {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .dev-info-reversed > .info {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
   }
 
   .dev-info-reversed > .container {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
     margin: 12px auto 24px;
   }
 }
