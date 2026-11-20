@@ -235,6 +235,13 @@ body {
   font-size: 1rem;
 }
 
+.sidebar-menu a img {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  object-fit: contain;
+}
+
 .sidebar-menu a:hover, .sidebar-menu a.active {
   background-color: var(--light-bg);
   color: var(--deep-blue);
