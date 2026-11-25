@@ -10,11 +10,6 @@
   --border-subtle: #D0E1F9;
 }
 
-html.readefine-font-small { font-size: 14px; }
-html.readefine-font-medium { font-size: 16px; }
-html.readefine-font-large { font-size: 18px; }
-html.readefine-font-extra-large { font-size: 20px; }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -1649,60 +1644,4 @@ html[data-page="exam"] #app > * {
   .container .details h2 {
     font-size: 1.15rem;
   }
-}
-
-html.readefine-dark body {
-  background: #101827;
-  color: #dbe7f6;
-}
-
-html.readefine-dark .app-frame,
-html.readefine-dark .sidebar,
-html.readefine-dark .main-content,
-html.readefine-dark .top-header-bar,
-html.readefine-dark .section-box,
-html.readefine-dark .hero-card,
-html.readefine-dark .feature-item,
-html.readefine-dark .account-profile-detail,
-html.readefine-dark .lesson-reader-controls,
-html.readefine-dark .reader-speed select,
-html.readefine-dark .reader-voice select,
-html.readefine-dark .container .details,
-html.readefine-dark .card,
-html.readefine-dark .dev-info {
-  background: #162235;
-  color: #dbe7f6;
-  border-color: #2d405a;
-}
-
-html.readefine-dark .app-frame,
-html.readefine-dark .sidebar,
-html.readefine-dark .top-header-bar,
-html.readefine-dark .hero-card,
-html.readefine-dark .section-box,
-html.readefine-dark .lesson-reader-controls,
-html.readefine-dark .account-profile-detail {
-  box-shadow: none;
-}
-
-html.readefine-dark h1,
-html.readefine-dark h2,
-html.readefine-dark h3,
-html.readefine-dark strong,
-html.readefine-dark dd,
-html.readefine-dark .landing-logo,
-html.readefine-dark .welcome-text h1,
-html.readefine-dark .account-profile-heading h2 {
-  color: #f4f8ff;
-}
-
-html.readefine-dark p,
-html.readefine-dark small,
-html.readefine-dark dt,
-html.readefine-dark .welcome-text p,
-html.readefine-dark .landing-nav-links a,
-html.readefine-dark .reader-status,
-html.readefine-dark .reader-speed,
-html.readefine-dark .reader-voice {
-  color: #a9b8cb;
 }
